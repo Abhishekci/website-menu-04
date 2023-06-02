@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/images/pngwing.com.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+    <title>KSP-My Application</title>
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .hero-myApp {
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero-myApp .bg-logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        .form-container {
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 40%;
+            margin: 0 auto;
+            max-height: 100%;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #aaa;
+        }
+
+        .forgot-password {
+            font-size: 14px;
+            color: #999;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .forgot-password:hover {
+            color: #555;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero-myApp">
+        <img src="/images/Home.svg" class="bg-logo">
+        <div class="container-fluid login d-flex justify-content-center">
+            <div class="card">
+                <div class="card-body">
+
+                    <div class="form">
+                        <div class="text-center p-3">
+                            <img src="/images/pngwing.com.png" alt="logo" class="card-img-top">
+                        </div>
+                        <h2 class="card-title">Application Login</h2>
+                        <form class="text-left">
+                            <div class="form-group">
+                                <label for="username" class="mb-2">Application Number</label>
+                                <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="password">Date of Birth</label>
+                                <input type="password" class="form-control mb-3" id="password"
+                                    placeholder="Enter your password">
+
+                            </div>
+
+                        </form>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+
+                        <div class=" d-flex justify-content-center align-content-center mt-5">
+                            <button type="submit" class="btn btn-primary w-50">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
