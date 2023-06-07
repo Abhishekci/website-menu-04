@@ -21,6 +21,19 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
+fieldset {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 2em !important;
+}
+
+legend {
+  background-color: #f0f0f0;
+  /* padding: 5px 10px; */
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
 
 
 /* body:before {
@@ -211,7 +224,7 @@ a:hover {
 
 @media (max-width: 991.98px) {
   .site-navbar {
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
   }
 }
@@ -751,7 +764,7 @@ input[type="date"] {
 .form-group input,
 .form-select,
 .form-control {
-  border: #1b1b32 1px solid !important;
+  border: #a9a9ae 1px solid !important;
 }
 
 .form-horizontal .form-control {
@@ -760,8 +773,10 @@ input[type="date"] {
   border-color: #000;
   /* border: #1b1b32 1px solid !important; */
 
+}
 
-
+.newapp span {
+  margin-bottom: 1em;
 }
 
 label {
@@ -795,10 +810,10 @@ label {
 }
 
 .myapp-img img {
-  width: 150px;
-  height: 150px;
-  max-width: 100%;
-  max-height: 100%;
+  width: 200px;
+  height: 100px;
+  /* border-radius: 50%; */
+
 }
 
 .myapp-field {
@@ -855,7 +870,7 @@ form {
 
 .preview-image {
   height: 200px;
-  width: 200px;
+  width: 100%;
   object-fit: cover;
   gap: 50px;
 }
@@ -923,10 +938,11 @@ form {
 
 .newapp input,
 textarea,
-button {
+button,
+select {
   padding: 8px 15px;
   border-radius: 5px !important;
-  margin: 5px 0px;
+  /* margin: 5px 0px; */
   box-sizing: border-box;
   border: 1px solid #ccc;
   font-size: 18px !important;
@@ -960,4 +976,43 @@ button:focus {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   outline-width: 0
+}
+
+
+.form-group.row.gender label {
+  font-weight: bold;
+}
+
+.form-group.row.gender .form-check-inline {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.form-group.row.gender .form-check-inline input[type="radio"] {
+  display: none;
+}
+
+.form-group.row.gender .form-check-inline label {
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+.form-group.row.gender .form-check-inline input[type="radio"]:checked+label {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.myapp-icon {
+  line-height: 20px;
+}
+
+.btn-download-challan {
+  width: 180px;
+}
+
+.challan {
+  width: 100px;
 }

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Ram/KSP_APCC/fonts"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "website-menu-04"
+	}
+}

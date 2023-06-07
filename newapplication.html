@@ -105,707 +105,701 @@
 
     <!-- Main content -->
 
-    <div class="container">
-        <div style="text-align:center; margin-top: 2em;">
-            <h2>Karnataka State Police Department Application Form</h2>
-            <!-- <img src="./images/logo2022.png" alt="ksp-logo" class="logo" /> -->
-        </div>
+    <div class="container-fluid px-1 py-5">
+        <fieldset>
+            <legend>
+                <div class="text-center">
+                    <h2>Karnataka State Police Department Application Form</h2>
+                    <!-- <img src="./images/logo2022.png" alt="ksp-logo" class="logo" /> -->
+                </div>
+            </legend>
 
-        <form action="view.html" style="margin-top: 2em;" class="border-1" autocomplete="off">
-            <!-- Input Text -->
+            <form action="view.html" style="margin-top: 2em;" autocomplete="off">
+                <!-- Input Text -->
 
-            <div class="row">
-                <!-- <div class="col-sm-6">
+                <div class="row">
+                    <!-- <div class="col-sm-6">
                     <div class="form-group">
                         <label for="application-number">Application No:</label>
                         <input type="text" placeholder="Application No" id="application-number"
                             class="form-control mt-2" required pattern="^\d{1,7}$" minlength="7">
                         <span class="invalid" id="appValid"></span>
                     </div>
-                </div> -->
-
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="candidate-type">You are applying as a:</label>
-                        <select class="form-control mt-2" id="candidate-type" required>
-                            <option value="">Select an option</option>
-                            <option value="option1">Direct Candidate</option>
-                            <option value="option2">Inservice</option>
-                            <option value="option3">Exservice</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="unit-name">Unit Name:</label>
-                        <select id="unit-name" class="form-control mt-2" required>
-                            <option value="">Select a unit</option>
-                            <option value="Bengaluru">Bengaluru</option>
-                            <option value="Mumbai">Mumbai</option>
-                            <option value="Delhi">Delhi</option>
-                        </select>
-                        <span class="invalid" id="unitValid"></span>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!---------------------- Personal Details -------------------------->
-
-
-            <fieldset>
-                <legend style="border: 1px solid #ccc; padding: 5px 10px; display: inline-block; width: 100%;">Personal
-                    Details
-                </legend>
-
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="name" class="col-form-label">Candidate Name:</label>
-                        <input type="text" placeholder="Candidate Name" id="name" class="form-control" minlength="1"
-                            pattern="[a-zA-Z\s]{1,80}" required>
-                        <span class="invalid" id="nameValid"></span>
-                    </div>
+                    </div> -->
 
                     <div class="col-sm-6">
-                        <label for="mname" class="col-form-label">Mother's Name:</label>
-                        <input type="text" placeholder="Mother's Name" id="mname" class="form-control" minlength="1"
-                            pattern="[a-zA-Z]{1,80}" required>
-                        <span class="invalid" id="mnameValid"></span>
-                    </div>
-                </div>
-
-
-                <!-- <div class="row text-left">
-                    <div class="form-group col-sm-6 flex-column d-flex">
-                        <label class="form-control-label">First name<span class="text-danger"> *</span></label>
-                        <input type="text" id="fname" name="fname" class="form-control"
-                            placeholder="Enter your first name" onblur="validate(1)">
-                    </div>
-                    <div class="form-group col-sm-6 flex-column d-flex">
-                        <label class="form-control-label">Last name<span class="text-danger"> *</span></label>
-                        <input type="text" id="lname" name="lname" class="form-control"
-                            placeholder="Enter your last name" onblur="validate(2)">
-                    </div>
-                </div> -->
-
-
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="fname" class="col-form-label">Fathers Name:</label>
-                        <input type="text" placeholder="Fathers Name" id="fname" class="form-control" minlength="1"
-                            pattern="[a-zA-Z\s]{1,80}" required>
-                        <span class="invalid" id="fnameValid"></span>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <label class="col-form-label" for="mobNumber">Mobile Number:</label>
-                        <input class="form-control" type="number" placeholder="9874563210" id="mobNumber" maxlength="10"
-                            minlength="10" required pattern="^[0-9]{1,10}$">
-                        <span class="invalid" id="mobValid"></span>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="email" class="col-form-label">Email Id:</label>
-                        <input type="email" placeholder="abc@abc.com" id="email" class="form-control" required>
-                        <span class="invalid" id="emailValid"></span>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <label for="aadhar" class="col-form-label">Aadhar Number:</label>
-                        <input type="text" placeholder="Aadhar Number" id="aadhar" class="form-control" minlength="12"
-                            pattern="^\d{1,12}$" required>
-                        <span class="invalid" id="aadharValid"></span>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="dob" class="col-form-label">Date of Birth:</label>
-                        <input type="date" class="form-control" id="dob" required>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label class="col-form-label" for="height">Height of the Candidate in cm (Present):</label>
-                        <input class="form-control" type="number" placeholder="Height in CM Ex: 171cm" id="height"
-                            maxlength="3" required pattern="^\d{0,3}$">
-                        <span class="invalid" id="heightValid"></span>
-                    </div>
-
-                    <div class="col-sm-6 ">
-                        <label class="col-form-label" for="weight">Weight of the Candidate in kg (Present):</label>
-                        <input class="form-control" type="number" placeholder="Weight in kg Ex: 85" id="weight"
-                            maxlength="3" required pattern="^\d{0,3}$">
-                        <span class="invalid" id="weightValid"></span>
-                    </div>
-                </div>
-
-                <div class="row col-md-9 mt-3">
-                    <label class="form-label col-md-3">Gender:</label>
-                    <div class="form-check form-check-inline col-md-2">
-                        <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
-                        <label class="form-check-label" for="male">Male</label>
-                    </div>
-                    <div class="form-check form-check-inline col-md-2">
-                        <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
-                        <label class="form-check-label" for="female">Female</label>
-                    </div>
-                    <div class="form-check form-check-inline col-md-2">
-                        <input class="form-check-input" type="radio" name="gender" id="transgender" value="transgender"
-                            required>
-                        <label class="form-check-label" for="transgender">Transgender</label>
-                    </div>
-                </div>
-            </fieldset>
-
-
-            <!-------------------- Address Details --------------------------->
-
-            <!-- <h4 class="mt-3"></h4> -->
-
-            <fieldset>
-                <legend style="border: 1px solid #ccc; padding: 5px 10px; display: inline-block; width: 100%;">Address
-                    Details
-                </legend>
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="door" class="col-form-label">Door No:</label>
-                        <input type="text" class="form-control" id="door" placeholder="Ex: 55" max="100" min="1"
-                            required pattern="[a-zA-Z0-9]{1,80}">
-                        <span class="invalid" id="doorno"></span>
-                    </div>
-
-                    <div class="col-sm-6 ">
-                        <label for="street" class="col-form-label">Street:</label>
-                        <input type="text" class="form-control" id="street" placeholder="Ex: Main Street" required>
-                        <span class="invalid" id="streetError"></span>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="area" class="col-form-label">Area:</label>
-                        <input type="text" class="form-control" id="area" placeholder="Ex: Downtown" required>
-                        <span class="invalid" id="areaError"></span>
-                    </div>
-
-                    <div class="col-sm-6 ">
-                        <label for="taluk" class="col-form-label">Taluk:</label>
-                        <input type="text" class="form-control" id="taluk" placeholder="Ex: XYZ Taluk" required>
-                        <span class="invalid" id="talukError"></span>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="pincode" class="col-form-label">Pin Code:</label>
-                        <input type="text" class="form-control" id="pincode" placeholder="Ex: 123456" required>
-                        <span class="invalid" id="pincodeError"></span>
-                    </div>
-
-                    <div class="col-sm-6 ">
-                        <label for="city" class="col-form-label">City:</label>
-                        <input type="text" class="form-control" id="city" placeholder="Ex: New York" required>
-                        <span class="invalid" id="cityError"></span>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="nativeDistrict" class="col-form-label">Native District:</label>
-                        <input type="text" class="form-control" id="nativeDistrict" placeholder="Ex: ABC District"
-                            required>
-                        <span class="invalid" id="nativeDistrictError"></span>
-                    </div>
-
-                    <div class="col-sm-6 ">
-                        <label for="category" class="col-form-label">State:</label>
-                        <select class="form-control" id="category" required>
-                            <option value="">Choose an option</option>
-                            <option value="option1">Karnataka</option>
-                            <option value="option2">TN</option>
-                            <option value="option3">ST</option>
-                            <option value="option3">2A</option>
-                            <option value="option3">2B</option>
-                            <option value="option3">3A</option>
-                            <option value="option3">3B</option>
-                            <option value="option3">CAT 1</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="category" class="col-form-label">District:</label>
-                        <select class="form-control" id="category" required>
-                            <option value="">Choose an option</option>
-                            <option value="option1">Bengaluru</option>
-                            <option value="option2">Dharwad</option>
-                            <option value="option3">ST</option>
-                            <option value="option3">2A</option>
-                            <option value="option3">2B</option>
-                            <option value="option3">3A</option>
-                            <option value="option3">3B</option>
-                            <option value="option3">CAT 1</option>
-                        </select>
-                    </div>
-
-                    <div class="col-sm-6 ">
-                        <label for="category" class="col-form-label">Native District:</label>
-                        <select class="form-control" id="category">
-                            <option value="">Choose an option</option>
-                            <option value="option1">Uttara Kannada</option>
-                            <option value="option2">Belgavi</option>
-                            <option value="option3">ST</option>
-                            <option value="option3">2A</option>
-                            <option value="option3">2B</option>
-                            <option value="option3">3A</option>
-                            <option value="option3">3B</option>
-                            <option value="option3">CAT 1</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="category" class="col-form-label">Other District:</label>
-                        <select class="form-control" id="category">
-                            <option value="">Choose an option</option>
-                            <option value="option1">Gadag</option>
-                            <option value="option2">Raichur</option>
-                            <option value="option3">ST</option>
-                            <option value="option3">2A</option>
-                            <option value="option3">2B</option>
-                            <option value="option3">3A</option>
-                            <option value="option3">3B</option>
-                            <option value="option3">CAT 1</option>
-                        </select>
-                    </div>
-
-                    <div class="col-sm-6 ">
-                        <label for="postaladdress" class="col-form-label">Postal Address:</label>
-                        <input type="text" class="form-control" id="postaladdress" placeholder="Postal Address"
-                            max="100" min="5" required pattern="[a-zA-Z0-9]{1,80}">
-                        <span class="invalid" id="addressValid"></span>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label class="col-sm-6 col-form-label">Permanent Address & Postal Address are Same?</label>
-                    <div class="col-sm-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="addresssame" id="addresssame1"
-                                value="Yes" onclick="togglePresentAddress(true)" required>
-                            <label class="form-check-label" for="male">Yes</label>
+                        <div class="form-group">
+                            <label for="candidate-type">You are applying as a:</label>
+                            <select class="form-control mt-2" id="candidate-type" required>
+                                <option value="">Select an option</option>
+                                <option value="option1">Direct Candidate</option>
+                                <option value="option2">Inservice</option>
+                                <option value="option3">Exservice</option>
+                            </select>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="addresssame" id="addresssame2" value="No"
-                                onclick="togglePresentAddress(false)" required>
-                            <label class="form-check-label" for="female">No</label>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="unit-name">Unit Name:</label>
+                            <select id="unit-name" class="form-control mt-2" required>
+                                <option value="">Select a unit</option>
+                                <option value="Bengaluru">Bengaluru</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Delhi">Delhi</option>
+                            </select>
+                            <span class="invalid" id="unitValid"></span>
                         </div>
                     </div>
                 </div>
 
-                <div class="form-group row permanentAddress hidden" id="paddress">
-                    <label for="aadhar" class="col-sm-3 col-form-label">Enter your present address:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="preAddress" placeholder="Present Address" max="100"
-                            min="5" pattern="[a-zA-Z]{1,80}">
-                        <span class="invalid" id="paddressValid"></span>
-                    </div>
-                </div>
-
-            </fieldset>
 
 
-            <!-- Reservation Details -->
-            <fieldset>
-
-                <legend style="border: 1px solid #ccc; padding: 5px 10px; display: inline-block; width: 100%;">
-                    Reservation Details
-                </legend>
+                <!---------------------- Personal Details -------------------------->
 
 
-                <!-- 4 questions with dropdown options -->
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="category" class="col-form-label">Category:</label>
-                        <select class="form-control" id="category" required>
-                            <option value="">Choose an option</option>
-                            <option value="option1">General</option>
-                            <option value="option2">SC</option>
-                            <option value="option3">ST</option>
-                            <option value="option3">2A</option>
-                            <option value="option3">2B</option>
-                            <option value="option3">3A</option>
-                            <option value="option3">3B</option>
-                            <option value="option3">CAT 1</option>
-                        </select>
-                    </div>
+                <fieldset>
+                    <legend style="border: 1px solid #ccc; padding: 5px 10px; width: 100%;">Personal
+                        Details
+                    </legend>
 
-                    <div class="col-sm-6 ">
-                        <label for="aadhar" class="col-form-label">Sub Caste:</label>
-                        <input type="text" class="form-control" id="subcaste" placeholder="Ex: Kuruba"
-                            pattern="[a-zA-Z]{1,80}" required>
-                        <span class="invalid" id="subcasteValid"></span>
 
-                    </div>
-
-                </div>
-
-                <div class="form-group row">
-
-                    <div class="col-sm-6">
-                        <label for="doi" class="col-form-label">Date of Issue:</label>
-                        <input type="date" class="form-control" id="doi" required>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="serviceman" class="col-sm-6 col-form-label">Are you Physically Challenged?</label>
-                    <div class="col-sm-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="serviceman" id="question1-yes"
-                                value="yes" required>
-                            <label class="form-check-label" for="question1-yes">Yes</label>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="name" class="col-form-label">Candidate Name:</label>
+                            <input type="text" placeholder="Candidate Name" id="name" class="form-control" minlength="1"
+                                pattern="[a-zA-Z\s]{1,80}" required>
+                            <span class="invalid" id="nameValid"></span>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="serviceman" id="question1-no" value="no"
+
+                        <div class="col-sm-6">
+                            <label for="mname" class="col-form-label">Mother's Name:</label>
+                            <input type="text" placeholder="Mother's Name" id="mname" class="form-control" minlength="1"
+                                pattern="[a-zA-Z]{1,80}" required>
+                            <span class="invalid" id="mnameValid"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="fname" class="col-form-label">Fathers Name:</label>
+                            <input type="text" placeholder="Fathers Name" id="fname" class="form-control" minlength="1"
+                                pattern="[a-zA-Z\s]{1,80}" required>
+                            <span class="invalid" id="fnameValid"></span>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label class="col-form-label" for="mobNumber">Mobile Number:</label>
+                            <input class="form-control" type="number" placeholder="9874563210" id="mobNumber"
+                                maxlength="10" minlength="10" required pattern="^[0-9]{1,10}$">
+                            <span class="invalid" id="mobValid"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="email" class="col-form-label">Email Id:</label>
+                            <input type="email" placeholder="abc@abc.com" id="email" class="form-control" required>
+                            <span class="invalid" id="emailValid"></span>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="aadhar" class="col-form-label">Aadhar Number:</label>
+                            <input type="text" placeholder="Aadhar Number" id="aadhar" class="form-control"
+                                minlength="12" pattern="^\d{1,12}$" required>
+                            <span class="invalid" id="aadharValid"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="dob" class="col-form-label">Date of Birth:</label>
+                            <input type="date" class="form-control" id="dob" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label class="col-form-label" for="height">Height of the Candidate in cm (Present):</label>
+                            <input class="form-control" type="number" placeholder="Height in CM Ex: 171cm" id="height"
+                                maxlength="3" required pattern="^\d{0,3}$">
+                            <span class="invalid" id="heightValid"></span>
+                        </div>
+
+                        <div class="col-sm-6 ">
+                            <label class="col-form-label" for="weight">Weight of the Candidate in kg (Present):</label>
+                            <input class="form-control" type="number" placeholder="Weight in kg Ex: 85" id="weight"
+                                maxlength="3" required pattern="^\d{0,3}$">
+                            <span class="invalid" id="weightValid"></span>
+                        </div>
+                    </div>
+
+                    <div class="row col-md-9 mt-3">
+                        <label class="form-label col-md-3">Gender:</label>
+                        <div class="form-check form-check-inline col-md-2">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline col-md-2">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="female"
                                 required>
-                            <label class="form-check-label" for="question1-no">No</label>
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline col-md-2">
+                            <input class="form-check-input" type="radio" name="gender" id="transgender"
+                                value="transgender" required>
+                            <label class="form-check-label" for="transgender">Transgender</label>
                         </div>
                     </div>
-                </div>
+                </fieldset>
 
-                <div class="form-group row">
-                    <label for="serviceman" class="col-sm-6 col-form-label">Are you an Exserviceman Child?</label>
-                    <div class="col-sm-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="serviceman" id="question2-yes"
-                                value="yes" required>
-                            <label class="form-check-label" for="question2-yes">Yes</label>
+
+                <!-------------------- Address Details --------------------------->
+
+                <!-- <h4 class="mt-3"></h4> -->
+
+                <fieldset>
+                    <legend style="border: 1px solid #ccc; padding: 5px 10px; display: inline-block; width: 100%;">
+                        Address
+                        Details
+                    </legend>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="door" class="col-form-label">Door No:</label>
+                            <input type="text" class="form-control" id="door" placeholder="Ex: 55" max="100" min="1"
+                                required pattern="[a-zA-Z0-9]{1,80}">
+                            <span class="invalid" id="doorno"></span>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="serviceman" id="question2-no" value="no"
+
+                        <div class="col-sm-6 ">
+                            <label for="street" class="col-form-label">Street:</label>
+                            <input type="text" class="form-control" id="street" placeholder="Ex: Main Street" required>
+                            <span class="invalid" id="streetError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="area" class="col-form-label">Area:</label>
+                            <input type="text" class="form-control" id="area" placeholder="Ex: Downtown" required>
+                            <span class="invalid" id="areaError"></span>
+                        </div>
+
+                        <div class="col-sm-6 ">
+                            <label for="taluk" class="col-form-label">Taluk:</label>
+                            <input type="text" class="form-control" id="taluk" placeholder="Ex: XYZ Taluk" required>
+                            <span class="invalid" id="talukError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="pincode" class="col-form-label">Pin Code:</label>
+                            <input type="text" class="form-control" id="pincode" placeholder="Ex: 123456" required>
+                            <span class="invalid" id="pincodeError"></span>
+                        </div>
+
+                        <div class="col-sm-6 ">
+                            <label for="city" class="col-form-label">City:</label>
+                            <input type="text" class="form-control" id="city" placeholder="Ex: New York" required>
+                            <span class="invalid" id="cityError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="nativeDistrict" class="col-form-label">Native District:</label>
+                            <input type="text" class="form-control" id="nativeDistrict" placeholder="Ex: ABC District"
                                 required>
-                            <label class="form-check-label" for="question2-no">No</label>
+                            <span class="invalid" id="nativeDistrictError"></span>
+                        </div>
+
+                        <div class="col-sm-6 ">
+                            <label for="category" class="col-form-label">State:</label>
+                            <select class="form-control" id="category" required>
+                                <option value="">Choose an option</option>
+                                <option value="option1">Karnataka</option>
+                                <option value="option2">TN</option>
+                                <option value="option3">ST</option>
+                                <option value="option3">2A</option>
+                                <option value="option3">2B</option>
+                                <option value="option3">3A</option>
+                                <option value="option3">3B</option>
+                                <option value="option3">CAT 1</option>
+                            </select>
                         </div>
                     </div>
-                </div>
 
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="category" class="col-form-label">District:</label>
+                            <select class="form-control" id="category" required>
+                                <option value="">Choose an option</option>
+                                <option value="option1">Bengaluru</option>
+                                <option value="option2">Dharwad</option>
+                                <option value="option3">ST</option>
+                                <option value="option3">2A</option>
+                                <option value="option3">2B</option>
+                                <option value="option3">3A</option>
+                                <option value="option3">3B</option>
+                                <option value="option3">CAT 1</option>
+                            </select>
+                        </div>
 
-                <div class="form-group row">
-                    <label class="col-sm-6 col-form-label">Do you belong to a family of an Ex-servicemen who while in
-                        service was died in action (only for Exservicemen Children)?</label>
-                    <div class="col-sm-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="exserviceman" id="question3-yes"
-                                value="yes" required>
-                            <label class="form-check-label" for="question3-yes">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="exserviceman" id="question3-no"
-                                value="no" required>
-                            <label class="form-check-label" for="question3-no">No</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label class="col-sm-6 col-form-label">Do you belong to a family of an Ex-servicemen who while in
-                        service was
-                        permanently disabled (only for Exservicemen Children)?</label>
-                    <div class="col-sm-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="exserviceman" id="question4-yes"
-                                value="yes" required>
-                            <label class="form-check-label" for="question4-yes">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="exserviceman" id="question4-no"
-                                value="no" required>
-                            <label class="form-check-label" for="question4-no">No</label>
+                        <div class="col-sm-6 ">
+                            <label for="category" class="col-form-label">Native District:</label>
+                            <select class="form-control" id="category">
+                                <option value="">Choose an option</option>
+                                <option value="option1">Uttara Kannada</option>
+                                <option value="option2">Belgavi</option>
+                                <option value="option3">ST</option>
+                                <option value="option3">2A</option>
+                                <option value="option3">2B</option>
+                                <option value="option3">3A</option>
+                                <option value="option3">3B</option>
+                                <option value="option3">CAT 1</option>
+                            </select>
                         </div>
                     </div>
-                </div>
 
-
-                <div class="form-group row">
-                    <label class="col-sm-6 col-form-label">Are you claiming PDP Reservation?</label>
-                    <div class="col-sm-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="pdpreservation" id="question5-yes"
-                                value="yes" required>
-                            <label class="form-check-label" for="question5-yes">Yes</label>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="category" class="col-form-label">Other District:</label>
+                            <select class="form-control" id="category">
+                                <option value="">Choose an option</option>
+                                <option value="option1">Gadag</option>
+                                <option value="option2">Raichur</option>
+                                <option value="option3">ST</option>
+                                <option value="option3">2A</option>
+                                <option value="option3">2B</option>
+                                <option value="option3">3A</option>
+                                <option value="option3">3B</option>
+                                <option value="option3">CAT 1</option>
+                            </select>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="pdpreservation" id="question5-no"
-                                value="no" required>
-                            <label class="form-check-label" for="question5-no">No</label>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="form-group row">
-                    <label for="dop" class="col-sm-3 col-form-label">Date of Issue:</label>
-                    <div class="col-sm-9">
-                        <input type="date" class="form-control" id="dop" required>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label class="col-sm-6 col-form-label">Are you claiming Kannada Medium Reservation?</label>
-                    <div class="col-sm-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="kanmediumreservation" id="question6-yes"
-                                value="yes" required>
-                            <label class="form-check-label" for="question6-yes">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="kanmediumreservation" id="question6-no"
-                                value="no" required>
-                            <label class="form-check-label" for="question6-no">No</label>
+                        <div class="col-sm-6 ">
+                            <label for="postaladdress" class="col-form-label">Postal Address:</label>
+                            <input type="text" class="form-control" id="postaladdress" placeholder="Postal Address"
+                                max="100" min="5" required pattern="[a-zA-Z0-9]{1,80}">
+                            <span class="invalid" id="addressValid"></span>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group row">
-                    <label for="dok" class="col-sm-3 col-form-label">Date of Issue:</label>
-                    <div class="col-sm-9">
-                        <input type="date" class="form-control" id="dok" required>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label class="col-sm-6 col-form-label">Are you claiming Rural Medium Reservation?</label>
-                    <div class="col-sm-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="ruralreservation" id="question7-yes"
-                                value="yes" required>
-                            <label class="form-check-label" for="question7-yes">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="ruralreservation" id="question7-no"
-                                value="no" required>
-                            <label class="form-check-label" for="question7-no">No</label>
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Permanent Address & Postal Address are Same?</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="addresssame" id="addresssame1"
+                                    value="Yes" onclick="togglePresentAddress(true)" required>
+                                <label class="form-check-label" for="male">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="addresssame" id="addresssame2"
+                                    value="No" onclick="togglePresentAddress(false)" required>
+                                <label class="form-check-label" for="female">No</label>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group row">
-                    <label for="dor" class="col-sm-3 col-form-label">Date of Issue:</label>
-                    <div class="col-sm-9">
-                        <input type="date" class="form-control" id="dor" required>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label class="col-sm-6 col-form-label">Are you a condidate belonging to Kalyana Karnataka Region
-                        ?</label>
-                    <div class="col-sm-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="kalyanakarnataka" id="kalyana-yes"
-                                value="yes" required>
-                            <label class="form-check-label" for="kalyana-yes">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="kalyanakarnataka" id="kalyana-no"
-                                value="no" required>
-                            <label class="form-check-label" for="kalyana-no">No</label>
+                    <div class="form-group row permanentAddress hidden" id="paddress">
+                        <label for="aadhar" class="col-sm-3 col-form-label">Enter your present address:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="preAddress" placeholder="Present Address"
+                                max="100" min="5" pattern="[a-zA-Z]{1,80}">
+                            <span class="invalid" id="paddressValid"></span>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group row">
-                    <label for="kaldis" class="col-sm-3 col-form-label">If Yes mention your District:</label>
-                    <div class="col-sm-9">
-                        <select class="form-control" id="kaldis">
-                            <option value="">Choose an option</option>
-                            <option value="option1">Gadag</option>
-                            <option value="option2">Raichur</option>
-                            <option value="option3">ST</option>
-                            <option value="option3">2A</option>
-                            <option value="option3">2B</option>
-                            <option value="option3">3A</option>
-                            <option value="option3">3B</option>
-                            <option value="option3">CAT 1</option>
-                        </select>
-                    </div>
-                </div>
+                </fieldset>
 
-                <div class="form-group row">
-                    <label class="col-sm-6 col-form-label">Are you a Government Employee ?</label>
-                    <div class="col-sm-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="governmentemployee" id="govt-yes"
-                                value="yes" required>
-                            <label class="form-check-label" for="govt-yes">Yes</label>
+
+                <!-- Reservation Details -->
+                <fieldset>
+
+                    <legend style="border: 1px solid #ccc; padding: 5px 10px; display: inline-block; width: 100%;">
+                        Reservation Details
+                    </legend>
+
+
+                    <!-- 4 questions with dropdown options -->
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="category" class="col-form-label">Category:</label>
+                            <select class="form-control" id="category" required>
+                                <option value="">Choose an option</option>
+                                <option value="option1">General</option>
+                                <option value="option2">SC</option>
+                                <option value="option3">ST</option>
+                                <option value="option3">2A</option>
+                                <option value="option3">2B</option>
+                                <option value="option3">3A</option>
+                                <option value="option3">3B</option>
+                                <option value="option3">CAT 1</option>
+                            </select>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="governmentemployee" id="govt-no"
-                                value="no" required>
-                            <label class="form-check-label" for="govt-no">No</label>
+
+                        <div class="col-sm-6 ">
+                            <label for="aadhar" class="col-form-label">Sub Caste:</label>
+                            <input type="text" class="form-control" id="subcaste" placeholder="Ex: Kuruba"
+                                pattern="[a-zA-Z]{1,80}" required>
+                            <span class="invalid" id="subcasteValid"></span>
+
                         </div>
+
                     </div>
-                </div>
 
-                <div class="form-group row permanentAddress hidden" id="department">
-                    <label for="department" class="col-sm-3 col-form-label">If Yes mention the department:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="department" placeholder="Cultural" max="100" min="5"
-                            pattern="[a-zA-Z]{1,80}">
-                        <span class="invalid" id="department"></span>
-                    </div>
-                </div>
+                    <div class="form-group row">
 
-                <div class="form-group row permanentAddress hidden" id="designation">
-                    <label for="designation" class="col-sm-3 col-form-label">If Yes mention the designation:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="designation" placeholder="Cultural" max="100"
-                            min="5" pattern="[a-zA-Z]{1,80}">
-                        <span class="invalid" id="designation"></span>
-                    </div>
-                </div>
-
-                <div class="form-group row permanentAddress hidden" id="designationyears">
-                    <label for="designationyears" class="col-sm-3 col-form-label">Years:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="designationyears" placeholder="Cultural" max="100"
-                            min="5" pattern="[a-zA-Z]{1,80}">
-                        <span class="invalid" id="designationyears"></span>
-                    </div>
-                </div>
-
-                <div class="form-group row permanentAddress hidden" id="designationmonths">
-                    <label for="designationmonths" class="col-sm-3 col-form-label">Months:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="designationmonths" placeholder="Cultural" max="100"
-                            min="5" pattern="[a-zA-Z]{1,80}">
-                        <span class="invalid" id="designationmonths"></span>
-                    </div>
-                </div>
-
-                <div class="form-group row permanentAddress hidden" id="designationdays">
-                    <label for="designationdays" class="col-sm-3 col-form-label">Days:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="designationdays" placeholder="Cultural" max="100"
-                            min="5" pattern="[a-zA-Z]{1,80}">
-                        <span class="invalid" id="designationdays"></span>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="dojoi" class="col-sm-3 col-form-label">Date of Joining:</label>
-                    <div class="col-sm-9">
-                        <input type="date" class="form-control" id="dojoi" required>
-                    </div>
-                </div>
-
-
-                <div class="form-group row">
-                    <label for="dokal" class="col-sm-3 col-form-label">Date of Issue:</label>
-                    <div class="col-sm-9">
-                        <input type="date" class="form-control" id="dokal" required>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label class="col-sm-6 col-form-label">Are you claiming Transgender Reservation?</label>
-                    <div class="col-sm-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="transgenderreservation"
-                                id="pdpreservation" value="yes" required>
-                            <label class="form-check-label" for="pdpreservation">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="transgenderreservation" id="question5-no"
-                                value="no" required>
-                            <label class="form-check-label" for="question5-no">No</label>
+                        <div class="col-sm-6">
+                            <label for="doi" class="col-form-label">Date of Issue:</label>
+                            <input type="date" class="form-control" id="doi" required>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group row">
-                    <label class="col-md-6" for="criminalcases">Have you been involved in any Criminal Cases?</label>
-                    <div class="col-md-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="criminalcases" id="criminalcases"
-                                value="yes" required>
-                            <label class="form-check-label" for="criminalcases">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="criminalcases" id="criminalcases"
-                                value="no" required>
-                            <label class="form-check-label" for="criminalcases">No</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group row criminalcases" id="criminalcases">
-                    <label for="criminalcases" class="col-sm-3 col-form-label">If Yes mention the details:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="criminalcases" placeholder="details" max="100"
-                            min="5" pattern="[a-zA-Z]{1,80}">
-                        <span class="invalid" id="criminalcases"></span>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label class="col-md-6" for="departmentalenquiry">Have you been involved in any Departmental
-                        Enquiry?</label>
-                    <div class="col-md-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="departmentalenquiry" id="pdpreservation"
-                                value="yes" required>
-                            <label class="form-check-label" for="pdpreservation">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="departmentalenquiry"
-                                id="departmentalenquiry" value="no" required>
-                            <label class="form-check-label" for="departmentalenquiry">No</label>
+                    <div class="form-group row">
+                        <label for="serviceman" class="col-sm-6 col-form-label">Are you Physically Challenged?</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="serviceman" id="question1-yes"
+                                    value="yes" required>
+                                <label class="form-check-label" for="question1-yes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="serviceman" id="question1-no"
+                                    value="no" required>
+                                <label class="form-check-label" for="question1-no">No</label>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group row criminalcases" id="departmentalenquiry2">
-                    <label for="de`" class="col-sm-3 col-form-label">If Yes mention the details:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="criminalcases" placeholder="details" max="100"
-                            min="5" pattern="[a-zA-Z]{1,80}">
-                        <span class="invalid" id="de`"></span>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label class="col-md-6" for="degreeholder">Have you been involved in any Departmental
-                        Enquiry?</label>
-                    <div class="col-md-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="degreeholder" id="degreeholderyes"
-                                value="yes" required>
-                            <label class="form-check-label" for="pdpreservation">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="degreeholder" id="degreeholderno"
-                                value="no" required>
-                            <label class="form-check-label" for="degreeholderno">No</label>
+                    <div class="form-group row">
+                        <label for="serviceman" class="col-sm-6 col-form-label">Are you an Exserviceman Child?</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="serviceman" id="question2-yes"
+                                    value="yes" required>
+                                <label class="form-check-label" for="question2-yes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="serviceman" id="question2-no"
+                                    value="no" required>
+                                <label class="form-check-label" for="question2-no">No</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend style="border: 1px solid #ccc; padding: 5px 10px; display: inline-block; width: 100%;">
-                    Educational Qualification Details
-                </legend>
 
 
-                <!-- <div class="form-group row">
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Do you belong to a family of an Ex-servicemen who while
+                            in
+                            service was died in action (only for Exservicemen Children)?</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="exserviceman" id="question3-yes"
+                                    value="yes" required>
+                                <label class="form-check-label" for="question3-yes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="exserviceman" id="question3-no"
+                                    value="no" required>
+                                <label class="form-check-label" for="question3-no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Do you belong to a family of an Ex-servicemen who while
+                            in
+                            service was
+                            permanently disabled (only for Exservicemen Children)?</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="exserviceman" id="question4-yes"
+                                    value="yes" required>
+                                <label class="form-check-label" for="question4-yes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="exserviceman" id="question4-no"
+                                    value="no" required>
+                                <label class="form-check-label" for="question4-no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Are you claiming PDP Reservation?</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="pdpreservation" id="question5-yes"
+                                    value="yes" required>
+                                <label class="form-check-label" for="question5-yes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="pdpreservation" id="question5-no"
+                                    value="no" required>
+                                <label class="form-check-label" for="question5-no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="dop" class="col-sm-3 col-form-label">Date of Issue:</label>
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control" id="dop" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Are you claiming Kannada Medium Reservation?</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="kanmediumreservation"
+                                    id="question6-yes" value="yes" required>
+                                <label class="form-check-label" for="question6-yes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="kanmediumreservation"
+                                    id="question6-no" value="no" required>
+                                <label class="form-check-label" for="question6-no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="dok" class="col-sm-3 col-form-label">Date of Issue:</label>
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control" id="dok" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Are you claiming Rural Medium Reservation?</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="ruralreservation" id="question7-yes"
+                                    value="yes" required>
+                                <label class="form-check-label" for="question7-yes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="ruralreservation" id="question7-no"
+                                    value="no" required>
+                                <label class="form-check-label" for="question7-no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="dor" class="col-sm-3 col-form-label">Date of Issue:</label>
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control" id="dor" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Are you a condidate belonging to Kalyana Karnataka Region
+                            ?</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="kalyanakarnataka" id="kalyana-yes"
+                                    value="yes" required>
+                                <label class="form-check-label" for="kalyana-yes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="kalyanakarnataka" id="kalyana-no"
+                                    value="no" required>
+                                <label class="form-check-label" for="kalyana-no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="kaldis" class="col-sm-3 col-form-label">If Yes mention your District:</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="kaldis">
+                                <option value="">Choose an option</option>
+                                <option value="option1">Gadag</option>
+                                <option value="option2">Raichur</option>
+                                <option value="option3">ST</option>
+                                <option value="option3">2A</option>
+                                <option value="option3">2B</option>
+                                <option value="option3">3A</option>
+                                <option value="option3">3B</option>
+                                <option value="option3">CAT 1</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Are you a Government Employee ?</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="governmentemployee" id="govt-yes"
+                                    value="yes" required>
+                                <label class="form-check-label" for="govt-yes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="governmentemployee" id="govt-no"
+                                    value="no" required>
+                                <label class="form-check-label" for="govt-no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row permanentAddress hidden" id="department">
+                        <label for="department" class="col-sm-3 col-form-label">If Yes mention the department:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="department" placeholder="Cultural" max="100"
+                                min="5" pattern="[a-zA-Z]{1,80}">
+                            <span class="invalid" id="department"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row permanentAddress hidden" id="designation">
+                        <label for="designation" class="col-sm-3 col-form-label">If Yes mention the designation:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="designation" placeholder="Cultural" max="100"
+                                min="5" pattern="[a-zA-Z]{1,80}">
+                            <span class="invalid" id="designation"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row permanentAddress hidden" id="designationyears">
+                        <label for="designationyears" class="col-sm-3 col-form-label">Years:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="designationyears" placeholder="Cultural"
+                                max="100" min="5" pattern="[a-zA-Z]{1,80}">
+                            <span class="invalid" id="designationyears"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row permanentAddress hidden" id="designationmonths">
+                        <label for="designationmonths" class="col-sm-3 col-form-label">Months:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="designationmonths" placeholder="Cultural"
+                                max="100" min="5" pattern="[a-zA-Z]{1,80}">
+                            <span class="invalid" id="designationmonths"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row permanentAddress hidden" id="designationdays">
+                        <label for="designationdays" class="col-sm-3 col-form-label">Days:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="designationdays" placeholder="Cultural"
+                                max="100" min="5" pattern="[a-zA-Z]{1,80}">
+                            <span class="invalid" id="designationdays"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="dojoi" class="col-sm-3 col-form-label">Date of Joining:</label>
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control" id="dojoi" required>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label for="dokal" class="col-sm-3 col-form-label">Date of Issue:</label>
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control" id="dokal" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Are you claiming Transgender Reservation?</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="transgenderreservation"
+                                    id="pdpreservation" value="yes" required>
+                                <label class="form-check-label" for="pdpreservation">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="transgenderreservation"
+                                    id="question5-no" value="no" required>
+                                <label class="form-check-label" for="question5-no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-6" for="criminalcases">Have you been involved in any Criminal
+                            Cases?</label>
+                        <div class="col-md-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="criminalcases" id="criminalcases"
+                                    value="yes" required>
+                                <label class="form-check-label" for="criminalcases">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="criminalcases" id="criminalcases"
+                                    value="no" required>
+                                <label class="form-check-label" for="criminalcases">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row criminalcases" id="criminalcases">
+                        <label for="criminalcases" class="col-sm-3 col-form-label">If Yes mention the details:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="criminalcases" placeholder="details" max="100"
+                                min="5" pattern="[a-zA-Z]{1,80}">
+                            <span class="invalid" id="criminalcases"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-6" for="departmentalenquiry">Have you been involved in any Departmental
+                            Enquiry?</label>
+                        <div class="col-md-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="departmentalenquiry"
+                                    id="pdpreservation" value="yes" required>
+                                <label class="form-check-label" for="pdpreservation">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="departmentalenquiry"
+                                    id="departmentalenquiry" value="no" required>
+                                <label class="form-check-label" for="departmentalenquiry">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row criminalcases" id="departmentalenquiry2">
+                        <label for="de`" class="col-sm-3 col-form-label">If Yes mention the details:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="criminalcases" placeholder="details" max="100"
+                                min="5" pattern="[a-zA-Z]{1,80}">
+                            <span class="invalid" id="de`"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-6" for="degreeholder">Have you been involved in any Departmental
+                            Enquiry?</label>
+                        <div class="col-md-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="degreeholder" id="degreeholderyes"
+                                    value="yes" required>
+                                <label class="form-check-label" for="pdpreservation">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="degreeholder" id="degreeholderno"
+                                    value="no" required>
+                                <label class="form-check-label" for="degreeholderno">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend style="border: 1px solid #ccc; padding: 5px 10px; display: inline-block; width: 100%;">
+                        Educational Qualification Details
+                    </legend>
+
+
+                    <!-- <div class="form-group row">
                 <div class="col-sm-6">
                     <label for="pincode" class="col-form-label">Pin Code:</label>
                     <input type="text" class="form-control" id="pincode" placeholder="Ex: 123456" required>
@@ -819,190 +813,191 @@
                 </div>
             </div> -->
 
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="question2" class="col-form-label">Education Qualification:</label>
-                        <select class="form-control" id="Education" required>
-                            <option value="">Choose an option</option>
-                            <option value="option1">SSLC State Board</option>
-                            <option value="option2">PUC</option>
-                            <option value="option3">UG</option>
-                            <option value="option3">PG</option>
-                        </select>
-                    </div>
-
-                    <div class="col-sm-6 ">
-                        <label for="yop" class="col-form-label">Year of Passing:</label>
-                        <select class="form-control" id="yop" required>
-                            <option value="">Choose an option</option>
-                            <option value="option1">2018</option>
-                            <option value="option2">2019</option>
-                            <option value="option3">2020</option>
-                            <option value="option3">2021</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group row" id="marks">
-                    <div class="col-sm-6">
-                        <label for="marks" class="col-form-label">Maximum marks:</label>
-                        <input type="text" class="form-control" id="marks" placeholder="details" max="100" min="5"
-                            pattern="[a-zA-Z]{1,80}">
-                        <span class="invalid" id="criminalcases"></span>
-                    </div>
-
-                    <div class="col-sm-6 ">
-                        <label for="marksobtained" class="col-form-label">Marks Obtained:</label>
-                        <input type="text" class="form-control" id="marksobtained" placeholder="details" max="100"
-                            min="5" pattern="[a-zA-Z]{1,80}">
-                        <span class="invalid" id="marksobtained"></span>
-                    </div>
-                </div>
-
-
-                <div class="form-group row" id="marks">
-                    <div class="col-sm-6">
-                        <label for="Percentage" class="col-form-label">Percentage:</label>
-                        <input type="text" class="form-control" id="Percentage" placeholder="details" max="100" min="5"
-                            pattern="[a-zA-Z]{1,80}">
-                        <span class="invalid" id="Percentage"></span>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-md-6">
-                        <label for="boardlanguage">Passed NIOS/PUC Board Language Exam:</label>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="boardlanguage" id="boardlanguage"
-                                value="yes" required>
-                            <label class="form-check-label" for="boardlanguage">Yes</label>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="question2" class="col-form-label">Education Qualification:</label>
+                            <select class="form-control" id="Education" required>
+                                <option value="">Choose an option</option>
+                                <option value="option1">SSLC State Board</option>
+                                <option value="option2">PUC</option>
+                                <option value="option3">UG</option>
+                                <option value="option3">PG</option>
+                            </select>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="boardlanguage" id="boardlanguageno"
-                                value="no" required>
-                            <label class="form-check-label" for="boardlanguageno">No</label>
+
+                        <div class="col-sm-6 ">
+                            <label for="yop" class="col-form-label">Year of Passing:</label>
+                            <select class="form-control" id="yop" required>
+                                <option value="">Choose an option</option>
+                                <option value="option1">2018</option>
+                                <option value="option2">2019</option>
+                                <option value="option3">2020</option>
+                                <option value="option3">2021</option>
+                            </select>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group row">
-                    <div class="col-md-6">
-                        <label for="boardlanguagekan">Studied Kannada Language:</label>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="boardlanguagekan" id="boardlanguagekan"
-                                value="yes" required>
-                            <label class="form-check-label" for="boardlanguagekan">Yes</label>
+                    <div class="form-group row" id="marks">
+                        <div class="col-sm-6">
+                            <label for="marks" class="col-form-label">Maximum marks:</label>
+                            <input type="text" class="form-control" id="marks" placeholder="details" max="100" min="5"
+                                pattern="[a-zA-Z]{1,80}">
+                            <span class="invalid" id="criminalcases"></span>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="boardlanguagekan" id="boardlanguagekanno"
-                                value="no" required>
-                            <label class="form-check-label" for="boardlanguagekanno">No</label>
+
+                        <div class="col-sm-6 ">
+                            <label for="marksobtained" class="col-form-label">Marks Obtained:</label>
+                            <input type="text" class="form-control" id="marksobtained" placeholder="details" max="100"
+                                min="5" pattern="[a-zA-Z]{1,80}">
+                            <span class="invalid" id="marksobtained"></span>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group row">
-                    <div class="col-md-6">
-                        <label for="passed">Passed NIOS/PUC Board Subject Exam:</label>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="passed" id="passed" value="yes" required>
-                            <label class="form-check-label" for="passed">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="passed" id="passedno" value="no"
-                                required>
-                            <label class="form-check-label" for="passedno">No</label>
+
+                    <div class="form-group row" id="marks">
+                        <div class="col-sm-6">
+                            <label for="Percentage" class="col-form-label">Percentage:</label>
+                            <input type="text" class="form-control" id="Percentage" placeholder="details" max="100"
+                                min="5" pattern="[a-zA-Z]{1,80}">
+                            <span class="invalid" id="Percentage"></span>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group row" id="marks">
-                    <div class="col-sm-6">
-                        <label for="marks" class="col-form-label">Maximum marks:</label>
-                        <input type="text" class="form-control" id="marks" placeholder="details" max="100" min="5"
-                            pattern="[a-zA-Z]{1,80}">
-                        <span class="invalid" id="criminalcases"></span>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="boardlanguage">Passed NIOS/PUC Board Language Exam:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="boardlanguage" id="boardlanguage"
+                                    value="yes" required>
+                                <label class="form-check-label" for="boardlanguage">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="boardlanguage" id="boardlanguageno"
+                                    value="no" required>
+                                <label class="form-check-label" for="boardlanguageno">No</label>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-sm-6 ">
-                        <label for="marksobtained" class="col-form-label">Marks Obtained:</label>
-                        <input type="text" class="form-control" id="marksobtained" placeholder="details" max="100"
-                            min="5" pattern="[a-zA-Z]{1,80}">
-                        <span class="invalid" id="marksobtained"></span>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="boardlanguagekan">Studied Kannada Language:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="boardlanguagekan"
+                                    id="boardlanguagekan" value="yes" required>
+                                <label class="form-check-label" for="boardlanguagekan">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="boardlanguagekan"
+                                    id="boardlanguagekanno" value="no" required>
+                                <label class="form-check-label" for="boardlanguagekanno">No</label>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="dor" class="col-form-label">Result Date:</label>
-                        <input type="date" class="form-control" id="dor" required>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="passed">Passed NIOS/PUC Board Subject Exam:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="passed" id="passed" value="yes"
+                                    required>
+                                <label class="form-check-label" for="passed">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="passed" id="passedno" value="no"
+                                    required>
+                                <label class="form-check-label" for="passedno">No</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-6 ">
-                        <label for="mop" class="col-form-label">Month of Passing:</label>
-                        <input type="month" class="form-control" id="mop" required>
+
+                    <div class="form-group row" id="marks">
+                        <div class="col-sm-6">
+                            <label for="marks" class="col-form-label">Maximum marks:</label>
+                            <input type="text" class="form-control" id="marks" placeholder="details" max="100" min="5"
+                                pattern="[a-zA-Z]{1,80}">
+                            <span class="invalid" id="criminalcases"></span>
+                        </div>
+
+                        <div class="col-sm-6 ">
+                            <label for="marksobtained" class="col-form-label">Marks Obtained:</label>
+                            <input type="text" class="form-control" id="marksobtained" placeholder="details" max="100"
+                                min="5" pattern="[a-zA-Z]{1,80}">
+                            <span class="invalid" id="marksobtained"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group row" id="marks">
-                    <div class="col-sm-6">
-                        <label for="puc" class="col-form-label">PUC Registration No:</label>
-                        <input type="text" class="form-control" id="puc" placeholder="details" max="100" min="5"
-                            pattern="[a-zA-Z]{1,80}">
-                        <span class="invalid" id="puc"></span>
+
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="dor" class="col-form-label">Result Date:</label>
+                            <input type="date" class="form-control" id="dor" required>
+                        </div>
+                        <div class="col-sm-6 ">
+                            <label for="mop" class="col-form-label">Month of Passing:</label>
+                            <input type="month" class="form-control" id="mop" required>
+                        </div>
                     </div>
-                    <div class="col-sm-6 ">
-                        <label for="Stream" class="col-form-label">PUC Stream:</label>
-                        <select class="form-control" id="Stream" required>
-                            <option value="">Choose an option</option>
-                            <option value="option1">Science</option>
-                            <option value="option2">Arts</option>
-                            <option value="option3">Commerce</option>
-                            <option value="option4">Other</option>
-                        </select>
+
+                    <div class="form-group row" id="marks">
+                        <div class="col-sm-6">
+                            <label for="puc" class="col-form-label">PUC Registration No:</label>
+                            <input type="text" class="form-control" id="puc" placeholder="details" max="100" min="5"
+                                pattern="[a-zA-Z]{1,80}">
+                            <span class="invalid" id="puc"></span>
+                        </div>
+                        <div class="col-sm-6 ">
+                            <label for="Stream" class="col-form-label">PUC Stream:</label>
+                            <select class="form-control" id="Stream" required>
+                                <option value="">Choose an option</option>
+                                <option value="option1">Science</option>
+                                <option value="option2">Arts</option>
+                                <option value="option3">Commerce</option>
+                                <option value="option4">Other</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-            </fieldset>
+                </fieldset>
 
 
-            <fieldset>
-                <legend style="border: 1px solid #ccc; padding: 5px 10px; display: inline-block; width: 100%;">
-                    Documents Upload
-                </legend>
+                <fieldset>
+                    <legend style="border: 1px solid #ccc; padding: 5px 10px; display: inline-block; width: 100%;">
+                        Documents Upload
+                    </legend>
 
 
-                <div class="form-group row">
-                    <label for="question10" class="col-sm-3">Select the Uploading Identity Card:</label>
-                    <div class="col-sm-9">
-                        <select class="form-control" id="question10" required>
-                            <option value="">Choose an option</option>
-                            <option value="option1">Aadhar</option>
-                            <option value="option2">Driving Licence</option>
-                            <option value="option3">PAN Card</option>
-                            <option value="option3">Ration Card</option>
-                            <option value="option3">Voter ID</option>
-                        </select>
+                    <div class="form-group row">
+                        <label for="question10" class="col-sm-3">Select the Uploading Identity Card:</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="question10" required>
+                                <option value="">Choose an option</option>
+                                <option value="option1">Aadhar</option>
+                                <option value="option2">Driving Licence</option>
+                                <option value="option3">PAN Card</option>
+                                <option value="option3">Ration Card</option>
+                                <option value="option3">Voter ID</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
 
 
 
-                <div class="form-group row">
-                    <label for="idcard" class="col-sm-3">Identity Card No:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="idcard" placeholder="Identity Card No"
-                            pattern="[a-zA-Z0-9]{1,10}" required>
-                        <span class="invalid" id="idValid"></span>
+                    <div class="form-group row">
+                        <label for="idcard" class="col-sm-3">Identity Card No:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="idcard" placeholder="Identity Card No"
+                                pattern="[a-zA-Z0-9]{1,10}" required>
+                            <span class="invalid" id="idValid"></span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- <h4>Online Payment Details</h4>
+                    <!-- <h4>Online Payment Details</h4>
 
 
             <div class="form-group row">
@@ -1045,55 +1040,55 @@
                 </div>
             </div> -->
 
-                <!-- <h4>Upload Documents</h4> -->
+                    <!-- <h4>Upload Documents</h4> -->
 
-                <div class="form-group row">
-                    <label for="aadhar-upload" class="col-sm-3">Aadhar Card:</label>
-                    <div class="col-sm-9">
-                        <input type="file" class="form-control" id="aadhar-upload"
-                            onchange="previewFile('aadhar-upload', 'aadhar-preview')" accept="image/jpeg, image/png"
-                            required>
-                        <!-- <img id="aadhar-preview" src="" style="max-width:100%; height:auto; display:none;"> -->
+                    <div class="form-group row">
+                        <label for="aadhar-upload" class="col-sm-3">Aadhar Card:</label>
+                        <div class="col-sm-9">
+                            <input type="file" class="form-control" id="aadhar-upload"
+                                onchange="previewFile('aadhar-upload', 'aadhar-preview')" accept="image/jpeg, image/png"
+                                required>
+                            <!-- <img id="aadhar-preview" src="" style="max-width:100%; height:auto; display:none;"> -->
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group row">
-                    <label for="signature-upload" class="col-sm-3">Signature:</label>
-                    <div class="col-sm-9">
-                        <input type="file" class="form-control" id="signature-upload"
-                            onchange="previewFile('signature-upload', 'signature-preview')"
-                            accept="image/jpeg, image/png" required>
-                        <!-- <img id="signature-preview" src="" style="max-width:100%; height:auto; display:none;"> -->
+                    <div class="form-group row">
+                        <label for="signature-upload" class="col-sm-3">Signature:</label>
+                        <div class="col-sm-9">
+                            <input type="file" class="form-control" id="signature-upload"
+                                onchange="previewFile('signature-upload', 'signature-preview')"
+                                accept="image/jpeg, image/png" required>
+                            <!-- <img id="signature-preview" src="" style="max-width:100%; height:auto; display:none;"> -->
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group row">
-                    <label for="thumb-upload" class="col-sm-3">Applicant Thumb Impression:</label>
-                    <div class="col-sm-9">
-                        <input type="file" class="form-control" id="thumb-upload"
-                            onchange="previewFile('thumb-upload', 'thumb-preview')" accept="image/jpeg, image/png"
-                            required>
-                        <!-- <img id="thumb-preview" src="" style="max-width:100%; height:auto; display:none;"> -->
+                    <div class="form-group row">
+                        <label for="thumb-upload" class="col-sm-3">Applicant Thumb Impression:</label>
+                        <div class="col-sm-9">
+                            <input type="file" class="form-control" id="thumb-upload"
+                                onchange="previewFile('thumb-upload', 'thumb-preview')" accept="image/jpeg, image/png"
+                                required>
+                            <!-- <img id="thumb-preview" src="" style="max-width:100%; height:auto; display:none;"> -->
+                        </div>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-4">
-                        <img id="aadhar-preview" src="" class="preview-image" alt="">
-                        <span class="caption">Aadhar Card</span>
+                    <div class="row">
+                        <div class="col-4">
+                            <img id="aadhar-preview" src="" class="preview-image" alt="">
+                            <span class="caption">Aadhar Card</span>
+                        </div>
+                        <div class="col-4">
+                            <img id="signature-preview" src="" class="preview-image" alt="">
+                            <span class="caption">Signature</span>
+                        </div>
+                        <div class="col-4">
+                            <img id="thumb-preview" src="" class="preview-image" alt="">
+                            <span class="caption">Applicant Thumb Impression</span>
+                        </div>
                     </div>
-                    <div class="col-4">
-                        <img id="signature-preview" src="" class="preview-image" alt="">
-                        <span class="caption">Signature</span>
-                    </div>
-                    <div class="col-4">
-                        <img id="thumb-preview" src="" class="preview-image" alt="">
-                        <span class="caption">Applicant Thumb Impression</span>
-                    </div>
-                </div>
-            </fieldset>
+                </fieldset>
 
-            <!-- <picture class="image-container">
+                <!-- <picture class="image-container">
                 <img id="aadhar-preview" src="" class="img-fluid img-thumbnail" alt="">
                 <img id="signature-preview" src="" class="img-fluid img-thumbnail" alt="">
                 <img id="thumb-preview" src="" class="img-fluid img-thumbnail" alt="">
@@ -1102,11 +1097,12 @@
 
 
 
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary mt-3" id="submitBtn">Submit</button>
-            </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary mt-3" id="submitBtn">Submit</button>
+                </div>
 
-        </form>
+            </form>
+        </fieldset>
     </div>
 
     <div id="previewSection" class="mt-4" style="display: none;">

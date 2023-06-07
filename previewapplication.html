@@ -24,84 +24,6 @@
 
 <body class="newapp">
 
-    <!-- Toogle bar -->
-    <div class="site-mobile-menu site-navbar-target">
-        <div class="site-mobile-menu-header">
-            <div class="site-mobile-menu-close mt-3">
-                <span class="icon-close2 js-menu-toggle"></span>
-            </div>
-        </div>
-        <div class="site-mobile-menu-body"></div>
-    </div>
-
-    <!-- Main Content -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <a href="#" class=""><span class="mr-2  icon-timer"></span> <span
-                            class="d-none d-md-inline-block">Time:
-                            10:30
-                            AM to 05:30 PM (Monday to Friday) |</span></a>
-                    <span class="mx-md-2 d-inline-block"></span>
-                    <a href="#" class=""><span class="mr-2  icon-phone"></span> <span
-                            class="d-none d-md-inline-block">Helpline:
-                            080 2294 3346 / 3039</span></a>
-                    <div class="float-right">
-                        <a href="#" class=""><span class="mr-2  icon-twitter"></span> <span
-                                class="d-none d-md-inline-block">Twitter</span></a>
-                        <span class="mx-md-2 d-inline-block"></span>
-                        <a href="#" class=""><span class="mr-2  icon-facebook"></span> <span
-                                class="d-none d-md-inline-block">Facebook</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Nav bar -->
-    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
-        <div class="container">
-            <div class="row align-items-center position-relative">
-                <div class="site-logo">
-                    <img src="images/logo_v2.jpeg" alt="logo" class="logo">
-                    <!-- <a href="index.html" class="text-black"><span class="text-primary">Brand</a> -->
-                </div>
-                <div class="col-12">
-                    <nav class="site-navigation text-right ml-auto" role="navigation">
-                        <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                            <li><a href="/index.html" class="nav-link">Home</a></li>
-                            <li><a href="#services-section" class="nav-link">Notifications</a></li>
-                            <!-- <li><a href="/myapplication.html" class="nav-link">My Application</a></li> -->
-                        </ul>
-                    </nav>
-                </div>
-                <div class="toggle-button d-inline-block d-lg-none"><a href="#"
-                        class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center font-weight-bold">
-                    <!-- <p>ಸಶಸ್ತ್ರ ಪೊಲೀಸ್ ಕಾನ್ಸ್ಟೇಬಲ್ (ಪುರುಷರು ಮತ್ತು ಪುರುಷ ಟ್ರಾನ್ಸ್‌ಜೆಂಡರ್) (ಕಾರ್/ಡೀಎರ್)-2022 (3064
-                                        ಹುದ್ದೆಗಳು)</p> -->
-                    <!-- <p>C¢ü¸ÀÆZÀ£É ¸ÀASÉå.07 / £ÉÃªÀÄPÁw-4 / 2022-23</p> -->
-                    <p>APPLICATION FOR THE POST OF POLICE CONSTABLE (CIVIL)(MEN & WOMEN) (RESIDUAL) & KALYANA KARNATAKA
-                        (LOCAL)
-                        RECRUITMENT-2023-24</p>
-                    <p>ಪೊಲೀಸ್ ಕಾನ್ಸ್ಟೇಬಲ್ ಹುದ್ದೆಗೆ ಅರ್ಜಿ (ನಾಗರಿಕ) (ಪುರುಷರು ಮತ್ತು ಮಹಿಳೆಯರು) (ಉಳಿಯಿಂದ ಒಳಗಾದ) & ಕಲ್ಯಾಣ
-                        ಕರ್ನಾಟಕ (ಸ್ಥಳೀಯ)
-                        ನೇಮಕಾತಿ-2021-22</p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Application Starts -->
 
     <!-- Main content -->
@@ -109,23 +31,23 @@
 
 
 
-    <div class="container px-1 py-5">
+    <div class="container-fluid px-1 py-5">
         <div class="text-center">
             <h2 class="text-dark">Karnataka State Police Department Application Form</h2>
-            <h4 class="text-dark">Fill All the details</h4>
+            <h4 class="text-dark">Applicant Details</h4>
             <hr>
             <!-- <img src="./images/logo2022.png" alt="ksp-logo" class="logo" /> -->
         </div>
 
         <form action="view.html" style="margin-top: 2em;" autocomplete="off" class="col-lg-12 col-md-6">
-            <!-- Input Text -->
+            <!-- span Text -->
 
             <div class="border rounded shadow p-3">
                 <div class="row">
                     <!-- <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="application-number">Application No:</label>
-                                <input type="text" placeholder="Application No" id="application-number"
+                                <span type="text" placeholder="Application No" id="application-number"
                                     class="form-control mt-2" required pattern="^\d{1,7}$" minlength="7">
                                 <span class="invalid" id="appValid"></span>
                             </div>
@@ -175,80 +97,80 @@
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label for="name" class="col-form-label">Candidate Name:</label>
-                                <input type="text" placeholder="Candidate Name" id="name" class="form-control"
+                                <span type="text" placeholder="Candidate Name" id="name" class="form-control"
                                     minlength="1" pattern="[a-zA-Z\s]{1,80}" required>
-                                <span class="invalid" id="nameValid"></span>
+                                    <span class="invalid" id="nameValid"></span>
                             </div>
 
                             <div class="col-sm-6">
                                 <label for="mname" class="col-form-label">Mother's Name:</label>
-                                <input type="text" placeholder="Mother's Name" id="mname" class="form-control"
+                                <span type="text" placeholder="Mother's Name" id="mname" class="form-control"
                                     minlength="1" pattern="[a-zA-Z]{1,80}" required>
-                                <span class="invalid" id="mnameValid"></span>
+                                    <span class="invalid" id="mnameValid"></span>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label for="fname" class="col-form-label">Fathers Name:</label>
-                                <input type="text" placeholder="Fathers Name" id="fname" class="form-control"
+                                <span type="text" placeholder="Fathers Name" id="fname" class="form-control"
                                     minlength="1" pattern="[a-zA-Z\s]{1,80}" required>
-                                <span class="invalid" id="fnameValid"></span>
+                                    <span class="invalid" id="fnameValid"></span>
                             </div>
 
                             <div class="col-sm-6">
                                 <label class="col-form-label" for="mobNumber">Mobile Number:</label>
-                                <input class="form-control" type="number" placeholder="9874563210" id="mobNumber"
+                                <span class="form-control" type="number" placeholder="9874563210" id="mobNumber"
                                     maxlength="10" minlength="10" required pattern="^[0-9]{1,10}$">
-                                <span class="invalid" id="mobValid"></span>
+                                    <span class="invalid" id="mobValid"></span>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label for="email" class="col-form-label">Email Id:</label>
-                                <input type="email" placeholder="abc@abc.com" id="email" class="form-control" required>
-                                <span class="invalid" id="emailValid"></span>
+                                <span type="email" placeholder="abc@abc.com" id="email" class="form-control" required>
+                                    <span class="invalid" id="emailValid"></span>
                             </div>
 
                             <div class="col-sm-6">
                                 <label for="aadhar" class="col-form-label">Aadhar Number:</label>
-                                <input type="text" placeholder="Aadhar Number" id="aadhar" class="form-control"
+                                <span type="text" placeholder="Aadhar Number" id="aadhar" class="form-control"
                                     minlength="12" pattern="^\d{1,12}$" required>
-                                <span class="invalid" id="aadharValid"></span>
+                                    <span class="invalid" id="aadharValid"></span>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label for="dob" class="col-form-label">Date of Birth:</label>
-                                <input type="date" class="form-control" id="dob" required>
+                                <span type="date" class="form-control" id="dob" required>
                             </div>
                             <div class="col-sm-6">
                                 <label for="ageofcandidate" class="col-form-label">Age of candidate as on may
                                     2023:</label>
-                                <input type="text" placeholder="age" id="ageofcandidate" class="form-control"
+                                <span type="text" placeholder="age" id="ageofcandidate" class="form-control"
                                     minlength="" pattern="" required>
-                                <span class="invalid" id="aadharValid"></span>
+                                    <span class="invalid" id="aadharValid"></span>
                             </div>
                         </div>
 
                         <div class="form-group row gender">
                             <label class="form-label col-sm-2">Gender:</label>
                             <div class="form-check form-check-inline col-sm-1">
-                                <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off"
+                                <span type="radio" class="btn-check" name="gender" id="male" autocomplete="off"
                                     required>
-                                <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
+                                    <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
                             </div>
                             <div class="form-check form-check-inline col-sm-1">
-                                <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off"
+                                <span type="radio" class="btn-check" name="gender" id="female" autocomplete="off"
                                     required>
-                                <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
+                                    <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
                             </div>
                             <div class="form-check form-check-inline col-sm-2">
-                                <input type="radio" class="btn-check" name="gender" id="secret" autocomplete="off"
+                                <span type="radio" class="btn-check" name="gender" id="secret" autocomplete="off"
                                     required>
-                                <label class="btn btn-sm btn-outline-secondary" for="secret">Transgender</label>
+                                    <label class="btn btn-sm btn-outline-secondary" for="secret">Transgender</label>
                             </div>
                         </div>
 
@@ -256,17 +178,17 @@
                             <div class="col-sm-6">
                                 <label class="col-form-label" for="height">Height of the Candidate in cm
                                     (Present):</label>
-                                <input class="form-control" type="number" placeholder="Height in CM Ex: 171cm"
+                                <span class="form-control" type="number" placeholder="Height in CM Ex: 171cm"
                                     id="height" maxlength="3" required pattern="^\d{0,3}$">
-                                <span class="invalid" id="heightValid"></span>
+                                    <span class="invalid" id="heightValid"></span>
                             </div>
 
                             <div class="col-sm-6 ">
                                 <label class="col-form-label" for="weight">Weight of the Candidate in kg
                                     (Present):</label>
-                                <input class="form-control" type="number" placeholder="Weight in kg Ex: 85" id="weight"
+                                <span class="form-control" type="number" placeholder="Weight in kg Ex: 85" id="weight"
                                     maxlength="3" required pattern="^\d{0,3}$">
-                                <span class="invalid" id="weightValid"></span>
+                                    <span class="invalid" id="weightValid"></span>
                             </div>
                         </div>
                     </div>
@@ -289,53 +211,53 @@
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label for="door" class="col-form-label">Door No:</label>
-                                <input type="text" class="form-control" id="door" placeholder="Ex: 55" max="100" min="1"
+                                <span type="text" class="form-control" id="door" placeholder="Ex: 55" max="100" min="1"
                                     required pattern="[a-zA-Z0-9]{1,80}">
-                                <span class="invalid" id="doorno"></span>
+                                    <span class="invalid" id="doorno"></span>
                             </div>
 
                             <div class="col-sm-6 ">
                                 <label for="street" class="col-form-label">Street:</label>
-                                <input type="text" class="form-control" id="street" placeholder="Ex: Main Street"
+                                <span type="text" class="form-control" id="street" placeholder="Ex: Main Street"
                                     required>
-                                <span class="invalid" id="streetError"></span>
+                                    <span class="invalid" id="streetError"></span>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label for="area" class="col-form-label">Area:</label>
-                                <input type="text" class="form-control" id="area" placeholder="Ex: Downtown" required>
-                                <span class="invalid" id="areaError"></span>
+                                <span type="text" class="form-control" id="area" placeholder="Ex: Downtown" required>
+                                    <span class="invalid" id="areaError"></span>
                             </div>
 
                             <div class="col-sm-6 ">
                                 <label for="taluk" class="col-form-label">Taluk:</label>
-                                <input type="text" class="form-control" id="taluk" placeholder="Ex: XYZ Taluk" required>
-                                <span class="invalid" id="talukError"></span>
+                                <span type="text" class="form-control" id="taluk" placeholder="Ex: XYZ Taluk" required>
+                                    <span class="invalid" id="talukError"></span>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label for="pincode" class="col-form-label">Pin Code:</label>
-                                <input type="text" class="form-control" id="pincode" placeholder="Ex: 123456" required>
-                                <span class="invalid" id="pincodeError"></span>
+                                <span type="text" class="form-control" id="pincode" placeholder="Ex: 123456" required>
+                                    <span class="invalid" id="pincodeError"></span>
                             </div>
 
                             <div class="col-sm-6 ">
                                 <label for="city" class="col-form-label">City:</label>
-                                <input type="text" class="form-control" id="city" placeholder="Ex: New York" required>
-                                <span class="invalid" id="cityError"></span>
+                                <span type="text" class="form-control" id="city" placeholder="Ex: New York" required>
+                                    <span class="invalid" id="cityError"></span>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label for="nativeDistrict" class="col-form-label">Native District:</label>
-                                <input type="text" class="form-control" id="nativeDistrict"
+                                <span type="text" class="form-control" id="nativeDistrict"
                                     placeholder="Ex: ABC District" required>
-                                <span class="invalid" id="nativeDistrictError"></span>
+                                    <span class="invalid" id="nativeDistrictError"></span>
                             </div>
 
                             <div class="col-sm-6 ">
@@ -404,9 +326,9 @@
 
                             <div class="col-sm-6 ">
                                 <label for="postaladdress" class="col-form-label">Postal Address:</label>
-                                <input type="text" class="form-control" id="postaladdress" placeholder="Postal Address"
+                                <span type="text" class="form-control" id="postaladdress" placeholder="Postal Address"
                                     max="100" min="5" required pattern="[a-zA-Z0-9]{1,80}">
-                                <span class="invalid" id="addressValid"></span>
+                                    <span class="invalid" id="addressValid"></span>
                             </div>
                         </div>
 
@@ -415,14 +337,14 @@
                                 Same?</label>
                             <div class="col-sm-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="addresssame" id="addresssame1"
+                                    <span class="form-check-span" type="radio" name="addresssame" id="addresssame1"
                                         value="Yes" onclick="togglePresentAddress(true)" required>
-                                    <label class="form-check-label" for="male">Yes</label>
+                                        <label class="form-check-label" for="male">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="addresssame" id="addresssame2"
+                                    <span class="form-check-span" type="radio" name="addresssame" id="addresssame2"
                                         value="No" onclick="togglePresentAddress(false)" required>
-                                    <label class="form-check-label" for="female">No</label>
+                                        <label class="form-check-label" for="female">No</label>
                                 </div>
                             </div>
                         </div>
@@ -430,9 +352,9 @@
                         <div class="form-group row permanentAddress hidden" id="paddress">
                             <label for="aadhar" class="col-sm-3 col-form-label">Enter your present address:</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="preAddress" placeholder="Present Address"
+                                <span type="text" class="form-control" id="preAddress" placeholder="Present Address"
                                     max="100" min="5" pattern="[a-zA-Z]{1,80}">
-                                <span class="invalid" id="paddressValid"></span>
+                                    <span class="invalid" id="paddressValid"></span>
                             </div>
                         </div>
                     </div>
@@ -469,9 +391,9 @@
 
                             <div class="col-sm-6 ">
                                 <label for="aadhar" class="col-form-label">Sub Caste:</label>
-                                <input type="text" class="form-control" id="subcaste" placeholder="Ex: Kuruba"
+                                <span type="text" class="form-control" id="subcaste" placeholder="Ex: Kuruba"
                                     pattern="[a-zA-Z]{1,80}" required>
-                                <span class="invalid" id="subcasteValid"></span>
+                                    <span class="invalid" id="subcasteValid"></span>
 
                             </div>
 
@@ -481,7 +403,7 @@
 
                             <div class="col-sm-6">
                                 <label for="doi" class="col-form-label">Date of Issue:</label>
-                                <input type="date" class="form-control" id="doi" required>
+                                <span type="date" class="form-control" id="doi" required>
                             </div>
                         </div>
 
@@ -490,14 +412,14 @@
                                 Challenged?</label>
                             <div class="col-sm-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="serviceman" id="question1-yes"
+                                    <span class="form-check-span" type="radio" name="serviceman" id="question1-yes"
                                         value="yes" required>
-                                    <label class="form-check-label" for="question1-yes">Yes</label>
+                                        <label class="form-check-label" for="question1-yes">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="serviceman" id="question1-no"
+                                    <span class="form-check-span" type="radio" name="serviceman" id="question1-no"
                                         value="no" required>
-                                    <label class="form-check-label" for="question1-no">No</label>
+                                        <label class="form-check-label" for="question1-no">No</label>
                                 </div>
                             </div>
                         </div>
@@ -507,14 +429,14 @@
                                 Child?</label>
                             <div class="col-sm-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="serviceman" id="question2-yes"
+                                    <span class="form-check-span" type="radio" name="serviceman" id="question2-yes"
                                         value="yes" required>
-                                    <label class="form-check-label" for="question2-yes">Yes</label>
+                                        <label class="form-check-label" for="question2-yes">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="serviceman" id="question2-no"
+                                    <span class="form-check-span" type="radio" name="serviceman" id="question2-no"
                                         value="no" required>
-                                    <label class="form-check-label" for="question2-no">No</label>
+                                        <label class="form-check-label" for="question2-no">No</label>
                                 </div>
                             </div>
                         </div>
@@ -527,14 +449,14 @@
                                 service was died in action (only for Exservicemen Children)?</label>
                             <div class="col-sm-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="exserviceman" id="question3-yes"
+                                    <span class="form-check-span" type="radio" name="exserviceman" id="question3-yes"
                                         value="yes" required>
-                                    <label class="form-check-label" for="question3-yes">Yes</label>
+                                        <label class="form-check-label" for="question3-yes">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="exserviceman" id="question3-no"
+                                    <span class="form-check-span" type="radio" name="exserviceman" id="question3-no"
                                         value="no" required>
-                                    <label class="form-check-label" for="question3-no">No</label>
+                                        <label class="form-check-label" for="question3-no">No</label>
                                 </div>
                             </div>
                         </div>
@@ -547,14 +469,14 @@
                                 permanently disabled (only for Exservicemen Children)?</label>
                             <div class="col-sm-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="exserviceman" id="question4-yes"
+                                    <span class="form-check-span" type="radio" name="exserviceman" id="question4-yes"
                                         value="yes" required>
-                                    <label class="form-check-label" for="question4-yes">Yes</label>
+                                        <label class="form-check-label" for="question4-yes">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="exserviceman" id="question4-no"
+                                    <span class="form-check-span" type="radio" name="exserviceman" id="question4-no"
                                         value="no" required>
-                                    <label class="form-check-label" for="question4-no">No</label>
+                                        <label class="form-check-label" for="question4-no">No</label>
                                 </div>
                             </div>
                         </div>
@@ -564,14 +486,14 @@
                             <label class="col-sm-6 col-form-label">Are you claiming PDP Reservation?</label>
                             <div class="col-sm-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="pdpreservation"
-                                        id="question5-yes" value="yes" required>
-                                    <label class="form-check-label" for="question5-yes">Yes</label>
+                                    <span class="form-check-span" type="radio" name="pdpreservation" id="question5-yes"
+                                        value="yes" required>
+                                        <label class="form-check-label" for="question5-yes">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="pdpreservation" id="question5-no"
+                                    <span class="form-check-span" type="radio" name="pdpreservation" id="question5-no"
                                         value="no" required>
-                                    <label class="form-check-label" for="question5-no">No</label>
+                                        <label class="form-check-label" for="question5-no">No</label>
                                 </div>
                             </div>
                         </div>
@@ -579,7 +501,7 @@
                         <div class="form-group row">
                             <label for="dop" class="col-sm-3 col-form-label">Date of Issue:</label>
                             <div class="col-sm-9">
-                                <input type="date" class="form-control" id="dop" required>
+                                <span type="date" class="form-control" id="dop" required>
                             </div>
                         </div>
 
@@ -588,14 +510,14 @@
                                 Reservation?</label>
                             <div class="col-sm-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="kanmediumreservation"
+                                    <span class="form-check-span" type="radio" name="kanmediumreservation"
                                         id="question6-yes" value="yes" required>
-                                    <label class="form-check-label" for="question6-yes">Yes</label>
+                                        <label class="form-check-label" for="question6-yes">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="kanmediumreservation"
+                                    <span class="form-check-span" type="radio" name="kanmediumreservation"
                                         id="question6-no" value="no" required>
-                                    <label class="form-check-label" for="question6-no">No</label>
+                                        <label class="form-check-label" for="question6-no">No</label>
                                 </div>
                             </div>
                         </div>
@@ -603,7 +525,7 @@
                         <div class="form-group row">
                             <label for="dok" class="col-sm-3 col-form-label">Date of Issue:</label>
                             <div class="col-sm-9">
-                                <input type="date" class="form-control" id="dok" required>
+                                <span type="date" class="form-control" id="dok" required>
                             </div>
                         </div>
 
@@ -612,14 +534,14 @@
                                 Reservation?</label>
                             <div class="col-sm-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="ruralreservation"
+                                    <span class="form-check-span" type="radio" name="ruralreservation"
                                         id="question7-yes" value="yes" required>
-                                    <label class="form-check-label" for="question7-yes">Yes</label>
+                                        <label class="form-check-label" for="question7-yes">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="ruralreservation"
-                                        id="question7-no" value="no" required>
-                                    <label class="form-check-label" for="question7-no">No</label>
+                                    <span class="form-check-span" type="radio" name="ruralreservation" id="question7-no"
+                                        value="no" required>
+                                        <label class="form-check-label" for="question7-no">No</label>
                                 </div>
                             </div>
                         </div>
@@ -627,7 +549,7 @@
                         <div class="form-group row">
                             <label for="dor" class="col-sm-3 col-form-label">Date of Issue:</label>
                             <div class="col-sm-9">
-                                <input type="date" class="form-control" id="dor" required>
+                                <span type="date" class="form-control" id="dor" required>
                             </div>
                         </div>
 
@@ -637,14 +559,14 @@
                                 ?</label>
                             <div class="col-sm-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="kalyanakarnataka"
-                                        id="kalyana-yes" value="yes" required>
-                                    <label class="form-check-label" for="kalyana-yes">Yes</label>
+                                    <span class="form-check-span" type="radio" name="kalyanakarnataka" id="kalyana-yes"
+                                        value="yes" required>
+                                        <label class="form-check-label" for="kalyana-yes">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="kalyanakarnataka" id="kalyana-no"
+                                    <span class="form-check-span" type="radio" name="kalyanakarnataka" id="kalyana-no"
                                         value="no" required>
-                                    <label class="form-check-label" for="kalyana-no">No</label>
+                                        <label class="form-check-label" for="kalyana-no">No</label>
                                 </div>
                             </div>
                         </div>
@@ -671,14 +593,14 @@
                             <label class="col-sm-6 col-form-label">Are you a Government Employee ?</label>
                             <div class="col-sm-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="governmentemployee" id="govt-yes"
+                                    <span class="form-check-span" type="radio" name="governmentemployee" id="govt-yes"
                                         value="yes" required>
-                                    <label class="form-check-label" for="govt-yes">Yes</label>
+                                        <label class="form-check-label" for="govt-yes">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="governmentemployee" id="govt-no"
+                                    <span class="form-check-span" type="radio" name="governmentemployee" id="govt-no"
                                         value="no" required>
-                                    <label class="form-check-label" for="govt-no">No</label>
+                                        <label class="form-check-label" for="govt-no">No</label>
                                 </div>
                             </div>
                         </div>
@@ -687,9 +609,9 @@
                             <label for="department" class="col-sm-3 col-form-label">If Yes mention the
                                 department:</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="department" placeholder="Cultural" max="100"
+                                <span type="text" class="form-control" id="department" placeholder="Cultural" max="100"
                                     min="5" pattern="[a-zA-Z]{1,80}">
-                                <span class="invalid" id="department"></span>
+                                    <span class="invalid" id="department"></span>
                             </div>
                         </div>
 
@@ -697,43 +619,43 @@
                             <label for="designation" class="col-sm-3 col-form-label">If Yes mention the
                                 designation:</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="designation" placeholder="Cultural"
-                                    max="100" min="5" pattern="[a-zA-Z]{1,80}">
-                                <span class="invalid" id="designation"></span>
+                                <span type="text" class="form-control" id="designation" placeholder="Cultural" max="100"
+                                    min="5" pattern="[a-zA-Z]{1,80}">
+                                    <span class="invalid" id="designation"></span>
                             </div>
                         </div>
 
                         <div class="form-group row permanentAddress hidden" id="designationyears">
                             <label for="designationyears" class="col-sm-3 col-form-label">Years:</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="designationyears" placeholder="Cultural"
+                                <span type="text" class="form-control" id="designationyears" placeholder="Cultural"
                                     max="100" min="5" pattern="[a-zA-Z]{1,80}">
-                                <span class="invalid" id="designationyears"></span>
+                                    <span class="invalid" id="designationyears"></span>
                             </div>
                         </div>
 
                         <div class="form-group row permanentAddress hidden" id="designationmonths">
                             <label for="designationmonths" class="col-sm-3 col-form-label">Months:</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="designationmonths" placeholder="Cultural"
+                                <span type="text" class="form-control" id="designationmonths" placeholder="Cultural"
                                     max="100" min="5" pattern="[a-zA-Z]{1,80}">
-                                <span class="invalid" id="designationmonths"></span>
+                                    <span class="invalid" id="designationmonths"></span>
                             </div>
                         </div>
 
                         <div class="form-group row permanentAddress hidden" id="designationdays">
                             <label for="designationdays" class="col-sm-3 col-form-label">Days:</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="designationdays" placeholder="Cultural"
+                                <span type="text" class="form-control" id="designationdays" placeholder="Cultural"
                                     max="100" min="5" pattern="[a-zA-Z]{1,80}">
-                                <span class="invalid" id="designationdays"></span>
+                                    <span class="invalid" id="designationdays"></span>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="dojoi" class="col-sm-3 col-form-label">Date of Joining:</label>
                             <div class="col-sm-9">
-                                <input type="date" class="form-control" id="dojoi" required>
+                                <span type="date" class="form-control" id="dojoi" required>
                             </div>
                         </div>
 
@@ -741,7 +663,7 @@
                         <div class="form-group row">
                             <label for="dokal" class="col-sm-3 col-form-label">Date of Issue:</label>
                             <div class="col-sm-9">
-                                <input type="date" class="form-control" id="dokal" required>
+                                <span type="date" class="form-control" id="dokal" required>
                             </div>
                         </div>
 
@@ -749,14 +671,14 @@
                             <label class="col-sm-6 col-form-label">Are you claiming Transgender Reservation?</label>
                             <div class="col-sm-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="transgenderreservation"
+                                    <span class="form-check-span" type="radio" name="transgenderreservation"
                                         id="pdpreservation" value="yes" required>
-                                    <label class="form-check-label" for="pdpreservation">Yes</label>
+                                        <label class="form-check-label" for="pdpreservation">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="transgenderreservation"
+                                    <span class="form-check-span" type="radio" name="transgenderreservation"
                                         id="question5-no" value="no" required>
-                                    <label class="form-check-label" for="question5-no">No</label>
+                                        <label class="form-check-label" for="question5-no">No</label>
                                 </div>
                             </div>
                         </div>
@@ -766,14 +688,14 @@
                                 Cases?</label>
                             <div class="col-md-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="criminalcases" id="criminalcases"
+                                    <span class="form-check-span" type="radio" name="criminalcases" id="criminalcases"
                                         value="yes" required>
-                                    <label class="form-check-label" for="criminalcases">Yes</label>
+                                        <label class="form-check-label" for="criminalcases">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="criminalcases" id="criminalcases"
+                                    <span class="form-check-span" type="radio" name="criminalcases" id="criminalcases"
                                         value="no" required>
-                                    <label class="form-check-label" for="criminalcases">No</label>
+                                        <label class="form-check-label" for="criminalcases">No</label>
                                 </div>
                             </div>
                         </div>
@@ -782,9 +704,9 @@
                             <label for="criminalcases" class="col-sm-3 col-form-label">If Yes mention the
                                 details:</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="criminalcases" placeholder="details"
+                                <span type="text" class="form-control" id="criminalcases" placeholder="details"
                                     max="100" min="5" pattern="[a-zA-Z]{1,80}">
-                                <span class="invalid" id="criminalcases"></span>
+                                    <span class="invalid" id="criminalcases"></span>
                             </div>
                         </div>
 
@@ -794,14 +716,14 @@
                                 Enquiry?</label>
                             <div class="col-md-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="departmentalenquiry"
+                                    <span class="form-check-span" type="radio" name="departmentalenquiry"
                                         id="pdpreservation" value="yes" required>
-                                    <label class="form-check-label" for="pdpreservation">Yes</label>
+                                        <label class="form-check-label" for="pdpreservation">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="departmentalenquiry"
+                                    <span class="form-check-span" type="radio" name="departmentalenquiry"
                                         id="departmentalenquiry" value="no" required>
-                                    <label class="form-check-label" for="departmentalenquiry">No</label>
+                                        <label class="form-check-label" for="departmentalenquiry">No</label>
                                 </div>
                             </div>
                         </div>
@@ -809,9 +731,9 @@
                         <div class="form-group row criminalcases" id="departmentalenquiry2">
                             <label for="de`" class="col-sm-3 col-form-label">If Yes mention the details:</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="criminalcases" placeholder="details"
+                                <span type="text" class="form-control" id="criminalcases" placeholder="details"
                                     max="100" min="5" pattern="[a-zA-Z]{1,80}">
-                                <span class="invalid" id="de`"></span>
+                                    <span class="invalid" id="de`"></span>
                             </div>
                         </div>
 
@@ -820,12 +742,12 @@
                                 Enquiry?</label>
                             <div class="col-md-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="degreeholder"
+                                    <span class="form-check-span" type="radio" name="degreeholder"
                                         id="degreeholderyes" value="yes" required>
                                     <label class="form-check-label" for="pdpreservation">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="degreeholder" id="degreeholderno"
+                                    <span class="form-check-span" type="radio" name="degreeholder" id="degreeholderno"
                                         value="no" required>
                                     <label class="form-check-label" for="degreeholderno">No</label>
                                 </div>
@@ -873,14 +795,14 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="passed" id="passed" value="yes"
+                                    <span class="form-check-span" type="radio" name="passed" id="passed" value="yes"
                                         required>
-                                    <label class="form-check-label" for="passed">Yes</label>
+                                        <label class="form-check-label" for="passed">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="passed" id="passedno" value="no"
+                                    <span class="form-check-span" type="radio" name="passed" id="passedno" value="no"
                                         required>
-                                    <label class="form-check-label" for="passedno">No</label>
+                                        <label class="form-check-label" for="passedno">No</label>
                                 </div>
                             </div>
                         </div>
@@ -936,16 +858,16 @@
                         <div class="form-group row" id="marks">
                             <div class="col-sm-6">
                                 <label for="marks" class="col-form-label">Maximum marks:</label>
-                                <input type="text" class="form-control" id="marks" placeholder="details" max="100"
+                                <span type="text" class="form-control" id="marks" placeholder="details" max="100"
                                     min="5" pattern="[a-zA-Z]{1,80}">
-                                <span class="invalid" id="criminalcases"></span>
+                                    <span class="invalid" id="criminalcases"></span>
                             </div>
 
                             <div class="col-sm-6 ">
                                 <label for="marksobtained" class="col-form-label">Marks Obtained:</label>
-                                <input type="text" class="form-control" id="marksobtained" placeholder="details"
+                                <span type="text" class="form-control" id="marksobtained" placeholder="details"
                                     max="100" min="5" pattern="[a-zA-Z]{1,80}">
-                                <span class="invalid" id="marksobtained"></span>
+                                    <span class="invalid" id="marksobtained"></span>
                             </div>
                         </div>
 
@@ -953,9 +875,9 @@
                         <div class="form-group row" id="marks">
                             <div class="col-sm-6">
                                 <label for="Percentage" class="col-form-label">Percentage:</label>
-                                <input type="text" class="form-control" id="Percentage" placeholder="details" max="100"
+                                <span type="text" class="form-control" id="Percentage" placeholder="details" max="100"
                                     min="5" pattern="[a-zA-Z]{1,80}">
-                                <span class="invalid" id="Percentage"></span>
+                                    <span class="invalid" id="Percentage"></span>
                             </div>
                         </div>
 
@@ -965,14 +887,14 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="boardlanguage" id="boardlanguage"
+                                    <span class="form-check-span" type="radio" name="boardlanguage" id="boardlanguage"
                                         value="yes" required>
-                                    <label class="form-check-label" for="boardlanguage">Yes</label>
+                                        <label class="form-check-label" for="boardlanguage">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="boardlanguage"
-                                        id="boardlanguageno" value="no" required>
-                                    <label class="form-check-label" for="boardlanguageno">No</label>
+                                    <span class="form-check-span" type="radio" name="boardlanguage" id="boardlanguageno"
+                                        value="no" required>
+                                        <label class="form-check-label" for="boardlanguageno">No</label>
                                 </div>
                             </div>
                         </div>
@@ -983,14 +905,14 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="boardlanguagekan"
+                                    <span class="form-check-span" type="radio" name="boardlanguagekan"
                                         id="boardlanguagekan" value="yes" required>
-                                    <label class="form-check-label" for="boardlanguagekan">Yes</label>
+                                        <label class="form-check-label" for="boardlanguagekan">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="boardlanguagekan"
+                                    <span class="form-check-span" type="radio" name="boardlanguagekan"
                                         id="boardlanguagekanno" value="no" required>
-                                    <label class="form-check-label" for="boardlanguagekanno">No</label>
+                                        <label class="form-check-label" for="boardlanguagekanno">No</label>
                                 </div>
                             </div>
                         </div>
@@ -1001,14 +923,14 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="passed" id="passed" value="yes"
+                                    <span class="form-check-span" type="radio" name="passed" id="passed" value="yes"
                                         required>
-                                    <label class="form-check-label" for="passed">Yes</label>
+                                        <label class="form-check-label" for="passed">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="passed" id="passedno" value="no"
+                                    <span class="form-check-span" type="radio" name="passed" id="passedno" value="no"
                                         required>
-                                    <label class="form-check-label" for="passedno">No</label>
+                                        <label class="form-check-label" for="passedno">No</label>
                                 </div>
                             </div>
                         </div>
@@ -1016,16 +938,16 @@
                         <div class="form-group row" id="marks">
                             <div class="col-sm-6">
                                 <label for="marks" class="col-form-label">Maximum marks:</label>
-                                <input type="text" class="form-control" id="marks" placeholder="details" max="100"
+                                <span type="text" class="form-control" id="marks" placeholder="details" max="100"
                                     min="5" pattern="[a-zA-Z]{1,80}">
-                                <span class="invalid" id="criminalcases"></span>
+                                    <span class="invalid" id="criminalcases"></span>
                             </div>
 
                             <div class="col-sm-6 ">
                                 <label for="marksobtained" class="col-form-label">Marks Obtained:</label>
-                                <input type="text" class="form-control" id="marksobtained" placeholder="details"
+                                <span type="text" class="form-control" id="marksobtained" placeholder="details"
                                     max="100" min="5" pattern="[a-zA-Z]{1,80}">
-                                <span class="invalid" id="marksobtained"></span>
+                                    <span class="invalid" id="marksobtained"></span>
                             </div>
                         </div>
 
@@ -1033,20 +955,20 @@
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label for="dor" class="col-form-label">Result Date:</label>
-                                <input type="date" class="form-control" id="dor" required>
+                                <span type="date" class="form-control" id="dor" required>
                             </div>
                             <div class="col-sm-6 ">
                                 <label for="mop" class="col-form-label">Month of Passing:</label>
-                                <input type="month" class="form-control" id="mop" required>
+                                <span type="month" class="form-control" id="mop" required>
                             </div>
                         </div>
 
                         <div class="form-group row" id="marks">
                             <div class="col-sm-6">
                                 <label for="puc" class="col-form-label">PUC Registration No:</label>
-                                <input type="text" class="form-control" id="puc" placeholder="details" max="100" min="5"
+                                <span type="text" class="form-control" id="puc" placeholder="details" max="100" min="5"
                                     pattern="[a-zA-Z]{1,80}">
-                                <span class="invalid" id="puc"></span>
+                                    <span class="invalid" id="puc"></span>
                             </div>
                             <div class="col-sm-6 ">
                                 <label for="Stream" class="col-form-label">PUC Stream:</label>
@@ -1091,9 +1013,9 @@
                         <div class="form-group row">
                             <label for="idcard" class="col-sm-3">Identity Card No:</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="idcard" placeholder="Identity Card No"
+                                <span type="text" class="form-control" id="idcard" placeholder="Identity Card No"
                                     pattern="[a-zA-Z0-9]{1,10}" required>
-                                <span class="invalid" id="idValid"></span>
+                                    <span class="invalid" id="idValid"></span>
                             </div>
                         </div>
 
@@ -1103,40 +1025,40 @@
                         <div class="form-group row">
                             <label for="aadhar-upload" class="col-sm-3">Aadhar Card:</label>
                             <div class="col-sm-9">
-                                <input type="file" class="form-control" id="aadhar-upload"
+                                <span type="file" class="form-control" id="aadhar-upload"
                                     onchange="previewFile('aadhar-upload', 'aadhar-preview')"
                                     accept="image/jpeg, image/png" required>
-                                <!-- <img id="aadhar-preview" src="" style="max-width:100%; height:auto; display:none;"> -->
+                                    <!-- <img id="aadhar-preview" src="" style="max-width:100%; height:auto; display:none;"> -->
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="signature-upload" class="col-sm-3">Signature:</label>
                             <div class="col-sm-9">
-                                <input type="file" class="form-control" id="signature-upload"
+                                <span type="file" class="form-control" id="signature-upload"
                                     onchange="previewFile('signature-upload', 'signature-preview')"
                                     accept="image/jpeg, image/png" required>
-                                <!-- <img id="signature-preview" src="" style="max-width:100%; height:auto; display:none;"> -->
+                                    <!-- <img id="signature-preview" src="" style="max-width:100%; height:auto; display:none;"> -->
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="thumb-upload" class="col-sm-3">Applicant Thumb Impression:</label>
                             <div class="col-sm-9">
-                                <input type="file" class="form-control" id="thumb-upload"
+                                <span type="file" class="form-control" id="thumb-upload"
                                     onchange="previewFile('thumb-upload', 'thumb-preview')"
                                     accept="image/jpeg, image/png" required>
-                                <!-- <img id="thumb-preview" src="" style="max-width:100%; height:auto; display:none;"> -->
+                                    <!-- <img id="thumb-preview" src="" style="max-width:100%; height:auto; display:none;"> -->
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="photo-upload" class="col-sm-3">Applicant Passport Photo:</label>
                             <div class="col-sm-9">
-                                <input type="file" class="form-control" id="photo-upload"
+                                <span type="file" class="form-control" id="photo-upload"
                                     onchange="previewFile('photo-upload', 'photo-preview')"
                                     accept="image/jpeg, image/png" required>
-                                <!-- <img id="thumb-preview" src="" style="max-width:100%; height:auto; display:none;"> -->
+                                    <!-- <img id="thumb-preview" src="" style="max-width:100%; height:auto; display:none;"> -->
                             </div>
                         </div>
 
@@ -1173,40 +1095,19 @@
 
 
         </form>
-        <div class="d-flex justify-content-center">
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary" id="submitBtn"><i class="far fa-paper-plane"></i>
-                    Submit</button>
-            </div>
-            <div class="text-center mx-5">
-                <button type="submit" class="btn btn-primary" id="previewBtn" onclick="openPreviewWindow()"><i
-                        class="far fa-eye"></i>
-                    Preview</button>
-            </div>
-        </div>
-
-    </div>
 
 
 
-    <!-- Bootstrap JS -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/main.js"></script>
-    <script src="main.js"></script>
+        <!-- Bootstrap JS -->
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/main.js"></script>
+        <script src="main.js"></script>
 
-    <script>
-        function openPreviewWindow() {
-            // Replace 'preview.html' with the URL or file path of the page containing the application details
-            var newWindow = window.open('previewapplication.html', '_blank', "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=800,height=800");
-            if (newWindow) {
-                newWindow.opener = null; // Disassociate the new window from the current window
-            }
-        }
-    </script>
+
 
 
 
