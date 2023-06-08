@@ -128,17 +128,31 @@ a:hover {
   width: 100%;
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
+  /* /* background-repeat: no-repeat; */
   /* background-image: url('images/Home.svg'); */
   background-image: url(/images/Home.svg);
 }
 
+
 @media (max-width: 767px) {
   .hero {
-    height: 200vh;
-    margin-top: -131px;
+    /* height: 200vh; */
+    margin-top: 20px;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
     /* Adjust the value as needed */
   }
+}
+
+.login-app {
+  height: 100vh;
+  width: 100%;
+}
+
+.text-dark {
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .widget-posts-meta {
@@ -201,6 +215,10 @@ a:hover {
   padding: .5rem 0;
   background: linear-gradient(to right, #5233ff, #66ccff);
   font-size: 14px;
+}
+
+#top-bar {
+  padding-bottom: inherit;
 }
 
 .site-logo img {
