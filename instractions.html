@@ -121,7 +121,68 @@
         </div>
 
     </header>
+    <hr>
 
+
+    <div class="container mt-4">
+        <h2>Instructions</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <h4>English Instructions:</h4>
+                <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum semper
+                    congue. Proin
+                    ultricies lectus at nisl mollis, eget blandit lorem feugiat. Morbi cursus, magna id dignissim
+                    hendrerit, libero felis tempor neque, sed ultrices justo quam nec neque. Mauris vitae arcu nunc.
+                    Sed suscipit lacus eu metus rhoncus, vitae suscipit elit condimentum.</p>
+                <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum semper
+                    congue. Proin
+                    ultricies lectus at nisl mollis, eget blandit lorem feugiat. Morbi cursus, magna id dignissim
+                    hendrerit, libero felis tempor neque, sed ultrices justo quam nec neque. Mauris vitae arcu nunc.
+                    Sed suscipit lacus eu metus rhoncus, vitae suscipit elit condimentum.</p>
+                <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum semper
+                    congue. Proin
+                    ultricies lectus at nisl mollis, eget blandit lorem feugiat. Morbi cursus, magna id dignissim
+                    hendrerit, libero felis tempor neque, sed ultrices justo quam nec neque. Mauris vitae arcu nunc.
+                    Sed suscipit lacus eu metus rhoncus, vitae suscipit elit condimentum.</p>
+
+                <h4>Kannada Instructions:</h4>
+                <p>ನಿರ್ದೇಶಗಳು ಇಲ್ಲಿ ಇರುತ್ತವೆ.</p>
+
+                <div class="form-check mt-4">
+                    <input type="checkbox" class="form-check-input" id="agreeCheckbox">
+                    <label class="form-check-label" for="agreeCheckbox">I agree to all the terms and
+                        conditions</label>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <button class="btn btn-secondary mr-2" id="backBtn">Back</button>
+                <button class="btn btn-primary" id="nextBtn">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        // Handle Back button click event
+        document.getElementById('backBtn').addEventListener('click', function () {
+            // Add your logic for going back to the previous page
+            console.log('Back button clicked');
+        });
+
+        // Handle Next button click event
+        document.getElementById('nextBtn').addEventListener('click', function () {
+            // Check if the "Agree" checkbox is checked
+            if (document.getElementById('agreeCheckbox').checked) {
+                // Add your logic for proceeding to the next page
+                console.log('Next button clicked');
+            } else {
+                alert('Please agree to the terms and conditions.');
+            }
+        });
+    </script>
 
 
 

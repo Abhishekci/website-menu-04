@@ -149,7 +149,7 @@
                         <div class="form-group">
                             <label for="candidate-type">You are applying as a / ನೀವು ಅರ್ಜಿ ಸಲ್ಲಿಸುವುದು:</label>
                             <select class="form-control mt-2" id="candidate-type" required>
-                                <option value="">Select an option / ಒಂದು ಆಯ್ಕೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ</option>
+
                                 <option value="option1">Direct Candidate / ನೇರವಾಗಿ ಅರ್ಜಿದಾರ</option>
                                 <option value="option2">Inservice / ಸೇವಾ ಮಂಡಳಿಯಲ್ಲಿ ಕೆಲಸಮಾಡುವವರು</option>
                                 <option value="option3">Exservice / ಸೇವಾ ನಿವೃತ್ತರು</option>
@@ -161,7 +161,7 @@
                         <div class="form-group">
                             <label for="unit-name">Unit Name / ಯೂನಿಟ್ ಹೆಸರು:</label>
                             <select id="unit-name" class="form-control mt-2" required>
-                                <option value="">Select a unit / ಯೂನಿಟ್ ಆಯ್ಕೆಮಾಡಿ</option>
+
                                 <option value="Bengaluru">Bengaluru / ಬೆಂಗಳೂರು</option>
                                 <option value="Mumbai">Mumbai / ಮುಂಬೈ</option>
                                 <option value="Delhi">Delhi / ದೆಹಲಿ</option>
@@ -337,7 +337,7 @@
                             <div class="col-sm-6">
                                 <label for="district" class="col-form-label">17. District / ಜಿಲ್ಲೆ:</label>
                                 <select class="form-control" id="district" required>
-                                    <option value="">Choose an option / ಒಂದು ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ</option>
+
                                     <option value="Bengaluru">Bengaluru / ಬೆಂಗಳೂರು</option>
                                     <option value="Dharwad">Dharwad / ಧಾರವಾಡ</option>
                                     <option value="ST">Sikkim / ಸಿಕ್ಕಿಮ್</option>
@@ -348,6 +348,17 @@
                                     <option value="CAT1">CAT 1 / ಕ್ಯಾಟ್ 1</option>
                                 </select>
                             </div>
+                            <div class="col-sm-6">
+                                <label for="district" class="col-form-label">18. If selected other mention the Other
+                                    District / ಜಿಲ್ಲೆ:</label>
+                                <input type="text" class="form-control" id="nativeDistrict"
+                                    placeholder="Ex: ABC District" required>
+                                <span class="invalid" id="nativeDistrictError"></span>
+                            </div>
+
+
+                        </div>
+                        <div class="form-group row">
                             <div class="col-sm-6">
                                 <label for="nativeDistrict" class="col-form-label">18. Native District / ಮೂಲ
                                     ಜಿಲ್ಲೆ:</label>
@@ -356,27 +367,10 @@
                                 <span class="invalid" id="nativeDistrictError"></span>
                             </div>
 
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-6">
-                                <label for="district" class="col-form-label">19. District / ಜಿಲ್ಲೆ:</label>
-                                <select class="form-control" id="district" required>
-                                    <option value="">Choose an option / ಒಂದು ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ</option>
-                                    <option value="Bengaluru">Bengaluru / ಬೆಂಗಳೂರು</option>
-                                    <option value="Dharwad">Dharwad / ಧಾರವಾಡ</option>
-                                    <option value="ST">Sikkim / ಸಿಕ್ಕಿಮ್</option>
-                                    <option value="2A">2A</option>
-                                    <option value="2B">2B</option>
-                                    <option value="3A">3A</option>
-                                    <option value="3B">3B</option>
-                                    <option value="CAT1">CAT 1 / ಕ್ಯಾಟ್ 1</option>
-                                </select>
-                            </div>
-
                             <div class="col-sm-6">
                                 <label for="state" class="col-form-label">20. State / ರಾಜ್ಯ:</label>
                                 <select class="form-control" id="state" required>
-                                    <option value="">Choose an option / ಒಂದು ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ</option>
+
                                     <option value="Karnataka">Karnataka / ಕರ್ನಾಟಕ</option>
                                     <option value="TN">Tamil Nadu / ತಮಿಳು ನಾಡು</option>
                                     <option value="ST">Sikkim / ಸಿಕ್ಕಿಮ್</option>
@@ -390,21 +384,7 @@
 
                         </div>
                         <div class="form-group row">
-                            <div class="col-sm-6">
-                                <label for="otherDistrict" class="col-form-label">21. Other District / ಇತರ
-                                    ಜಿಲ್ಲೆ:</label>
-                                <select class="form-control" id="otherDistrict">
-                                    <option value="">Choose an option / ಒಂದು ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ</option>
-                                    <option value="Gadag">Gadag / ಗದಗ</option>
-                                    <option value="Raichur">Raichur / ರಾಯಚೂರು</option>
-                                    <option value="ST">Sikkim / ಸಿಕ್ಕಿಮ್</option>
-                                    <option value="2A">2A</option>
-                                    <option value="2B">2B</option>
-                                    <option value="3A">3A</option>
-                                    <option value="3B">3B</option>
-                                    <option value="CAT1">CAT 1 / ಕ್ಯಾಟ್ 1</option>
-                                </select>
-                            </div>
+
                             <div class="col-sm-6">
                                 <label for="postalAddress" class="col-form-label">22. Postal Address / ಅಂಚೆ
                                     ವಿಳಾಸ:</label>
@@ -413,8 +393,26 @@
                                     pattern="[a-zA-Z0-9]{1,80}">
                                 <span class="invalid" id="postalAddressValid"></span>
                             </div>
+                            <div class="col-sm-6">
+                                <label class="col-form-label">23. Permanent Address & Postal Address are Same?
+                                    /
+                                    ಶಾಶ್ವತ
+                                    ವಿಳಾಸ ಮತ್ತು
+                                    ಅಂಚೆ ವಿಳಾಸ
+                                    ಒಂದೇ?</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="addressSame" id="addressSame1"
+                                        value="Yes" onclick="togglePresentAddress(true)" required>
+                                    <label class="form-check-label" for="addressSame1">Yes / ಹೌದು</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="addressSame" id="addressSame2"
+                                        value="No" onclick="togglePresentAddress(false)" required>
+                                    <label class="form-check-label" for="addressSame2">No / ಇಲ್ಲ</label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <label class="col-sm-6 col-form-label">23. Permanent Address & Postal Address are Same? /
                                 ಶಾಶ್ವತ
                                 ವಿಳಾಸ ಮತ್ತು
@@ -432,7 +430,7 @@
                                     <label class="form-check-label" for="addressSame2">No / ಇಲ್ಲ</label>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="form-group row">
 
                             <div class="col-sm-12">
@@ -466,7 +464,7 @@
                             <div class="col-sm-6">
                                 <label for="category" class="col-form-label">24. Category / ವರ್ಗ:</label>
                                 <select class="form-control" id="category" required>
-                                    <option value="">Choose an option / ಒಂದು ಆಯ್ಕೆ ಮಾಡಿ</option>
+
                                     <option value="option1">General / ಸಾಮಾನ್ಯ</option>
                                     <option value="option2">SC / ಎಸ್.ಸಿ</option>
                                     <option value="option3">ST / ಎಸ್.ಟಿ</option>
@@ -595,7 +593,8 @@
                             </div>
 
                             <div class="col-sm-6 ">
-                                <label for="aadhar" class="col-form-label">27e. How many service are you rendered ?
+                                <label for="aadhar" class="col-form-label">27e. How many years service are you rendered
+                                    ?
                                     / ಉಪ ಜಾತಿ:</label>
                                 <input type="text" class="form-control" id="subcaste" placeholder="Ex: Kuruba / ಕುರುಬ"
                                     pattern="[a-zA-Z]{1,80}" required>
@@ -750,7 +749,7 @@
                                 ಜಿಲ್ಲೆಯನ್ನು ಉಲ್ಲೇಖಿಸಿ:</label>
                             <div class="col-sm-9">
                                 <select class="form-control" id="kaldis">
-                                    <option value="">Choose an option / ಒಂದು ಆಯ್ಕೆ ಮಾಡಿ</option>
+
                                     <option value="option1">Gadag / ಗದಗ</option>
                                     <option value="option2">Raichur / ರಾಯಚೂರು</option>
                                     <option value="option3">ST / ಎಸ್.ಟಿ</option>
@@ -795,7 +794,8 @@
                                 <span class="invalid" id="subcasteValid"></span>
                             </div>
                             <div class="col-sm-6 ">
-                                <label for="aadhar" class="col-form-label">33c. How many service are you rendered ?
+                                <label for="aadhar" class="col-form-label">33c. How many years service are you rendered
+                                    ?
                                     / ಉಪ ಜಾತಿ:</label>
                                 <input type="text" class="form-control" id="subcaste" placeholder="Ex: Kuruba / ಕುರುಬ"
                                     pattern="[a-zA-Z]{1,80}" required>
@@ -829,7 +829,8 @@
                                 <span class="invalid" id="subcasteValid"></span>
                             </div>
                             <div class="col-sm-6 ">
-                                <label for="aadhar" class="col-form-label">34c. How many service are you rendered ?
+                                <label for="aadhar" class="col-form-label">34c. How many years service are you rendered
+                                    ?
                                     / ಉಪ ಜಾತಿ:</label>
                                 <input type="text" class="form-control" id="subcaste" placeholder="Ex: Kuruba / ಕುರುಬ"
                                     pattern="[a-zA-Z]{1,80}" required>
@@ -1002,7 +1003,7 @@
                                     Language as?<br>SSLC ನಲ್ಲಿ
                                     ಕನ್ನಡ ಭಾಷೆಯನ್ನು ಅಧ್ಯಯನಿಸಿದ್ದೀರಾ?</label>
                                 <select class="form-control" id="kanEducation" required>
-                                    <option value="">Choose an option<br>ಆಯ್ಕೆಮಾಡಿ</option>
+
                                     <option value="option1">Kannada First Language<br>ಕನ್ನಡ ಮೊದಲ ಭಾಷೆ</option>
                                     <option value="option2">Kannada Second Language<br>ಕನ್ನಡ 2ನೇ ಭಾಷೆ</option>
                                     <option value="option3">Kannada Third Language<br>ಕನ್ನಡ 3ನೇ ಭಾಷೆ</option>
@@ -1011,13 +1012,8 @@
 
                             <div class="col-sm-6 ">
                                 <label for="yop" class="col-form-label">39a Year of Passing<br>ಪಾಸ್ ಆಗಿದ್ದ ವರ್ಷ:</label>
-                                <select class="form-control" id="yop" required>
-                                    <option value="">Choose an option<br>ಆಯ್ಕೆಮಾಡಿ</option>
-                                    <option value="option1">2018</option>
-                                    <option value="option2">2019</option>
-                                    <option value="option3">2020</option>
-                                    <option value="option3">2021</option>
-                                </select>
+                                <input type="text" class="form-control" id="criminalcases"
+                                    placeholder="details / ವಿವರಗಳು" max="100" min="5" pattern="[a-zA-Z]{1,80}">
                             </div>
                         </div>
 
@@ -1026,13 +1022,8 @@
                                 <label for="pucboard" class="col-form-label">39b. SSLC Board of Passing<br>PUC ಪಾಸ್
                                     ಆಗಿದ್ದ
                                     ಬೋರ್ಡ್ ಹೆಸರು:</label>
-                                <select class="form-control" id="pucboard" required>
-                                    <option value="">Choose an option<br>ಆಯ್ಕೆಮಾಡಿ</option>
-                                    <option value="option1">Karnataka State Board<br>ಕರ್ನಾಟಕ ರಾಜ್ಯ ಬೋರ್ಡ್</option>
-                                    <option value="option2">CBSE</option>
-                                    <option value="option3">Other 1<br>ಇತರ 1</option>
-                                    <option value="option3">Other 2<br>ಇತರ 2</option>
-                                </select>
+                                <input type="text" class="form-control" id="sslcboard" placeholder="details / ವಿವರಗಳು"
+                                    max="100" min="5" pattern="[a-zA-Z]{1,80}">
                             </div>
                         </div>
 
@@ -1060,25 +1051,15 @@
                                 <label for="pucboard" class="col-form-label">40a. PUC Board of Passing<br>PUC ಪಾಸ್
                                     ಆಗಿದ್ದ
                                     ಬೋರ್ಡ್ ಹೆಸರು:</label>
-                                <select class="form-control" id="pucboard" required>
-                                    <option value="">Choose an option<br>ಆಯ್ಕೆಮಾಡಿ</option>
-                                    <option value="option1">Karnataka State Board<br>ಕರ್ನಾಟಕ ರಾಜ್ಯ ಬೋರ್ಡ್</option>
-                                    <option value="option2">CBSE</option>
-                                    <option value="option3">Other 1<br>ಇತರ 1</option>
-                                    <option value="option3">Other 2<br>ಇತರ 2</option>
-                                </select>
+                                <input type="text" class="form-control" id="pucboard" placeholder="details / ವಿವರಗಳು"
+                                    max="100" min="5" pattern="[a-zA-Z]{1,80}">
                             </div>
 
                             <div class="col-sm-6 ">
                                 <label for="yopb" class="col-form-label">40b. Year of Passing<br>ಪಾಸ್ ಆಗಿದ್ದ
                                     ವರ್ಷ:</label>
-                                <select class="form-control" id="yopb" required>
-                                    <option value="">Choose an option<br>ಆಯ್ಕೆಮಾಡಿ</option>
-                                    <option value="option1">2018</option>
-                                    <option value="option2">2019</option>
-                                    <option value="option3">2020</option>
-                                    <option value="option3">2021</option>
-                                </select>
+                                <input type="text" class="form-control" id="yopb" placeholder="details / ವಿವರಗಳು"
+                                    max="100" min="5" pattern="[a-zA-Z]{1,80}">
                             </div>
                         </div>
 
@@ -1088,7 +1069,7 @@
                                 <label for="question2" class="col-form-label">40c. Maximum Qualification<br>ಗರಿಕೆ
                                     ಅತ್ಯುತ್ತಮ:</label>
                                 <select class="form-control" id="Education" required>
-                                    <option value="">Choose an option<br>ಆಯ್ಕೆಮಾಡಿ</option>
+
                                     <option value="option1">SSLC State Board<br>SSLC ರಾಜ್ಯ ಬೋರ್ಡ್</option>
                                     <option value="option2">PUC</option>
                                     <option value="option3">UG</option>
@@ -1098,13 +1079,8 @@
 
                             <div class="col-sm-6 ">
                                 <label for="yop" class="col-form-label">Year of Passing<br>ಪಾಸ್ ಆಗಿದ್ದ ವರ್ಷ:</label>
-                                <select class="form-control" id="yop" required>
-                                    <option value="">Choose an option<br>ಆಯ್ಕೆಮಾಡಿ</option>
-                                    <option value="option1">2018</option>
-                                    <option value="option2">2019</option>
-                                    <option value="option3">2020</option>
-                                    <option value="option3">2021</option>
-                                </select>
+                                <input type="text" class="form-control" id="criminalcases"
+                                    placeholder="details / ವಿವರಗಳು" max="100" min="5" pattern="[a-zA-Z]{1,80}">
                             </div>
                         </div> -->
 
@@ -1201,7 +1177,7 @@
                                 <label for="Stream" class="col-form-label">42b. Year of passing
                                     degree<br>ಪಾಠಶಾಲೆ:</label>
                                 <select class="form-control" id="Stream" required>
-                                    <option value="">Choose an option<br>ಒಂದು ಆಯ್ಕೆ ಮಾಡಿ</option>
+
                                     <option value="option1">Science<br>ವಿಜ್ಞಾನ</option>
                                     <option value="option2">Arts<br>ಕಲೆ</option>
                                     <option value="option3">Commerce<br>ವಾಣಿಜ್ಯ</option>
@@ -1210,9 +1186,28 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="passed">42c. Marks or grade ?<br>ಬೋರ್ಡ್ ವಿಷಯ ಪರೀಕ್ಷೆ
+                                    ಪಾಸ್ ಆಗಿದ್ದೀರಾ:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="passed" id="passed" value="yes"
+                                        required>
+                                    <label class="form-check-label" for="passed">Marks<br>ಹೌದು</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="passed" id="passedno" value="no"
+                                        required>
+                                    <label class="form-check-label" for="passedno">Grade<br>ಇಲ್ಲ</label>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="form-group row" id="marks">
                             <div class="col-sm-6">
-                                <label for="marks" class="col-form-label">42c. Maximum marks degree<br>ಗರಿಕೆ ಅತ್ಯುತ್ತಮ
+                                <label for="marks" class="col-form-label">42d. Maximum marks degree<br>ಗರಿಕೆ ಅತ್ಯುತ್ತಮ
                                     ಅಂಕಗಳು:</label>
                                 <input type="text" class="form-control" id="marks" placeholder="details<br>ವಿವರಗಳು"
                                     max="100" min="5" pattern="[a-zA-Z]{1,80}">
@@ -1220,7 +1215,25 @@
                             </div>
 
                             <div class="col-sm-6 ">
-                                <label for="marksobtained" class="col-form-label">42d. Marks Obtained<br>ಪಡೆದ
+                                <label for="marksobtained" class="col-form-label">42e. Marks Obtained<br>ಪಡೆದ
+                                    ಅಂಕಗಳು:</label>
+                                <input type="text" class="form-control" id="marksobtained"
+                                    placeholder="details<br>ವಿವರಗಳು" max="100" min="5" pattern="[a-zA-Z]{1,80}">
+                                <span class="invalid" id="marksobtained"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row" id="marks">
+                            <div class="col-sm-6">
+                                <label for="marks" class="col-form-label">42d. Maximum Grade<br>ಗರಿಕೆ ಅತ್ಯುತ್ತಮ
+                                    ಅಂಕಗಳು:</label>
+                                <input type="text" class="form-control" id="marks" placeholder="details<br>ವಿವರಗಳು"
+                                    max="100" min="5" pattern="[a-zA-Z]{1,80}">
+                                <span class="invalid" id="criminalcases"></span>
+                            </div>
+
+                            <div class="col-sm-6 ">
+                                <label for="marksobtained" class="col-form-label">42e. Grades Obtained<br>ಪಡೆದ
                                     ಅಂಕಗಳು:</label>
                                 <input type="text" class="form-control" id="marksobtained"
                                     placeholder="details<br>ವಿವರಗಳು" max="100" min="5" pattern="[a-zA-Z]{1,80}">
@@ -1231,7 +1244,7 @@
 
                         <div class="form-group row">
                             <div class="col-sm-6 ">
-                                <label for="marksobtained" class="col-form-label">42e. Percentage<br>ಪಡೆದ
+                                <label for="marksobtained" class="col-form-label">42e. Percentage/CGPA<br>ಪಡೆದ
                                     ಅಂಕಗಳು:</label>
                                 <input type="text" class="form-control" id="marksobtained"
                                     placeholder="details<br>ವಿವರಗಳು" max="100" min="5" pattern="[a-zA-Z]{1,80}">
@@ -1251,7 +1264,7 @@
                             <div class="col-sm-6 ">
                                 <label for="Stream" class="col-form-label">PUC Stream<br>PUC ಪಾಠಶಾಲೆ:</label>
                                 <select class="form-control" id="Stream" required>
-                                    <option value="">Choose an option<br>ಒಂದು ಆಯ್ಕೆ ಮಾಡಿ</option>
+
                                     <option value="option1">Science<br>ವಿಜ್ಞಾನ</option>
                                     <option value="option2">Arts<br>ಕಲೆ</option>
                                     <option value="option3">Commerce<br>ವಾಣಿಜ್ಯ</option>
@@ -1279,7 +1292,7 @@
                                 ಆಯ್ಕೆಮಾಡಿ:</label>
                             <div class="col-sm-9">
                                 <select class="form-control" id="question10" required>
-                                    <option value="">Choose an option<br>ಒಂದು ಆಯ್ಕೆ ಮಾಡಿ</option>
+
                                     <option value="option1">Aadhar<br>ಆಧಾರ್</option>
                                     <option value="option2">Driving Licence<br>ಚಾಲನೆ ಪರವಾನಿಗೆ</option>
                                     <option value="option3">PAN Card<br>ಪ್ಯಾನ್ ಕಾರ್ಡ್</option>
@@ -1347,7 +1360,7 @@
                         <div class="row d-flex justify-content-center">
                             <div class="col-4">
                                 <img id="aadhar-preview" src="" class="preview-image rounded border" alt="">
-                                <span class="caption">Aadhar Card<br>ಆಧಾರ್ ಕಾರ್ಡ್</span>
+                                <span class="caption">ID Card<br>ಆಧಾರ್ ಕಾರ್ಡ್</span>
                             </div>
                             <div class="col-4">
                                 <img id="signature-preview" src="" class="preview-image rounded border" alt="">
