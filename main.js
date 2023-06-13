@@ -1,3 +1,192 @@
+// *************** Age calculator in Home Page ***************************** //
+$(document).ready(function () {
+    // Initialize datepicker
+    $('.dtp').datepicker({
+        format: "dd/mm/yyyy",
+        autoclose: true,
+    });
+
+    // Calculate age on button click
+    $('.calculate-age').click(function () {
+        var dob = $('#dob').datepicker('getDate');
+        if (dob != null) {
+            var age = calculateAge(dob);
+            $('#ageResult').text('Your age is: ' + age + ' years');
+        } else {
+            $('#ageResult').text('Please select a valid date of birth');
+        }
+    });
+
+    // Function to calculate age based on date of birth
+    function calculateAge(dob) {
+        var today = new Date();
+        var birthDate = new Date(dob);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var monthDiff = today.getMonth() - birthDate.getMonth();
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
+});
+
+
+// ************************************ Instruction page *******************************************//
+
+
+$(document).ready(function () {
+
+    $('#nextBtn').hide();
+
+    $('#agreeCheckbox').change(function () {
+
+        $('#divSubmit').hide();
+
+        if ($('#agreeCheckbox').is(":checked")) {
+            $('#nextBtn').show();
+        } else {
+            $('#nextBtn').hide();
+        }
+
+    })
+
+})
+
+
+
+// ********************************************** Secure window for new application fron instruction page ********************************//
+
+
+
+$(document).ready(function () {
+
+    function showalert() {
+        Swal.fire({
+            title: 'Good job!',
+            text: 'You clicked the button!',
+            icon: 'success'
+        }).then(function () {
+            // Wait for 2 seconds before opening the new window
+            setTimeout(function () {
+                window.open('http://localhost:5501/newapplicationv2.html', 'KSPCPC454', 'width=' + screen.availWidth + ',height=' + screen.availHeight + ',scrollbars=yes');
+            }); // 2 seconds delay
+        });
+    }
+
+    $('#nextBtn').click(function () {
+        // Check if the "Agree" checkbox is checked
+        if ($('#agreeCheckbox').is(':checked')) {
+            showalert(); // Call the showalert() function
+        } else {
+            Swal.fire({
+                title: 'Please agree',
+                text: 'Please agree to the terms and conditions.',
+                icon: 'warning'
+            });
+        }
+    });
+
+    $('.login-btn').click(function () {
+        window.open('https://localhost:44366/auth/login', 'KSPCPC454', 'width=' + screen.availWidth + ',height=' + screen.availHeight + ',scrollbars=yes');
+    });
+
+});
+
+
+// ******************************* Forgot Password Field validation ********************************//
+
+$(document).ready(function () {
+    var ahdar = $("#aadharNumber");
+    var ahdarMsg = $("#aadharValid");
+
+    function validAhdar() {
+        if (/^\d{12}$/.test(ahdar.val()) && ahdar.val().length === 12) {
+            ahdarMsg.html("");
+        } else {
+            ahdarMsg.html("* Input not valid");
+        }
+    }
+
+    ahdar.on("input", validAhdar);
+});
+
+
+$(document).ready(function () {
+    $("#dateOfBirth").datepicker();
+});
+
+
+// ********************************* Login form ************************************//
+
+function showalert() {
+    Swal.fire({
+        title: 'Good job!',
+        text: 'You clicked the button!',
+        icon: 'success'
+    })
+}
+
+$(document).ready(function () {
+    let notyf = new Notyf({
+        position: {
+            x: 'right',
+            y: 'top'
+        },
+        // Your configuration options here
+    });
+
+    $('#login-submit').click(function () {
+        // Get the input values
+        let username = $('#username').val();
+        let password = $('#dob').val();
+
+        // Perform form validation
+        if (username.length !== 12 || isNaN(username)) {
+            // Display error notification for invalid username
+            notyf.error('Invalid username. Please enter a 12-digit number');
+            return;
+        }
+
+        // Validate password as a date
+        let parsedDate = new Date(password);
+        if (isNaN(parsedDate.getTime())) {
+            // Display error notification for invalid date password
+            notyf.error('Invalid password. Please enter a valid date');
+            return;
+        }
+
+        // Check if the conditions are met
+        if (username.length === 12 && !isNaN(username) && isDesiredDate(parsedDate)) {
+            // Display success notification
+            showalert()
+            notyf.success('Login successful');
+            // Redirect to the desired page
+            showalert()
+            setTimeout(function () {
+                window.location.href = "myapplicationv2.html";
+            }, 1000);
+        } else {
+            // Display error notification for wrong credentials
+            notyf.error('Wrong credentials');
+        }
+    });
+});
+
+function isDesiredDate(date) {
+    // Perform your desired date validation here
+    // Example: Only allow dates after a specific year (e.g., 2000)
+    return date.getFullYear() > 2000;
+}
+
+
+
+
+
+
+
+
+
+
 // *************************************** Image preview ***************************************** //
 
 function previewFile(inputId, previewId) {

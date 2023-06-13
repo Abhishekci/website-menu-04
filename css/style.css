@@ -2,6 +2,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Kannada&family=Outfit:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@font-face {
+	font-family: 'Nudi';
+	src: url('/fonts/icomoon/fonts/Nudi\ web\ 01\ e\ Bold.ttf') format('truetype');
+	/* Replace '/path/to/nudi-font.ttf' with the actual path or URL */
+}
+
+@font-face {
+	font-family: 'Nudi.2';
+	src: url('/fonts/icomoon/fonts/Nudi\ 01\ e\ Bold.ttf') format('truetype');
+	/* Replace '/path/to/nudi-font.ttf' with the actual path or URL */
+}
+
+
 * {
 	padding: 0;
 	margin: 0;
@@ -175,7 +188,10 @@ a:hover {
 }
 
 .av-font-kn {
-	font-family: "Nudi";
+	/* font-family: "Nudi"; */
+	font-family: "Nudi.2";
+	font-size: large;
+	/* font-family: noti; */
 }
 
 /********************LOGIN*************************/
@@ -244,6 +260,11 @@ a:hover {
 	padding: 0.5rem 0;
 	background: linear-gradient(to right, #5233ff, #66ccff);
 	font-size: 14px;
+}
+
+.modal h3,
+.modal p {
+	color: #000 !important;
 }
 
 #top-bar {
@@ -881,9 +902,11 @@ form {
 	gap: 50px;
 }
 
+
+/* valid and invalid css */
 .invalid {
 	color: red;
-	font-size: 12px;
+	font-size: 15px;
 }
 
 .valid {
@@ -1019,4 +1042,34 @@ button:focus {
 
 .challan {
 	width: 100px;
+}
+
+
+.datepicker {
+	background-color: #fff;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #495057;
+	outline: none;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.datepicker:focus {
+	border-color: #80bdff;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.datepicker .input-group-append .input-group-text {
+	background-color: #fff;
+	border: 1px solid #ced4da;
+	border-left: 0;
+	border-top-right-radius: 0.25rem;
+	border-bottom-right-radius: 0.25rem;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #495057;
 }
