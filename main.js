@@ -1,3 +1,40 @@
+window.onload = function () {
+    window.scrollTo(0, 0);
+};
+
+function closeWindow() {
+    window.close();
+    navLinks.forEach(function (link) {
+        link.classList.remove('active');
+    });
+
+}
+
+window.addEventListener('beforeunload', function () {
+    // Get all the nav links
+    var navLinks = document.querySelectorAll('.site-navigation .main-menu .nav-link');
+
+    // Remove the active class from each nav link
+    navLinks.forEach(function (link) {
+        link.classList.remove('active');
+    });
+});
+
+// *************************** NAV Disabler *************************** //
+
+$(document).ready(function () {
+    $('.site-navbar .site-navigation .site-menu>li>a').click(function () {
+        // Remove the 'active' class from all navigation items
+        $('.site-navbar .site-navigation .site-menu>li>a').removeClass('active');
+        // Add the 'active' class to the clicked navigation item
+        $(this).addClass('active');
+    });
+});
+
+
+
+
+
 // *************** Age calculator in Home Page ***************************** //
 $(document).ready(function () {
     // Initialize datepicker
@@ -54,7 +91,7 @@ $(document).ready(function () {
 
 
 
-// ********************************************** Secure window for new application fron instruction page ********************************//
+// ********************************************** Secure window for new application from instruction page ********************************//
 
 
 
@@ -68,7 +105,7 @@ $(document).ready(function () {
         }).then(function () {
             // Wait for 2 seconds before opening the new window
             setTimeout(function () {
-                window.open('http://localhost:5501/newapplicationv2.html', 'KSPCPC454', 'width=' + screen.availWidth + ',height=' + screen.availHeight + ',scrollbars=yes');
+                window.open('Applicationform.html', 'KSPCPC454', 'width=' + screen.availWidth + ',height=' + screen.availHeight + ',scrollbars=yes');
             }); // 2 seconds delay
         });
     }
@@ -90,6 +127,17 @@ $(document).ready(function () {
         window.open('https://localhost:44366/auth/login', 'KSPCPC454', 'width=' + screen.availWidth + ',height=' + screen.availHeight + ',scrollbars=yes');
     });
 
+    $('.login-btn').click(function () {
+        window.open('https://localhost:44366/auth/login', 'KSPCPC454', 'width=' + screen.availWidth + ',height=' + screen.availHeight + ',scrollbars=yes');
+    });
+
+});
+
+$(document).ready(function () {
+    $('.newapplication').on('click', function (e) {
+        e.preventDefault();
+        window.open('instractions.html', 'KSPCPC454', 'width=' + screen.availWidth + ',height=' + screen.availHeight + ',scrollbars=yes');
+    });
 });
 
 
@@ -123,7 +171,7 @@ function showalert() {
         title: 'Good job!',
         text: 'You clicked the button!',
         icon: 'success'
-    })
+    });
 }
 
 $(document).ready(function () {
@@ -147,8 +195,23 @@ $(document).ready(function () {
             return;
         }
 
-        // Validate password as a date
-        let parsedDate = new Date(password);
+        // Validate password as a date in "dd-mm-yyyy" format
+        let pattern = /^\d{2}-\d{2}-\d{4}$/;
+        if (!pattern.test(password)) {
+            // Display error notification for invalid date password format
+            notyf.error('Invalid password format. Please enter a valid date in the dd-mm-yyyy format');
+            return;
+        }
+
+        // Extract the day, month, and year from the password
+        let parts = password.split('-');
+        let day = parseInt(parts[0]);
+        let month = parseInt(parts[1]) - 1; // Months are zero-based (0-11)
+        let year = parseInt(parts[2]);
+
+        // Create a new date object using the parsed values
+        let parsedDate = new Date(year, month, day);
+
         if (isNaN(parsedDate.getTime())) {
             // Display error notification for invalid date password
             notyf.error('Invalid password. Please enter a valid date');
@@ -158,12 +221,11 @@ $(document).ready(function () {
         // Check if the conditions are met
         if (username.length === 12 && !isNaN(username) && isDesiredDate(parsedDate)) {
             // Display success notification
-            showalert()
+            showalert();
             notyf.success('Login successful');
             // Redirect to the desired page
-            showalert()
             setTimeout(function () {
-                window.location.href = "myapplicationv2.html";
+                window.location.href = 'my_application.html';
             }, 1000);
         } else {
             // Display error notification for wrong credentials
@@ -181,9 +243,424 @@ function isDesiredDate(date) {
 
 
 
+// ****************************************** newapplication ****************************************** //
+
+$(document).ready(function () {
+    // Hide the "Other" div initially
+    $("#otherDistrict").hide();
+
+    // Show or hide the "Other" div based on district selection
+    $("#district").change(function () {
+        if ($(this).val() === "other") {
+            $("#otherDistrict").show();
+        } else {
+            $("#otherDistrict").hide();
+        }
+    });
+});
+
+$(document).ready(function () {
+    // Hide the "Other" div initially
+    $("#potherDistrict").hide();
+
+    // Show or hide the "Other" div based on district selection
+    $("#pdistrict").change(function () {
+        if ($(this).val() === "other") {
+            $("#potherDistrict").show();
+        } else {
+            $("#potherDistrict").hide();
+        }
+    });
+});
+
+//   permanent address
+
+$(document).ready(function () {
+    // Toggle visibility of the "permanentAddressDiv" based on radio button selection
+    $("input[name='addressSame']").change(function () {
+        if ($(this).val() === "No") {
+            $("#permanentAddressDiv").show();
+        } else {
+            $("#permanentAddressDiv").hide();
+        }
+    });
+});
+
+$(document).ready(function () {
+    // Initially hide the subcaste div
+    $('#subcasteDiv').hide();
+    $('#subcastedate').hide();
+
+    // Event handler for the category select element
+    $('#category').change(function () {
+        var selectedCategory = $(this).val();
+
+        // Check if the selected category is not "General"
+        if (selectedCategory !== 'option1') {
+            // Show the subcaste div
+            $('#subcasteDiv').show();
+            $('#subcastedate').show();
+        } else {
+            // Hide the subcaste div
+            $('#subcasteDiv').hide();
+            $('#subcastedate').hide();
+        }
+    });
+});
 
 
 
+$(document).ready(function () {
+    // Initially hide the div elements
+    $('#exServicemandate').hide();
+    $('#exServicemanService').hide();
+    $('#exServicemandischarge').hide();
+    $('#exServicemanrendered').hide();
+
+    // Event handler for the exServiceman radio buttons
+    $('input[name="exServiceman"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "yes" is selected
+        if (selectedValue === 'yes') {
+            // Show the desired div elements
+            $('#exServicemandate').show();
+            $('#exServicemanService').show();
+            $('#exServicemandischarge').show();
+            $('#exServicemanrendered').show();
+        } else {
+            // Hide the div elements
+            $('#exServicemandate').hide();
+            $('#exServicemanService').hide();
+            $('#exServicemandischarge').hide();
+            $('#exServicemanrendered').hide();
+        }
+    });
+});
+
+
+$(document).ready(function () {
+    // Initially hide the div elements
+    $('#dateOfNOCarm').hide();
+    $('#dateOfDischargearm').hide();
+    $('#ServiceRenderedarm').hide();
+    $('#yearsOfServicearm').hide();
+    $('#armid').hide();
+    $('#armid2').hide();
+
+    // Event handler for the armServiceman radio buttons
+    $('input[name="presentlyServing"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Yes" is selected
+        if (selectedValue === 'yes') {
+            // Show the desired div elements
+            $('#dateOfNOCarm').show();
+            $('#dateOfDischargearm').show();
+            $('#ServiceRenderedarm').show();
+            $('#yearsOfServicearm').show();
+            $('#armid').show();
+            $('#armid2').show();
+        } else {
+            // Hide the div elements
+            $('#dateOfNOCarm').hide();
+            $('#dateOfDischargearm').hide();
+            $('#ServiceRenderedarm').hide();
+            $('#yearsOfServicearm').hide();
+            $('#armid').hide();
+            $('#armid2').hide();
+        }
+    });
+});
+
+
+$(document).ready(function () {
+    // Initially hide the date of issue field
+    $('#pdpdate').hide();
+
+    $('#kanmed').hide();
+
+    $('#rural').hide();
+
+    $('#kalyani').hide();
+
+    $('#govtdate').hide();
+    $('#govtdept').hide();
+    $('#govtrendered').hide();
+
+    $('#inServicewing').hide();
+    $('#inServicerendered').hide();
+    $('#inServicedate').hide();
+
+    $('#criminalcases1').hide();
+
+    $('#deptenq').hide();
+
+    $('#criminalcases2').hide();
+
+
+    // Event handler for the pdpreservation radio buttons
+    $('input[name="pdpreservation"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Yes" is selected
+        if (selectedValue === 'yes') {
+            // Show the date of issue field
+            $('#pdpdate').show();
+        } else {
+            // Hide the date of issue field
+            $('#pdpdate').hide();
+        }
+    });
+
+    $('input[name="kanmediumreservation"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Yes" is selected
+        if (selectedValue === 'yes') {
+            // Show the date of issue field
+            $('#kanmed').show();
+        } else {
+            // Hide the date of issue field
+            $('#kanmed').hide();
+        }
+    });
+
+    $('input[name="ruralreservation"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Yes" is selected
+        if (selectedValue === 'yes') {
+            // Show the date of issue field
+            $('#rural').show();
+        } else {
+            // Hide the date of issue field
+            $('#rural').hide();
+        }
+    });
+
+    $('input[name="kalyanakarnataka"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Yes" is selected
+        if (selectedValue === 'yes') {
+            // Show the date of issue field
+            $('#kalyani').show();
+        } else {
+            // Hide the date of issue field
+            $('#kalyani').hide();
+        }
+    });
+
+    $('input[name="governmentemployee"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Yes" is selected
+        if (selectedValue === 'yes') {
+            // Show the date of issue field
+            $('#govtdate').show();
+            $('#govtdept').show();
+            $('#govtrendered').show();
+        } else {
+            // Hide the date of issue field
+            $('#govtdate').hide();
+            $('#govtdept').hide();
+            $('#govtrendered').hide();
+        }
+    });
+
+    $('input[name="inServicecandidate"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Yes" is selected
+        if (selectedValue === 'yes') {
+            // Show the date of issue field
+            $('#inServicewing').show();
+            $('#inServicerendered').show();
+            $('#inServicedate').show();
+        } else {
+            // Hide the date of issue field
+            $('#inServicewing').hide();
+            $('#inServicerendered').hide();
+            $('#inServicedate').hide();
+        }
+    });
+
+    $('input[name="criminalcasesinvolve"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Yes" is selected
+        if (selectedValue === 'yes') {
+            // Show the date of issue field
+            $('#criminalcases1').show();
+
+        } else {
+            // Hide the date of issue field
+            $('#criminalcases1').hide();
+        }
+    });
+
+    $('input[name="departmentalenquiry"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Yes" is selected
+        if (selectedValue === 'yes') {
+            // Show the date of issue field
+            $('#deptenq').show();
+
+        } else {
+            // Hide the date of issue field
+            $('#deptenq').hide();
+        }
+    });
+
+    $('input[name="criminalcasesconvicted"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Yes" is selected
+        if (selectedValue === 'yes') {
+            // Show the date of issue field
+            $('#criminalcases2').show();
+
+        } else {
+            // Hide the date of issue field
+            $('#criminalcases2').hide();
+        }
+    });
+});
+
+
+$(document).ready(function () {
+    // Event handler for the passedsslc radio buttons
+    $('input[name="passedsslc"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "No" is selected
+        if (selectedValue === 'no') {
+            // Show SweetAlert notification
+            Swal.fire({
+                title: "Not Eligible",
+                text: "You are not eligible for this post.",
+                icon: "error",
+                confirmButtonColor: "#3085d6",
+                confirmButtonText: "OK"
+            });
+        }
+    });
+});
+
+
+$(document).ready(function () {
+
+
+    $('#yoppuc, #puceducation, #markspuc, #gradeobtained, #pucPercentage').hide();
+
+    // Event handler for the passed radio buttons
+    $('input[name="passedpuc"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Yes" is selected
+        if (selectedValue === 'yes') {
+            // Show the fields
+            $('#yoppuc, #puceducation, #markspuc, #pucPercentage').show();
+        } else {
+            // Hide the fields
+            $('#yoppuc, #puceducation, #markspuc, #gradeobtained, #pucPercentage').hide();
+        }
+    });
+
+    // Event handler for the marks radio buttons
+    $('input[name="marksinpuc"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Marks" is selected
+        if (selectedValue === 'yes') {
+            // Show the "Max Marks" and "Marks Obtained" fields
+            $('#markspuc').show();
+            // Hide the "Grade Obtained" field
+            $('#gradeobtained').hide();
+        } else if (selectedValue === 'no') {
+            // Show the "Grade Obtained" field
+            $('#gradeobtained').show();
+            // Hide the "Max Marks" and "Marks Obtained" fields
+            $('#markspuc').hide();
+        }
+    });
+});
+
+
+$(document).ready(function () {
+
+    $('#bridgecource').hide();
+    // Event handler for the ksoubridgecourse radio buttons
+    $('input[name="ksoubridgecourse"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Yes" is selected
+        if (selectedValue === 'yes') {
+            // Show the div with id "bridgecource"
+            $('#bridgecource').show();
+        } else {
+            // Hide the entire div including the question and inputs
+            $('#bridgecource').hide();
+            $('#bridgecourcehead').hide();
+        }
+    });
+});
+
+
+$(document).ready(function () {
+
+
+    $('#deducation, #dmarks, #dgrade, #dgradeobtained, #degpercentage').hide();
+
+    // Event handler for the passed radio buttons
+    $('input[name="degpassed"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Yes" is selected
+        if (selectedValue === 'yes') {
+            // Show the fields
+            $('#deducation, #dmarks, #dgrade, #degpercentage').show();
+        } else {
+            // Hide the fields
+            $('#deducation, #dmarks, #dgrade, #dgradeobtained, #degpercentage').hide();
+        }
+    });
+
+    // Event handler for the marks radio buttons
+    $('input[name="makdeg"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Marks" is selected
+        if (selectedValue === 'yes') {
+            // Show the "Max Marks" and "Marks Obtained" fields
+            $('#dgrade').show();
+            // Hide the "Grade Obtained" field
+            $('#dgradeobtained').hide();
+        } else if (selectedValue === 'no') {
+            // Show the "Grade Obtained" field
+            $('#dgradeobtained').show();
+            // Hide the "Max Marks" and "Marks Obtained" fields
+            $('#dgrade').hide();
+        }
+    });
+});
+
+
+$(document).ready(function () {
+    // Hide the second group initially
+    // $(".group-2").hide();
+
+    // Event handler for radio button change
+    $("input[name='exServicemanChild']").change(function () {
+        if ($(this).val() === "yes") {
+            $(".group-2").show();
+        } else {
+            $(".group-2").hide();
+        }
+    });
+});
 
 
 
