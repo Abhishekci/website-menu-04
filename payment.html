@@ -1,230 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-    <!-- Style -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="/images/pngwing.com.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+Kannada&display=swap" rel="stylesheet">
-    <title>Karnataka State Police</title>
+    <title>Payment Status</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        .float-right a {
-            display: inline-flex;
-            align-items: center;
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
         }
 
-        .float-right span {
-            vertical-align: middle;
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #1779ba;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .payment-info {
+            margin-bottom: 30px;
+        }
+
+        .payment-info p {
+            margin-bottom: 10px;
+        }
+
+        .notice {
+            color: #6c757d;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        .success-icon {
+            font-size: 120px;
+            color: #28a745;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .btn-go-back {
+            background-color: #6c757d;
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-continue {
+            background-color: #1779ba;
+            color: #ffffff;
+            border: none;
         }
     </style>
 </head>
 
-
 <body>
-    <!-- Toogle bar -->
-    <div class="site-mobile-menu site-navbar-target">
-        <div class="site-mobile-menu-header">
-            <div class="site-mobile-menu-close mt-3">
-                <span class="icon-close2 js-menu-toggle"></span>
-            </div>
-        </div>
-        <div class="site-mobile-menu-body"></div>
-    </div>
+    <div class="container">
+        <h1>Payment Successful</h1>
 
-    <!-- Top bar -->
-    <div class="top-bar">
-        <div class="container">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+
+        <div class="payment-info">
             <div class="row">
-                <div class="col-12">
-                    <a href="#" class="">
-                        <span class="d-none d-md-inline-block">Recruitment Wing Karnataka State Police</span></a>
-                    <span class="mx-md-2 d-inline-block"></span>
-                    <div class="float-right">
-                        <a href="#" class=""><span class="mr-2 icon-timer"></span> <span
-                                class="d-none d-md-inline-block">Time:
-                                10:30 AM to
-                                05:30 PM (Monday to Friday)</span>
-                            <span class="d-none d-md-inline-block text-white mr-2 ml-2">|</span></a>
-                        <a href="#" class=""><span class="mr-2 icon-phone"></span><span
-                                class="d-none d-md-inline-block">Helpline:
-                                080
-                                2294 3346 /
-                                3039</span></a>
-                    </div>
+                <div class="col-md-6">
+                    <p><strong>Application Number:</strong> 123456789</p>
+                    <p><strong>Name:</strong> John Doe</p>
+                    <p><strong>Applying As:</strong> Direct Candidate</p>
+                    <p><strong>Unit Name:</strong> Bengaluru</p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Transaction Number:</strong> 987654321</p>
+                    <p><strong>Transaction ID:</strong> ABCD1234</p>
+                    <p><strong>Payment Mode:</strong> Credit Card</p>
+                    <p><strong>Fees Paid:</strong> Rs. 450</p>
                 </div>
             </div>
+        </div>
+
+        <p class="notice">Please note that the payment may take up to 24 hours to be reflected.</p>
+
+        <div class="buttons">
+            <button class="btn btn-go-back">Go Back</button>
+            <button class="btn btn-continue">Continue</button>
         </div>
     </div>
 
-    <!-- Nav bar -->
-    <header class="site-navbar js-sticky-header site-navbar-target p-0" role="banner">
-        <div class="container">
-            <div class="row align-items-center position-relative p-3">
-                <div class="site-logo">
-                    <img src="images/logo_v2.jpeg" alt="logo" class="logo">
-                    <!-- <a href="index.html" class="text-black"><span class="text-primary">Brand</a> -->
-                </div>
-                <div class="col-12">
-                    <nav class="site-navigation text-right ml-auto" role="navigation">
-
-                        <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                            <!-- <li><a href="index.html" class="nav-link">Home</a></li>
-                            <li><a href="#" target="_parent" class="nav-link newapplication">New Application</a></li>
-                            <li><a href="#services-section" class="nav-link">Notification</a></li> -->
-                            <li><a href="/index.html"><button class="button2">
-                                        Close
-                                    </button></a></li>
-                            <!-- <button class="btn btn-outline-light submit-btn border">
-                                <a href="/index.html" class="nav-link text-danger font-weight-bold">Sign Out</a>
-                            </button> -->
-                        </ul>
-                    </nav>
-                </div>
-                <div class="toggle-button d-inline-block d-lg-none"><a href="#"
-                        class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center font-weight-bold">
-                    <!-- <p>ಸಶಸ್ತ್ರ ಪೊಲೀಸ್ ಕಾನ್ಸ್ಟೇಬಲ್ (ಪುರುಷರು ಮತ್ತು ಪುರುಷ ಟ್ರಾನ್ಸ್‌ಜೆಂಡರ್) (ಕಾರ್/ಡೀಎರ್)-2022 (3064
-                                                ಹುದ್ದೆಗಳು)</p> -->
-                    <!-- <p>C¢ü¸ÀÆZÀ£É ¸ÀASÉå.07<i class="invalid">*</i> £ÉÃªÀÄPÁw-4<i class="invalid">*</i> 2022-23</p> -->
-                    <p class="m-0">NOTIFICATION NO. - 07 / RECRUITMENT - 4 / 2022-23</p>
-                    <p class="m-0">ಅಧಿಸೂಚನೆ ಸಂಖ್ಯೆ - 07 / ನೇಮಕಾತಿ - 4 / 2022-23</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container pb-2 mb-2">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card mt-5">
-                    <div class="card-header">
-                        <h4>Payment Status</h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="alert alert-success" role="alert">
-                            <h5 class="alert-heading text-dark">Payment Successful</h5>
-                            <p class="text-dark">Your payment has been successfully processed.</p>
-                        </div>
-
-                        <div class="row mt-4">
-                            <div class="col-md-6">
-                                <p class="text-dark"><strong>Application Number:</strong> <span
-                                        class="text-dark">123456789</span></p>
-                                <p class="text-dark"><strong>Name:</strong> <span class="text-dark">John Doe</span></p>
-                                <p class="text-dark"><strong>Applying As:</strong> <span class="text-dark">Direct
-                                        Candidate</span></p>
-                                <p class="text-dark"><strong>Unit Name:</strong> <span
-                                        class="text-dark">Bengaluru</span>
-                                </p>
-                            </div>
-                            <div class="col-md-6">
-                                <p class="text-dark"><strong>Transaction Number:</strong> <span
-                                        class="text-dark">987654321</span></p>
-                                <p class="text-dark"><strong>Transaction ID:</strong> <span
-                                        class="text-dark">ABCD1234</span></p>
-                                <p class="text-dark"><strong>Payment Mode:</strong> <span class="text-dark">Credit
-                                        Card</span></p>
-                                <p class="text-dark"><strong>Fees Paid:</strong> <span class="text-dark">Rs. 450</span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-                            <div class="col-12">
-                                <p class="text-danger">* Please note that the payment may take up to 24 hours to be
-                                    reflected.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="row mt-2">
-                            <div class="col-6">
-                                <a href="#" class="btn btn-primary">Go Back</a>
-                            </div>
-                            <div class="col-6 text-right">
-                                <a href="/my_application_details.html" class="btn btn-primary">Continue</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <footer class="bg-dark align-content-center">
-        <div class="clsCopyright">
-            <div class="container pt-2">
-                <div class="row">
-                    <div class="col-6 text-center">
-                        <p>© 2023 Karnataka State Police. All Rights Reserved</p>
-                    </div>
-                    <div class="col-6 text-right">
-                        <p>IP Address: 115.96.68.20</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('input[name="paymentMode"]').change(function () {
-                if (this.value === "offline") {
-                    $("#offlinePaymentDetails").show();
-                    $("#onlinePaymentDetails").hide();
-                } else {
-                    $("#offlinePaymentDetails").hide();
-                    $("#onlinePaymentDetails").show();
-                }
-            });
-        });
-    </script>
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.min.js"></script> -->
-
-    <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        window.addEventListener("DOMContentLoaded", function () {
-            Swal.fire({
-                title: "Good job!",
-                text: "You have logedin!",
-                icon: "success",
-            });
-        });
-    </script>
-
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/main.js"></script>
-    <script src="main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -898,21 +898,61 @@
                                 <div class="d-flex align-items-center">
                                     <div class="mr-2" style="align-self: self-start;">23.</div>
                                     <div>
+                                        Are you claiming Rural Medium Reservation? <i class="invalid">*</i><br>
+                                        <span class="av-font-kn">ನೀವು ಗ್ರಾಮೀಣ ಮಾಧ್ಯಮ ಆಯ್ಕೆಯನ್ನು
+                                            ಹೇಳಿದ್ದೀರಾ?</span>
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="ruralreservation"
+                                        id="ruralreservationyes" value="yes" required>
+                                    <label class="form-check-label pt-1" for="ruralreservationyes">Yes /
+                                        ಹೌದು</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="ruralreservation"
+                                        id="ruralreservationno" value="no" required>
+                                    <label class="form-check-label pt-1" for="ruralreservationno">No /
+                                        ಇಲ್ಲ</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" id="rural">
+                                <label class="col-form-label">
+                                    <div class="d-flex align-items-center">
+                                        <div class="mr-2" style="align-self: self-start;">23a.</div>
+                                        <div>
+                                            Date Of Issue <i class="invalid">*</i><br>
+                                            <span class="av-font-kn">ಪೋಷ್ಟತೆ ದಿನಾಂಕ:</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <input type="date" class="form-control" id="" required>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="mr-2" style="align-self: self-start;">24.</div>
+                                    <div>
                                         Are you an Ex-Serviceman? <i class="invalid">*</i><br>
                                         <span class="av-font-kn">ನೀವು ಮಾನವರ ಮಗನೇ</span>:
                                     </div>
                                 </div>
                             </label>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6" id="exservice-section">
                                 <div class="form-check form-check-inline pt-2">
-                                    <input class="form-check-input" type="radio" name="exServiceman" id="que1yes"
+                                    <input class="form-check-input" type="radio" name="exServiceman" id="exservice-yes"
                                         value="yes" required>
-                                    <label class="form-check-label pt-1" for="que1yes">Yes / ಹೌದು</label>
+                                    <label class="form-check-label pt-1" for="exservice-yes">Yes / ಹೌದು</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="exServiceman" id="que1no"
+                                    <input class="form-check-input" type="radio" name="exServiceman" id="exservice-no"
                                         value="no" required>
-                                    <label class="form-check-label pt-1" for="que1no">No / ಇಲ್ಲ</label>
+                                    <label class="form-check-label pt-1" for="exservice-no">No / ಇಲ್ಲ</label>
                                 </div>
                             </div>
                         </div>
@@ -921,7 +961,7 @@
                             <div class="col-sm-6">
                                 <label class="col-form-label">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">23a.</div>
+                                        <div class="mr-2" style="align-self: self-start;">24a.</div>
                                         <div>
                                             Date of Joining the Service <i class="invalid">*</i><br>
                                             <span class="av-font-kn">ಸೇವೆಗೆ ಸೇರಿದ ದಿನಾಂಕ</span>:
@@ -933,7 +973,7 @@
                             <div class="col-sm-6">
                                 <label class="col-form-label">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">23b.</div>
+                                        <div class="mr-2" style="align-self: self-start;">24b.</div>
                                         <div>
                                             Date of NOC <i class="invalid">*</i><br>
                                             <span class="av-font-kn">ಯಾಚಿತ ದಿನಾಂಕ</span>:
@@ -949,23 +989,26 @@
                             <div class="col-sm-6">
                                 <label class="col-form-label">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">23c.</div>
+                                        <div class="mr-2" style="align-self: self-start;">24c.</div>
                                         <div>
                                             Service rendered in which force (Army/Air Force/Navy) <i
                                                 class="invalid">*</i><br>
-                                            <span class="av-font-kn">ಸೇವೆಯನ್ನು ಕೊಟ್ಟ ದಂಗೆ
-                                                (ಸೇನೆ/ವಾಯುಸೇನೆ/ನೌಸೇನೆ)</span>:
+                                            <span class="av-font-kn">ಸೇವೆಯನ್ನು ಕೊಟ್ಟ ದಂಗೆ (ಸೇನೆ/ವಾಯುಸೇನೆ/ನೌಸೇನೆ)</span>:
                                         </div>
                                     </div>
                                 </label>
-                                <input type="text" class="form-control" id="ServiceRenderedexser"
-                                    placeholder="Ex: Kuruba / ಕುರುಬ" pattern="[a-zA-Z]{1,80}" required>
-                                <span class="invalid" id="subcasteValid"></span>
+                                <select class="form-control" id="ServiceRenderedexser" required>
+                                    <option value="">Select a force</option>
+                                    <option value="Army">Army</option>
+                                    <option value="Air Force">Air Force</option>
+                                    <option value="Navy">Navy</option>
+                                </select>
                             </div>
+
                             <div class="col-sm-6" id="exServicemandischarge">
                                 <label class="col-form-label">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">23d.</div>
+                                        <div class="mr-2" style="align-self: self-start;">24d.</div>
                                         <div>
                                             Date of Discharge from Service <i class="invalid">*</i><br>
                                             <span class="av-font-kn">ಸೇವೆಯಿಂದ ವಿಮುಕ್ತನಾಗುವ ದಿನಾಂಕ</span>:
@@ -977,27 +1020,39 @@
                         </div>
 
                         <div class="form-group row" id="exServicemanrendered">
-                            <div class="col-sm-6">
-                                <label class="col-form-label">
-                                    <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">23e.</div>
-                                        <div>
-                                            How many years of Service you rendered? <i class="invalid">*</i><br>
-                                            <span class="av-font-kn">ನೀವು ಎಷ್ಟು ವರ್ಷಗಳ ಸೇವೆ ನೀಡಿದ್ದೀರಿ</span>:
-                                        </div>
+                            <label class="col-form-label col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="mr-2" style="align-self: self-start;">24e.</div>
+                                    <div>
+                                        How many years of Service you rendered? <i class="invalid">*</i><br>
+                                        <span class="av-font-kn">ನೀವು ಎಷ್ಟು ವರ್ಷಗಳ ಸೇವೆ ನೀಡಿದ್ದೀರಿ</span>:
                                     </div>
-                                </label>
-                                <input type="text" class="form-control" id="yearsOfService" placeholder="Ex: 10"
-                                    pattern="[0-9]+" required>
-                                <!-- <span class="invalid" id="yearsOfServiceError"></span> -->
+                                </div>
+                            </label>
+                            <div class="col-sm-6">
+                                <div class="form-check form-check-inline pt-2">
+                                    <label class="form-check-label pt-1 mr-2" for="exyearsOfService">Years</label>
+                                    <input type="text" class="form-control" id="exyearsOfService" placeholder="Years"
+                                        pattern="[0-9]+" required style="width: 70px;">
+                                </div>
+                                <div class="form-check form-check-inline pt-2">
+                                    <label class="form-check-label pt-1 mr-2" for="exMonthsOfService">Months</label>
+                                    <input type="text" class="form-control" id="exMonthsOfService" placeholder="Months"
+                                        pattern="[0-9]+" required style="width: 70px;">
+                                </div>
+                                <div class="form-check form-check-inline pt-2">
+                                    <label class="form-check-label pt-1 mr-2" for="exdaysOfService">Days</label>
+                                    <input type="text" class="form-control" id="exdaysOfService" placeholder="Years"
+                                        pattern="[0-9]+" required style="width: 70px;">
+                                </div>
                             </div>
-
                         </div>
+
 
                         <div class="form-group row">
                             <label class="col-form-label col-sm-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">24.</div>
+                                    <div class="mr-2" style="align-self: self-start;">25.</div>
                                     <div>
                                         Are you an Ex-Serviceman Child? <i class="invalid">*</i><br>
                                         <span class="av-font-kn">ನೀವು ಮಾನವರ ಮಗನೇ</span>:
@@ -1018,124 +1073,14 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group row group-2">
                             <label class="col-form-label col-sm-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">24.</div>
+                                    <div class="mr-2" style="align-self: self-start;">25a.</div>
                                     <div>
-                                        Are you Physically Challenged? <i class="invalid">*</i><br>
-                                        <span class="ml-3 av-font-kn">ಶಾರೀರಿಕವಾಗಿ ಮುಂದುವರಿದವರೇನೇಕೆ</span>:
-                                    </div>
-                                </div>
-                            </label>
-                            <div class="col-sm-6 pt-2">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="physicallyChallenged"
-                                        id="physicallyChallengedyes" value="yes" required>
-                                    <label class="form-check-label pt-1" for="physicallyChallengedyes">Yes /
-                                        ಹೌದು</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="physicallyChallenged"
-                                        id="physicallyChallengedno" value="no" required>
-                                    <label class="form-check-label pt-1" for="physicallyChallengedno">No / ಇಲ್ಲ</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="col-form-label col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">25.</div>
-                                    <div>
-                                        Are you presently serving in Armed Force? <i class="invalid">*</i><br>
-                                        <span class="av-font-kn">ನೀವು ಪ್ರಸ್ತುತ ಸೇವೆಯಲ್ಲಿ ಸೇವೆ
-                                            ನೀಡುತ್ತಿದ್ದೀರಿ?</span>:
-                                    </div>
-                                </div>
-                            </label>
-                            <div class="col-sm-6 pt-2">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="presentlyServing"
-                                        id="armedforcesyes" value="yes" required>
-                                    <label class="form-check-label pt-1" for="armedforcesyes">Yes / ಹೌದು</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="presentlyServing"
-                                        id="armedforcesno" value="no" required>
-                                    <label class="form-check-label pt-1" for="armedforcesno">No / ಇಲ್ಲ</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row border pb-2" id="armid">
-                            <div class="col-sm-6" id="dateOfNOCarm">
-                                <label class="col-form-label">
-                                    <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">25a.</div>
-                                        <div>
-                                            Date of NOC <i class="invalid">*</i><br>
-                                            <span class="av-font-kn">ವಿತರಣಾ ದಿನಾಂಕ:</span>:
-                                        </div>
-                                    </div>
-                                </label>
-                                <input type="date" class="form-control" required>
-                            </div>
-
-                            <div class="col-sm-6" id="dateOfDischargearm">
-                                <label class="col-form-label">
-                                    <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">25b.</div>
-                                        <div>
-                                            Date of Discharge <i class="invalid">*</i><br>
-                                            <span class="av-font-kn">ವಿತರಣಾ ದಿನಾಂಕ:</span>
-                                        </div>
-                                    </div>
-                                </label>
-                                <input type="date" class="form-control" required>
-                            </div>
-
-                            <div class="col-sm-6" id="ServiceRenderedarm mt-2">
-                                <label class="col-form-label">
-                                    <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">25c.</div>
-                                        <div>
-                                            Service rendered in which force (Army/Air Force/Navy) <i
-                                                class="invalid">*</i><br>
-                                            <span class="av-font-kn">ಉಪ ಜಾತಿ:</span>
-                                        </div>
-                                    </div>
-                                </label>
-                                <input type="text" class="form-control" placeholder="Ex: Kuruba / ಕುರುಬ"
-                                    pattern="[a-zA-Z]{1,80}" required>
-                                <!-- <span class="invalid" id="subcasteValid"></span> -->
-                            </div>
-
-                            <div class="col-sm-6" id="yearsOfServicearm mt-2">
-                                <label class="col-form-label">
-                                    <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">25d.</div>
-                                        <div>
-                                            How many years of Service you rendered? <i class="invalid">*</i><br>
-                                            <span class="av-font-kn">ಉಪ ಜಾತಿ:</span>
-                                        </div>
-                                    </div>
-                                </label>
-                                <input type="text" class="form-control" placeholder="Ex: Kuruba / ಕುರುಬ"
-                                    pattern="[a-zA-Z]{1,80}" required>
-                                <!-- <span class="invalid" id="subcasteValid"></span> -->
-                            </div>
-
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="col-form-label col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">26.</div>
-                                    <div>
-                                        Do you belong to a family of an Ex-Servicemen who while in Service was died in
-                                        action
-                                        (only for Ex-Servicemen Children)? <i class="invalid">*</i><br>
+                                        Do you belong to a family of an Ex-Servicemen who while in Service was disabled
+                                        or died in action (only
+                                        for Ex-Servicemen Children)? <i class="invalid">*</i><br>
                                         <span class="av-font-kn">ಸೇವೆಯಲ್ಲಿರುವಾಗ ಮೃತನಾದ ಮಾನವರ ಕುಟುಂಬಕ್ಕೆ ನೀವು
                                             ಸೇರಿದ್ದೀರಾ?</span>
                                     </div>
@@ -1144,48 +1089,38 @@
                             <div class="col-sm-6">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="exServicemanfamded"
-                                        id="exServicemanfamdedyes" value="yes" required>
+                                        id="exServicemanfamdedyes" value="yes">
                                     <label class="form-check-label pt-1" for="exServicemanfamdedyes">Yes / ಹೌದು</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="exServicemanfamded"
-                                        id="exServicemanfamdedno" value="no" required>
+                                        id="exServicemanfamdedno" value="no">
                                     <label class="form-check-label pt-1" for="exServicemanfamdedno">No / ಇಲ್ಲ</label>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label class="col-form-label col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">27.</div>
-                                    <div>
-                                        Do you belong to a family of an Ex-Servicemen who while in Service was
-                                        permanently disabled
-                                        (only for Ex-Servicemen Children)? <i class="invalid">*</i><br>
-                                        <span class="av-font-kn">ನೀವು ಸೇವೆಯಲ್ಲಿರುವಾಗ ಶಾಶ್ವತವಾಗಿ ಅಸ್ಥಿರವಾದ ಮಾನವರ
-                                            ಕುಟುಂಬಕ್ಕೆ ಸೇರಿದ್ದೀರಾ?</span>
+                        <div class="form-group row group-2e" style="display: none;">
+                            <div class="col-sm-6" id="">
+                                <label for="famrelation" class="col-form-label">
+                                    <div class="d-flex align-items-center">
+                                        <div class="mr-2" style="align-self: self-start;">25c.</div>
+                                        <div>
+                                            Relationship with the Serviceman<i class="invalid">*</i><br>
+                                            <span class="mav-font-kn">ಮಾಜಿ ಸೈನಿಕನೊಂದಿಗಿನ ಸಂಬಂಧ:</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </label>
-                            <div class="col-sm-6">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="exServicemandis"
-                                        id="exServicemandisyes" value="yes" required>
-                                    <label class="form-check-label pt-1" for="exServicemandisyes">Yes / ಹೌದು</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="exServicemandis"
-                                        id="exServicemandisno" value="no" required>
-                                    <label class="form-check-label pt-1" for="exServicemandisno">No / ಇಲ್ಲ</label>
-                                </div>
+                                </label>
+                                <input type="text" class="form-control" id="famrelation" placeholder="Ex: Wife / ಹೆಂಡತಿ"
+                                    pattern="[a-zA-Z]{1,80}" required>
+                                <!-- <span class="invalid" id="subcasteValid"></span> -->
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label class="col-form-label col-sm-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">28.</div>
+                                    <div class="mr-2" style="align-self: self-start;">26.</div>
                                     <div>
                                         Are you claiming PDP Reservation? <i class="invalid">*</i><br>
                                         <span class="av-font-kn">ನೀವು PDP ಆಯ್ಕೆಯನ್ನು ಹೇಳಿದ್ದೀರಾ?</span>
@@ -1207,7 +1142,7 @@
                             <div class="col-sm-6" id="pdpdate">
                                 <label class="col-form-label">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">28a.</div>
+                                        <div class="mr-2" style="align-self: self-start;">26a.</div>
                                         <div>
                                             Date of Issue of PDP Certificate <i class="invalid">*</i><br>
                                             <span class="av-font-kn"> ವಿತರಣಾ ದಿನಾಂಕ:</span>
@@ -1221,7 +1156,7 @@
                         <div class="form-group row">
                             <label class="col-form-label col-sm-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">29.</div>
+                                    <div class="mr-2" style="align-self: self-start;">27.</div>
                                     <div>
                                         Are you claiming Kannada Medium Reservation? <i class="invalid">*</i><br>
                                         <span class="av-font-kn">ನೀವು ಕನ್ನಡ ಮಾಧ್ಯಮ ಆಯ್ಕೆಯನ್ನು ಹೇಳಿದ್ದೀರಾ?</span>
@@ -1244,7 +1179,7 @@
                             <div class="col-sm-6" id="kanmed">
                                 <label class="col-form-label">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">29a.</div>
+                                        <div class="mr-2" style="align-self: self-start;">27a.</div>
                                         <div>
                                             Date of Issue of certificate for Kannada medium Reservation <i
                                                 class="invalid">*</i><br>
@@ -1256,14 +1191,49 @@
                             </div>
                         </div>
 
-
-
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">
+                                <div class="d-flex align-items-center">
+                                    <div class="mr-2" style="align-self: self-start;">28.</div>
+                                    <div>
+                                        Are you claiming Transgender Reservation?<i class="invalid">*</i><br>
+                                        <span class="av-font-kn">ನೀವು ಟ್ರಾನ್ಸ್‌ಜೆಂಡರ್ ಆರಕ್ಷಣೆಯನ್ನು
+                                            ಕೇಳುತ್ತಿದ್ದೀರಾ?</span>
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="transgenderreservation"
+                                        id="transgender-yes" value="yes" required>
+                                    <label class="form-check-label pt-1" for="transgender-yes">Yes / ಹೌದು</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="transgenderreservation"
+                                        id="transgender-no" value="no" required>
+                                    <label class="form-check-label pt-1" for="transgender-no">No / ಇಲ್ಲ</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" id="transdate" style="display: none;">
+                                <label class="col-form-label">
+                                    <div class="d-flex align-items-center">
+                                        <div class="mr-2" style="align-self: self-start;">22a.</div>
+                                        <div>
+                                            Date of Issue of certificate for Transgender Reservation Certificate<i
+                                                class="invalid">*</i><br>
+                                            <span class="av-font-kn">ಇಸ್ಯೂ ದಿನಾಂಕ:</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <input type="date" class="form-control" id="transgender-certificate-date" required>
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label class="col-form-label">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">31a.</div>
+                                        <div class="mr-2" style="align-self: self-start;">29.</div>
                                         <div>
                                             Are you a candidate belonging to Kalyana Karnataka Region?<i
                                                 class="invalid">*</i><br>
@@ -1288,7 +1258,7 @@
                             <div class="col-sm-6" id="kalyani">
                                 <label class="col-form-label">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">31a.</div>
+                                        <div class="mr-2" style="align-self: self-start;">29a.</div>
                                         <div>
                                             If Yes, mention your District <i class="invalid">*</i><br>
                                             <span class="av-font-kn">ಹೌದು ಎಂದು ಹೇಳಿದ್ದರೆ, ನಿಮ್ಮ ಜಿಲ್ಲೆಯನ್ನು
@@ -1330,6 +1300,119 @@
                                     <option value="Yadgir">Yadgir / ಯಾದಗಿರಿ</option>
                                 </select>
                             </div>
+                        </div>
+
+
+
+
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="mr-2" style="align-self: self-start;">30.</div>
+                                    <div>
+                                        Are you Physically Challenged? <i class="invalid">*</i><br>
+                                        <span class="av-font-kn">ಶಾರೀರಿಕವಾಗಿ ಮುಂದುವರಿದವರೇನೇಕೆ</span>:
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="col-sm-6 pt-2">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="physicallyChallenged"
+                                        id="physicallyChallengedyes" value="yes" required>
+                                    <label class="form-check-label pt-1" for="physicallyChallengedyes">Yes /
+                                        ಹೌದು</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="physicallyChallenged"
+                                        id="physicallyChallengedno" value="no" required>
+                                    <label class="form-check-label pt-1" for="physicallyChallengedno">No / ಇಲ್ಲ</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="mr-2" style="align-self: self-start;">31.</div>
+                                    <div>
+                                        Are you presently serving in Armed Force? <i class="invalid">*</i><br>
+                                        <span class="av-font-kn">ನೀವು ಪ್ರಸ್ತುತ ಸೇವೆಯಲ್ಲಿ ಸೇವೆ
+                                            ನೀಡುತ್ತಿದ್ದೀರಿ?</span>:
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="col-sm-6 pt-2">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="presentlyServing"
+                                        id="armedforcesyes" value="yes" required>
+                                    <label class="form-check-label pt-1" for="armedforcesyes">Yes / ಹೌದು</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="presentlyServing"
+                                        id="armedforcesno" value="no" required>
+                                    <label class="form-check-label pt-1" for="armedforcesno">No / ಇಲ್ಲ</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row border pb-2" id="armid">
+                            <div class="col-sm-6" id="dateOfNOCarm">
+                                <label class="col-form-label">
+                                    <div class="d-flex align-items-center">
+                                        <div class="mr-2" style="align-self: self-start;">31a.</div>
+                                        <div>
+                                            Date of NOC <i class="invalid">*</i><br>
+                                            <span class="av-font-kn">ವಿತರಣಾ ದಿನಾಂಕ:</span>:
+                                        </div>
+                                    </div>
+                                </label>
+                                <input type="date" class="form-control" required>
+                            </div>
+
+                            <div class="col-sm-6" id="dateOfDischargearm">
+                                <label class="col-form-label">
+                                    <div class="d-flex align-items-center">
+                                        <div class="mr-2" style="align-self: self-start;">31b.</div>
+                                        <div>
+                                            Date of Discharge <i class="invalid">*</i><br>
+                                            <span class="av-font-kn">ವಿತರಣಾ ದಿನಾಂಕ:</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <input type="date" class="form-control" required>
+                            </div>
+
+                            <div class="col-sm-6" id="ServiceRenderedarm mt-2">
+                                <label class="col-form-label">
+                                    <div class="d-flex align-items-center">
+                                        <div class="mr-2" style="align-self: self-start;">31c.</div>
+                                        <div>
+                                            Service rendered in which force (Army/Air Force/Navy) <i
+                                                class="invalid">*</i><br>
+                                            <span class="av-font-kn">ಉಪ ಜಾತಿ:</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <input type="text" class="form-control" placeholder="Ex: Kuruba / ಕುರುಬ"
+                                    pattern="[a-zA-Z]{1,80}" required>
+                                <!-- <span class="invalid" id="subcasteValid"></span> -->
+                            </div>
+
+                            <div class="col-sm-6" id="yearsOfServicearm mt-2">
+                                <label class="col-form-label">
+                                    <div class="d-flex align-items-center">
+                                        <div class="mr-2" style="align-self: self-start;">31d.</div>
+                                        <div>
+                                            How many years of Service you rendered? <i class="invalid">*</i><br>
+                                            <span class="av-font-kn">ಉಪ ಜಾತಿ:</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <input type="text" class="form-control" placeholder="Ex: Kuruba / ಕುರುಬ"
+                                    pattern="[a-zA-Z]{1,80}" required>
+                                <!-- <span class="invalid" id="subcasteValid"></span> -->
+                            </div>
+
                         </div>
 
                         <div class="form-group row">
@@ -1380,20 +1463,35 @@
                                     pattern="[a-zA-Z]{1,80}" required>
                                 <!-- <span class="invalid" id="subcasteValid"></span> -->
                             </div>
-                            <div class="col-sm-6" id="govtrendered">
-                                <label for="govtServiceyears" class="col-form-label">
-                                    <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">32c.</div>
-                                        <div>
-                                            How many years of Service have you rendered?<i class="invalid">*</i><br>
-                                            <span class="av-font-kn">ನೀವು ಎಷ್ಟು ವರ್ಷ ಸೇವೆ ಸಲ್ಲಿಸಿದ್ದೀರಿ?</span>
-                                        </div>
+                        </div>
+                        <div class="form-group row" id="govtrendered">
+                            <label for="govtServiceyears" class="col-form-label col-sm-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="mr-2" style="align-self: self-start;">32c.</div>
+                                    <div>
+                                        How many years of Service have you rendered?<i class="invalid">*</i><br>
+                                        <span class="av-font-kn">ನೀವು ಎಷ್ಟು ವರ್ಷ ಸೇವೆ ಸಲ್ಲಿಸಿದ್ದೀರಿ?</span>
                                     </div>
-                                </label>
-                                <input type="text" class="form-control" id="govtServiceyears" placeholder="Ex: 5"
-                                    pattern="[0-9]{1,2}" required>
-                                <!-- <span class="invalid" id="govtServiceyearsValid"></span> -->
+                                </div>
+                            </label>
+                            <div class="col-sm-6">
+                                <div class="form-check form-check-inline pt-2">
+                                    <label class="form-check-label pt-1 mr-2" for="govtServiceyears">Years</label>
+                                    <input type="text" class="form-control" id="govtServiceyears" placeholder="Years"
+                                        pattern="[0-9]{1,2}" required style="width: 70px;">
+                                </div>
+                                <div class="form-check form-check-inline pt-2">
+                                    <label class="form-check-label pt-1 mr-2" for="govtServiceMonths">Months</label>
+                                    <input type="text" class="form-control" id="govtServiceMonths" placeholder="Months"
+                                        pattern="[0-9]{1,2}" required style="width: 70px;">
+                                </div>
+                                <div class="form-check form-check-inline pt-2">
+                                    <label class="form-check-label pt-1 mr-2" for="govtServiceDays">Days</label>
+                                    <input type="text" class="form-control" id="govtServiceDays" placeholder="Days"
+                                        pattern="[0-9]{1,2}" required style="width: 70px;">
+                                </div>
                             </div>
+
                         </div>
 
                         <div class="form-group row">
@@ -1406,7 +1504,7 @@
                                     </div>
                                 </div>
                             </label>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6" id="inService-section">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="inServicecandidate"
                                         id="inService-yes" value="yes" required>
@@ -1429,24 +1527,13 @@
                                         </div>
                                     </div>
                                 </label>
-                                <input type="text" class="form-control" id="inServicewingname"
-                                    placeholder="Ex: Kuruba / ಕುರುಬ" pattern="[a-zA-Z]{1,80}" required>
+                                <select class="form-control" id="inServicewingname" required>
+                                    <option value="">Select Wing</option>
+                                    <option value="option1">SI</option>
+                                    <option value="option2">Counstable</option>
+                                    <option value="option3">PSI</option>
+                                </select>
                                 <!-- <span class="invalid" id="inServicewingnameValid"></span> -->
-                            </div>
-
-                            <div class="col-sm-6" id="inServicerendered">
-                                <label for="inServicenumberyears" class="col-form-label">
-                                    <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">33b.</div>
-                                        <div>
-                                            How many years of Service have you rendered?<i class="invalid">*</i><br>
-                                            <span class="av-font-kn">ಉಪ ಜಾತಿ:</span>
-                                        </div>
-                                    </div>
-                                </label>
-                                <input type="text" class="form-control" id="inServicenumberyears" placeholder="Ex: 10"
-                                    pattern="[0-9]{1,2}" required>
-                                <!-- <span class="invalid" id="inServicenumberyearsValid"></span> -->
                             </div>
 
                             <div class="col-sm-6" id="inServicedate">
@@ -1463,35 +1550,41 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label class="col-sm-6 col-form-label">
+                        <div class="form-group row" id="inServicerendered">
+                            <label for="inServicenumberyears" class="col-form-label col-sm-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">34.</div>
+                                    <div class="mr-2" style="align-self: self-start;">33b.</div>
                                     <div>
-                                        Are you claiming Transgender Reservation?<i class="invalid">*</i><br>
-                                        <span class="av-font-kn">ನೀವು ಟ್ರಾನ್ಸ್‌ಜೆಂಡರ್ ಆರಕ್ಷಣೆಯನ್ನು
-                                            ಕೇಳುತ್ತಿದ್ದೀರಾ?</span>
+                                        How many years of Service have you rendered?<i class="invalid">*</i><br>
+                                        <span class="av-font-kn">ಉಪ ಜಾತಿ:</span>
                                     </div>
                                 </div>
                             </label>
                             <div class="col-sm-6">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="transgenderreservation"
-                                        id="transgender-yes" value="yes" required>
-                                    <label class="form-check-label pt-1" for="transgender-yes">Yes / ಹೌದು</label>
+                                <div class="form-check form-check-inline pt-2">
+                                    <label class="form-check-label pt-1 mr-2" for="inServicenumberyears">Years</label>
+                                    <input type="text" class="form-control" id="inServicenumberyears"
+                                        placeholder="Years" pattern="[0-9]{1,2}" required style="width: 70px;">
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="transgenderreservation"
-                                        id="transgender-no" value="no" required>
-                                    <label class="form-check-label pt-1" for="transgender-no">No / ಇಲ್ಲ</label>
+                                <div class="form-check form-check-inline pt-2">
+                                    <label class="form-check-label pt-1 mr-2" for="inServiceMonths">Months</label>
+                                    <input type="text" class="form-control" id="inServiceMonths" placeholder="Months"
+                                        pattern="[0-9]{1,2}" required style="width: 70px;">
+                                </div>
+                                <div class="form-check form-check-inline pt-2">
+                                    <label class="form-check-label pt-1 mr-2" for="inServiceDays">Days</label>
+                                    <input type="text" class="form-control" id="inServiceDays" placeholder="Days"
+                                        pattern="[0-9]{1,2}" required style="width: 70px;">
                                 </div>
                             </div>
+
                         </div>
+
 
                         <div class="form-group row">
                             <label class="col-md-6 col-form-label">
                                 <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">35.</div>
+                                    <div class="mr-2" style="align-self: self-start;">34.</div>
                                     <div>
                                         Have you been involved in any Criminal Cases?<i class="invalid">*</i><br>
                                         <span class="av-font-kn">ನೀವು ಯಾವುದೇ ಕ್ರಿಮಿನಲ್ ಕೇಸ್‌ಗಳಲ್ಲಿ
@@ -1516,7 +1609,7 @@
                         <div class="form-group row" id="criminalcases1">
                             <label class="col-sm-6 col-form-label">
                                 <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">35a.</div>
+                                    <div class="mr-2" style="align-self: self-start;">34a.</div>
                                     <div>
                                         If Yes, mention the details<i class="invalid">*</i><br>
                                         <span class="av-font-kn">ಹೌದು ಎಂದರೆ ವಿವರಗಳನ್ನು ಉಲ್ಲೇಖಿಸಿ:</span>
@@ -1534,7 +1627,7 @@
                         <div class="form-group row">
                             <label class="col-md-6 col-form-label">
                                 <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">36.</div>
+                                    <div class="mr-2" style="align-self: self-start;">35.</div>
                                     <div>
                                         Have you been involved in any Departmental Enquiry?<i class="invalid">*</i><br>
                                         <span class="av-font-kn">ನೀವು ಯಾವುದೇ ಇಲಾಖೆಯ ವಿಚಾರಣೆಯಲ್ಲಿ
@@ -1560,7 +1653,7 @@
                         <div class="form-group row" id="deptenq">
                             <label class="col-sm-6 col-form-label">
                                 <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">36a.</div>
+                                    <div class="mr-2" style="align-self: self-start;">35a.</div>
                                     <div>
                                         If Yes, mention the details<i class="invalid">*</i><br>
                                         <span class="av-font-kn">ಹೌದು ಎಂದರೆ ವಿವರಗಳನ್ನು ಉಲ್ಲೇಖಿಸಿ:</span>
@@ -1578,7 +1671,7 @@
                         <div class="form-group row">
                             <label class="col-form-label col-sm-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">37.</div>
+                                    <div class="mr-2" style="align-self: self-start;">36.</div>
                                     <div>
                                         Have you been convicted in a Criminal Case?<i class="invalid">*</i><br>
                                         <span class="av-font-kn">ನೀವು ಯಾವುದೇ ಇಲಾಖೆಯ ವಿಚಾರಣೆಯಲ್ಲಿ
@@ -1605,7 +1698,7 @@
                         <div class="form-group row" id="criminalcases2">
                             <label for="convictedDetails" class="col-sm-6 col-form-label">
                                 <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">37a.</div>
+                                    <div class="mr-2" style="align-self: self-start;">36a.</div>
                                     <div>
                                         If Yes, mention the details<i class="invalid">*</i><br>
                                         <span class="av-font-kn">ಹೌದು ಎಂದರೆ ವಿವರಗಳನ್ನು ಉಲ್ಲೇಖಿಸಿ:</span>
@@ -1618,25 +1711,6 @@
                                 <!-- <span class="invalid" id="criminalcases"></span> -->
                             </div>
                         </div>
-
-
-
-                        <!-- <div class="form-group row">
-                            <label class="col-md-6" for="degreeholder">Have you been involved in any Departmental
-                                Enquiry?</label>
-                            <div class="col-md-6">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="degreeholder"
-                                        id="degreeholderyes" value="yes" required>
-                                    <label class="form-check-label pt-1" for="pdpreservation">Yes</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="degreeholder" id="degreeholderno"
-                                        value="no" required>
-                                    <label class="form-check-label pt-1" for="degreeholderno">No</label>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </fieldset>
@@ -1656,7 +1730,7 @@
                             <div class="form-group row mt-3">
                                 <label for="sslcPassed" class="col-sm-6 col-form-label">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">38.</div>
+                                        <div class="mr-2" style="align-self: self-start;">37.</div>
                                         <div>
                                             Passed SSLC?<i class="invalid">*</i><br>
                                             <span class="v-font-kn">SSLC ಪರೀಕ್ಷೆ ಪಾಸ್ ಆಗಿದ್ದೀರಾ?</span>
@@ -1681,7 +1755,7 @@
                                 <div class="col-sm-6">
                                     <label for="kanEducation" class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">39.</div>
+                                            <div class="mr-2" style="align-self: self-start;">37a.</div>
                                             <div>
                                                 In SSLC, have you studied Kannada Language as?<i
                                                     class="invalid">*</i><br>
@@ -1699,7 +1773,7 @@
                                 <div class="col-sm-6">
                                     <label for="" class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">39a.</div>
+                                            <div class="mr-2" style="align-self: self-start;">37b.</div>
                                             <div>
                                                 Year of Passing SSLC<i class="invalid">*</i><br>
                                                 <span class="av-font-kn">ಪಾಸ್ ಆಗಿದ್ದ ವರ್ಷ:</span>
@@ -1715,15 +1789,20 @@
                                 <div class="col-sm-6">
                                     <label for="sslcboard" class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">39b.</div>
+                                            <div class="mr-2" style="align-self: self-start;">37c.</div>
                                             <div>
                                                 SSLC Board<i class="invalid">*</i><br>
                                                 <span class="av-font-kn">SSLC ಪಾಸ್ ಆಗಿದ್ದ ಬೋರ್ಡ್ ಹೆಸರು:</span>
                                             </div>
                                         </div>
                                     </label>
-                                    <input type="text" class="form-control" id="sslcboard"
-                                        placeholder="details / ವಿವರಗಳು" max="100" min="5" pattern="[a-zA-Z]{1,80}">
+                                    <select class="form-control" required>
+                                        <option value="">Select PUC Board</option>
+                                        <option value="option1">State Board</option>
+                                        <option value="option2">PUC</option>
+                                        <option value="option3">UG</option>
+                                        <option value="option3">PG</option>
+                                    </select>
                                 </div>
                             </div>
 
@@ -1737,7 +1816,7 @@
                             <div class="form-group row mt-3">
                                 <label for="niospucexam" class="col-form-label col-sm-6">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">40.</div>
+                                        <div class="mr-2" style="align-self: self-start;">38.</div>
                                         <div>
                                             Passed NIOS/PUC Board Subject Exam?<i class="invalid">*</i><br>
                                             <span class="av-font-kn"> NIOS/PUC ಪರೀಕ್ಷೆ ಪಾಸ್ ಆಗಿದ್ದೀರಾ?</span>
@@ -1764,7 +1843,7 @@
                                 <div class="col-sm-6">
                                     <label for="pucboard" class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">40a.</div>
+                                            <div class="mr-2" style="align-self: self-start;">38a.</div>
                                             <div>
                                                 PUC Board<i class="invalid">*</i><br>
                                                 <span class="av-font-kn"> PUC ಪಾಸ್ ಆಗಿದ್ದ ಬೋರ್ಡ್ ಹೆಸರು:</span>
@@ -1783,7 +1862,7 @@
                                 <div class="col-sm-6 ">
                                     <label for="" class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">41b.</div>
+                                            <div class="mr-2" style="align-self: self-start;">38b.</div>
                                             <div>
                                                 Year of Passing<i class="invalid">*</i><br>
                                                 <span class="av-font-kn"> ಪಾಸ್ ಆಗಿದ್ದ ವರ್ಷ:</span>
@@ -1799,7 +1878,7 @@
                             <div class="form-group row" id="puceducation">
                                 <label for="" class="col-form-label col-sm-6">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">41c.</div>
+                                        <div class="mr-2" style="align-self: self-start;">38c.</div>
                                         <div>
                                             Marks or grade?<i class="invalid">*</i><br>
                                             <span class="av-font-kn"> ಬೋರ್ಡ್ ವಿಷಯ ಪರೀಕ್ಷೆ ಪಾಸ್ ಆಗಿದ್ದೀರಾ:</span>
@@ -1827,7 +1906,7 @@
                                 <div class="col-sm-6">
                                     <label for="maxMarks" class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">41d.</div>
+                                            <div class="mr-2" style="align-self: self-start;">38d.</div>
                                             <div>
                                                 Maximum marks<i class="invalid">*</i><br>
                                                 <span class="av-font-kn">ಗರಿಕೆ ಅತ್ಯುತ್ತಮ ಅಂಕಗಳು:</span>
@@ -1842,7 +1921,7 @@
                                 <div class="col-sm-6 ">
                                     <label for="marksObtained" class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">41e.</div>
+                                            <div class="mr-2" style="align-self: self-start;">38e.</div>
                                             <div>
                                                 Marks Obtained<i class="invalid">*</i><br>
                                                 <span class="av-font-kn">ಪಡೆದ ಅಂಕಗಳು:</span>
@@ -1859,7 +1938,7 @@
                                 <div class="col-sm-6 ">
                                     <label for="gradeObtained" class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">41d.</div>
+                                            <div class="mr-2" style="align-self: self-start;">38d.</div>
                                             <div>
                                                 Grade Obtained<i class="invalid">*</i><br>
                                                 <span class="av-font-kn">ಪಡೆದ ಅಂಕಗಳು:</span>
@@ -1878,7 +1957,7 @@
                                 <div class="col-sm-6">
                                     <label for="percentageCGPA" class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">41e.</div>
+                                            <div class="mr-2" style="align-self: self-start;">38e.</div>
                                             <div>
                                                 Percentage<i class="invalid">*</i> CGPA<i class="invalid">*</i><br>
                                                 <span class="av-font-kn">ಶೇಕಡಾ:</span>
@@ -1900,7 +1979,7 @@
                             <div class="form-group row mt-3">
                                 <label for="bridgeCourse" class="col-form-label col-sm-6">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">42.</div>
+                                        <div class="mr-2" style="align-self: self-start;">39.</div>
                                         <div>
                                             Bridge Course from KSOU?<i class="invalid">*</i><br>
                                             <span class="av-font-kn">NIOS/PUC ಬೋರ್ಡ್ ಭಾಷಾ ಪರೀಕ್ಷೆ ಪಾಸ್ ಆಗಿದ್ದೀರಾ:</span>
@@ -1924,7 +2003,7 @@
                                 <div class="col-sm-6" id="bridgecource">
                                     <label for="qualificationRegNo" class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">42a.</div>
+                                            <div class="mr-2" style="align-self: self-start;">39a.</div>
                                             <div>
                                                 Qualification Certificate Registration No.<i class="invalid">*</i><br>
                                                 <span class="av-font-kn">ಗರಿಕೆ ಅತ್ಯುತ್ತಮ ಅಂಕಗಳು:</span>
@@ -1949,7 +2028,7 @@
                             <div class="form-group row mt-3">
                                 <label for="degreeHolder" class="col-form-label col-sm-6">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">43.</div>
+                                        <div class="mr-2" style="align-self: self-start;">40.</div>
                                         <div>
                                             Are you a degree holder?<i class="invalid">*</i><br>
                                             <span class="av-font-kn">ಬೋರ್ಡ್ ವಿಷಯ ಪರೀಕ್ಷೆ ಪಾಸ್ ಆಗಿದ್ದೀರಾ:</span>
@@ -1975,7 +2054,7 @@
                                 <div class="col-md-6">
                                     <label class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">43a.</div>
+                                            <div class="mr-2" style="align-self: self-start;">40a.</div>
                                             <div>
                                                 Degree Registration No<i class="invalid">*</i><br>
                                                 <span class="av-font-kn">ನೋಂದಣಿ ಸಂಖ್ಯೆ:</span>
@@ -1988,7 +2067,7 @@
                                 <div class="col-sm-6 ">
                                     <label class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">43b.</div>
+                                            <div class="mr-2" style="align-self: self-start;">40b.</div>
                                             <div>
                                                 Year of passing degree<i class="invalid">*</i><br>
                                                 <span class="av-font-kn"> ಪಾಠಶಾಲೆ:</span>
@@ -2008,7 +2087,7 @@
                             <div class="form-group row" id="dmarks">
                                 <label class="col-form-label col-sm-6">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">43c.</div>
+                                        <div class="mr-2" style="align-self: self-start;">40c.</div>
                                         <div>
                                             Marks or grade?<i class="invalid">*</i><br>
                                             <span class="av-font-kn"> ಬೋರ್ಡ್ ವಿಷಯ ಪರೀಕ್ಷೆ ಪಾಸ್ ಆಗಿದ್ದೀರಾ:</span>
@@ -2035,7 +2114,7 @@
                                 <div class="col-sm-6">
                                     <label class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">43d.</div>
+                                            <div class="mr-2" style="align-self: self-start;">40d.</div>
                                             <div>
                                                 Maximum marks degree<i class="invalid">*</i><br>
                                                 <span class="av-font-kn">ಗರಿಕೆ ಅತ್ಯುತ್ತಮ
@@ -2051,7 +2130,7 @@
                                 <div class="col-sm-6">
                                     <label class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">43e.</div>
+                                            <div class="mr-2" style="align-self: self-start;">40e.</div>
                                             <div>
                                                 Marks Obtained<i class="invalid">*</i><br>
                                                 <span class="av-font-kn">ಪಡೆದ
@@ -2070,7 +2149,7 @@
                                 <div class="col-sm-6 ">
                                     <label class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">43d.</div>
+                                            <div class="mr-2" style="align-self: self-start;">40d.</div>
                                             <div>
                                                 grade Obtained<i class="invalid">*</i><br>
                                                 <span class="av-font-kn">ಪಡೆದ
@@ -2090,7 +2169,7 @@
                                 <div class="col-sm-6 ">
                                     <label class="col-form-label">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2" style="align-self: self-start;">43e.</div>
+                                            <div class="mr-2" style="align-self: self-start;">40e.</div>
                                             <div>
                                                 Percentage/CGPA<i class="invalid">*</i><br>
                                                 <span class="av-font-kn">ಪಡೆದ
@@ -2111,7 +2190,7 @@
                             <div class="col-sm-6">
                                 <label class="col-form-label">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-2" style="align-self: self-start;">7.</div>
+                                        <div class="mr-2" style="align-self: self-start;">41.</div>
                                         <div>
                                             Date of Birth <i class="invalid">*</i><br>
                                             <span class="av-font-kn">ಹುಟ್ಟುವ ದಿನಾಂಕ:</span>
@@ -2153,7 +2232,7 @@
                         <div class="form-group row">
                             <label class="col-form-label col-sm-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">44.</div>
+                                    <div class="mr-2" style="align-self: self-start;">42.</div>
                                     <div>
                                         Select the Uploading Identity Card<i class="invalid">*</i><br>
                                         <span class="av-font-kn">ಅಪ್‌ಲೋಡ್
@@ -2179,7 +2258,7 @@
                         <div class="form-group row">
                             <label class="col-form-label col-sm-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="mr-2" style="align-self: self-start;">45.</div>
+                                    <div class="mr-2" style="align-self: self-start;">43.</div>
                                     <div>
                                         Identity Card No<i class="invalid">*</i><br>
                                         <span class="av-font-kn">ಗುರುತಿನ ಪತ್ರ ಸಂಖ್ಯೆ:</span>
@@ -2241,7 +2320,7 @@
                                         <div class="uploadfile">
                                             <div class="center border">
                                                 <div class="title">
-                                                    <h1 class="font-weight-bold">Thumb Impression<i
+                                                    <h1 class="font-weight-bold">Left Thumb Impression<i
                                                             class="invalid">*</i> <br> ಅರ್ಜಿದಾರರ ಬೆರಳ
                                                         ಮುದ್ರೆ</h1>
                                                 </div>
@@ -2261,9 +2340,11 @@
                                         <div class="uploadfile">
                                             <div class="center border">
                                                 <div class="title">
-                                                    <h1 class="font-weight-bold">Photo<i class="invalid">*</i> <br>
+                                                    <h1 class="font-weight-bold">Recent Photo<i class="invalid">*</i>
+                                                        <br>
                                                         ಅರ್ಜಿದಾರರ
-                                                        ಫೋಟೋೆ</h1>
+                                                        ಫೋಟೋೆ
+                                                    </h1>
                                                 </div>
                                                 <div class="dropzone">
                                                     <img src="" class="upload-icon">

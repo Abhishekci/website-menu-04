@@ -650,7 +650,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     // Hide the second group initially
-    // $(".group-2").hide();
+    $(".group-2").hide();
 
     // Event handler for radio button change
     $("input[name='exServicemanChild']").change(function () {
@@ -661,6 +661,72 @@ $(document).ready(function () {
         }
     });
 });
+
+$(document).ready(function () {
+    $('input[name="exServicemanfamded"]').change(function () {
+        if ($(this).val() === 'yes') {
+            $('.group-2e').show(); // Show the "Relationship with the Serviceman" field
+        } else {
+            $('.group-2e').hide(); // Hide the "Relationship with the Serviceman" field
+        }
+    });
+});
+
+$(document).ready(function () {
+    $('input[name="transgenderreservation"]').on('change', function () {
+        var selectedValue = $(this).val();
+        if (selectedValue === 'yes') {
+            $('#transdate').show();
+        } else {
+            $('#transdate').hide();
+        }
+    });
+});
+
+
+
+
+$(document).ready(function () {
+    $('#candidate-type').change(function () {
+        if ($(this).val() === 'option1') {
+            $('#inService-section').show();
+            $('#exservice-section').show();
+            $('#inService-no').prop('checked', true).prop('disabled', true);
+            $('#inService-yes').prop('checked', false).prop('disabled', true);
+            $('#exservice-no').prop('checked', true).prop('disabled', true);
+            $('#exservice-yes').prop('checked', false).prop('disabled', true);
+        } else {
+            $('#inService-section').show();
+            $('#exservice-section').show();
+        }
+    });
+
+    $('#candidate-type').change(function () {
+        if ($(this).val() === 'option2') {
+            // $('#inService-section').show();
+            // $('#exService-section').hide();
+            $('#exservice-no').prop('checked', true).prop('disabled', true);
+            $('#exService-yes').prop('disabled', true);
+        } else {
+            $('#inService-section').show();
+            $('#exService-section').show();
+        }
+    });
+
+    $('#candidate-type').change(function () {
+        if ($(this).val() === 'option3') {
+            // $('#inService-section').show();
+            // $('#exService-section').hide();
+            $('#inService-no').prop('checked', true).prop('disabled', true);
+            $('#inService-yes').prop('checked', false).prop('disabled', true);
+        } else {
+            $('#inService-section').show();
+            $('#exService-section').show();
+        }
+    });
+});
+
+
 
 
 
