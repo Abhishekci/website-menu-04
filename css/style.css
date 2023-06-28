@@ -820,6 +820,28 @@ span .input {
 	border-radius: 5px;
 }
 
+/* Default width for mobile */
+.inputchanges input[type="text"],
+.inputchanges input[type="number"],
+.inputchanges input[type="date"],
+.inputchanges input[type="email"],
+.inputchanges select {
+	margin-left: 20px;
+	width: 300px;
+}
+
+/* Media query for PC */
+@media (min-width: 768px) {
+
+	.inputchanges input[type="text"],
+	.inputchanges input[type="number"],
+	.inputchanges input[type="date"],
+	.inputchanges input[type="email"],
+	.inputchanges select {
+		width: 495px;
+	}
+}
+
 .form-group input,
 .form-select,
 .form-control {
@@ -1151,6 +1173,12 @@ input[type=number] {
 	margin: auto;
 }
 
+.box-photo-download img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
 .box-sign {
 	height: 80px;
 	width: 200px;
@@ -1304,4 +1332,23 @@ input[type=number] {
 	top: -45%;
 	background-color: #ae3c3c;
 	transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+#cb-cookie-banner {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	border-radius: 0;
+	display: block;
+}
+
+.disabled {
+	opacity: 0.5;
+	/* Reduce opacity to visually indicate it's disabled */
+	cursor: not-allowed;
+	/* Change cursor to indicate it's not clickable */
+	pointer-events: none;
+	/* Disable pointer events to prevent clicks */
 }

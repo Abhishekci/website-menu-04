@@ -85,7 +85,7 @@
                             <li><a href="index.html" class="nav-link">Home</a></li>
                             <li><a href="#" target="_parent" class="nav-link newapplication">New Application</a></li>
                             <li><a href="#services-section" class="nav-link">Notification</a></li>
-                            <li><a href="/index.html"><button class="button2">
+                            <li><a href="/index.html" onclick="closeWindow()"><button class="button2">
                                         Sign Out
                                     </button></a></li>
                             <!-- <button class="btn btn-outline-light submit-btn border">
@@ -126,6 +126,9 @@
     </div>
 
     <div class="container mt-4">
+        <h5 class="mt-4 text-dark text-uppercase font-weight-bold text-center"> <span>My Application</span>
+        </h5>
+        <hr>
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -210,34 +213,110 @@
                             <td>No</td>
                         </tr>
                         <tr>
+                            <th colspan="4" class="text-center">Reservation</th>
+                        </tr>
+                        <tr>
+                            <th colspan="4" class="text-center">PDP, Exserviceman, Rural Medium</th>
+                        </tr>
+                        <!-- <tr>
                             <th>PDP Reservation</th>
                             <td>No</td>
                             <th>Claiming KK Reservation</th>
                             <td>Yes</td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <th>Government Employee</th>
                             <td>No</td>
-                            <td></td>
-                            <td></td>
+                            <th>Unit</th>
+                            <td>Vijaypura</td>
                         </tr>
                     </tbody>
                 </table>
 
                 <hr>
 
-                <div class="card-header bg-info text-white mt-4">Endurance Test & Physical Standard Test</div>
+                <div class="card-header bg-info text-white mt-4">
+                    <h5 class="p-0 font-weight-bold">Remarks</h5>
+                </div>
                 <table class="table table-striped table-responsive-lg">
-                    <div class="alert alert-success mt-3 d-flex justify-content-between align-items-center"
+                    <tbody>
+                        <tr>
+                            <td width="5%">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                            </td>
+                            <td width="95%" class="align-middle text-success">
+                                <strong>QUALIFIED FOR ENDURANCE TEST, PHYSICAL STANDARD TEST, WRITTEN
+                                    EXAMINATION & MEDICAL EXAMINATION.</strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <div class="alert alert-success text-dark  d-flex justify-content-between align-items-center"
+                    role="alert">
+                    <div>
+                        <h5 class="alert-heading text-dark">
+                            <i class="bi bi-check-circle-fill text-success mr-2"></i> Payment Successful
+                        </h5>
+                        <p class="text-dark">Your payment has been successfully processed.</p>
+                    </div>
+                    <button class="btn btn-primary text-right" onclick="window.print()">Download Application / ರಸೀತಿ
+                        ಮುದ್ರಿಸಿ</button>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title mt-3">Payment Details / ಪಾವತಿ ವಿವರಗಳು</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="card-text text-dark">Payment Method / ಪಾವತಿ ವಿಧಾನ: Credit Card / ಕ್ರೆಡಿಟ್
+                                    ಕಾರ್ಡ್</p>
+                                <p class="card-text text-dark">Payment Challan Generate Date / ಪಾವತಿ ಚಾಲನ್ ರಚಿಸಿದ
+                                    ದಿನಾಂಕ:
+                                    14-08-2022</p>
+                                <p class="card-text text-dark">Payment Fee Paid / ಪಾವತಿ ಶುಲ್ಕ ಪಾವತಿಸಿದ ದಿನಾಂಕ:
+                                    RS-500/-</p>
+                                <p class="card-text text-dark">Payment Bank Reference No / ಪಾವತಿ ಬ್ಯಾಂಕ್ ರೆಫರೆನ್ಸ್
+                                    ಸಂಖ್ಯೆ:
+                                    PNB125DL</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="card-text text-dark">Payment Bank Name / ಪಾವತಿ ಬ್ಯಾಂಕ್ ಹೆಸರು: State Bank
+                                    Of India /
+                                    ಭಾರತೀಯ
+                                    ಸ್ಟೇಟ್
+                                    ಬ್ಯಾಂಕ್</p>
+                                <p class="card-text text-dark">Payment Bank Code / ಪಾವತಿ ಬ್ಯಾಂಕ್ ಕೋಡ್: SBI0165DF</p>
+                                <p class="card-text text-dark">Payment Bank Address / ಪಾವತಿ ಬ್ಯಾಂಕ್ ವಿಳಾಸ: State
+                                    Bank Of India -
+                                    NSP -
+                                    Delhi /
+                                    ಭಾರತೀಯ ಸ್ಟೇಟ್ ಬ್ಯಾಂಕ್ - ಎನ್‌ಎಸ್‌ಪಿ - ದೆಹಲಿ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="card-header bg-info text-white mt-4">
+                    <h5 class="p-0 font-weight-bold">Endurance Test & Physical Standard Test</h5>
+                </div>
+                <table class="table table-striped table-responsive-lg mt-3">
+                    <!-- <div class="alert alert-success mt-3 d-flex justify-content-between align-items-center"
                         role="alert">
                         <div>
-                            <h5 class="alert-heading text-dark">Payment Successful</h5>
+                            <h5 class="alert-heading text-dark">
+                                <i class="bi bi-check-circle-fill text-success mr-2"></i> Payment Successful
+                            </h5>
                             <p class="text-dark">Your payment has been successfully processed. (You are Eligible for
                                 ET/PST)</p>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- <table class="table table-striped"> -->
-                    <tbody class="font-weight-bold">
+                    <tbody class="font-weight-bold table-responsive-lg">
                         <tr>
                             <th>01</th>
                             <td>ET/PST GROUND DISTRICT</td>
@@ -267,6 +346,8 @@
                 </table>
 
                 <hr>
+
+
                 <!-- <div class="card-header bg-info text-white mt-4">Eligible Status - Remarks</div>
                     <table class="table table-striped">
                         <tbody>
@@ -280,12 +361,21 @@
                             </tr>
                         </tbody>
                     </table> -->
-                <div class="card-header bg-info text-white mt-4">Written Exam</div>
-                <table class="table table-striped table-responsive-lg">
-                    <div class="alert alert-success mt-3 d-flex justify-content-between align-items-center"
+                <div class="card-header bg-info text-white mt-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="p-0 font-weight-bold">Written Exam</h5>
+                        <button type="button" class="btn btn-light">
+                            <i class="bi bi-download"></i> Download Call Letter
+                        </button>
+                    </div>
+                </div>
+                <table class="table table-striped table-responsive-lg mt-3">
+                    <!-- <div class="alert alert-success mt-3 d-flex justify-content-between align-items-center"
                         role="alert">
                         <div>
-                            <h5 class="alert-heading text-dark">Payment Successful</h5>
+                            <h5 class="alert-heading text-dark">
+                                <i class="bi bi-check-circle-fill text-success mr-2"></i> Payment Successful
+                            </h5>
                             <p class="text-dark">Your payment has been successfully processed. QUA - (YOU ARE
                                 QUALIFIED
                                 FOR
@@ -294,8 +384,8 @@
                         <button type="button" class="btn btn-primary">
                             <i class="bi bi-download"></i> Download Call Letter
                         </button>
-                    </div>
-                    <tbody class="font-weight-bold">
+                    </div> -->
+                    <tbody class="font-weight-bold table-responsive-lg">
                         <tr>
                             <th>01</th>
                             <td>WRITTEN EXAM DISTRICT</td>
@@ -331,21 +421,31 @@
 
                 <hr>
 
-                <div class="card-header bg-info text-white mt-4">Medical Exam</div>
-                <table class="table table-striped">
-                    <div class="alert alert-success mt-3 d-flex justify-content-between align-items-center"
+                <div class="card-header bg-info text-white mt-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="p-0 font-weight-bold">Medical Exam</h5>
+                        <button type="button" class="btn btn-light">
+                            <i class="bi bi-download"></i> Download Call Letter
+                        </button>
+                    </div>
+                </div>
+                <table class="table table-striped table-responsive-lg mt-3">
+                    <!-- <div class="alert alert-success mt-3 d-flex justify-content-between align-items-center"
                         role="alert">
                         <div>
-                            <h5 class="alert-heading text-dark">Payment Successful</h5>
+                            <h5 class="alert-heading text-dark">
+                                <i class="bi bi-check-circle-fill text-success mr-2"></i> Payment Successful
+                            </h5>
+
                             <p class="text-dark">Your payment has been successfully processed. (YOU ARE
                                 QUALIFIED
                                 FOR
                                 MEDICAL EXAM)</p>
                         </div>
                         <button type="button" class="btn btn-primary">
-                            <i class="bi bi-download"></i> Download Letter
+                            <i class="bi bi-download"></i> Download Call Letter
                         </button>
-                    </div>
+                    </div> -->
                     <tbody class="font-weight-bold table-responsive-lg">
                         <tr>
                             <th>01</th>
@@ -381,23 +481,25 @@
                     </tbody>
                 </table>
 
-                <hr>
+                <!-- <hr>
 
 
-                <div class="card-header bg-info text-white mt-4">Eligible Status - Remarks</div>
+                <div class="card-header bg-info text-white mt-4">
+                    <h5 class="p-0 font-weight-bold">Eligible Status - Remarks</h5>
+                </div>
                 <table class="table table-striped table-responsive-lg">
                     <tbody>
                         <tr>
-                            <td width="10%">
+                            <td width="5%">
                                 <i class="bi bi-check-circle-fill text-success"></i>
                             </td>
-                            <td width="90%" class="align-middle text-success">
+                            <td width="95%" class="align-middle text-success">
                                 <strong>QUALIFIED FOR ENDURANCE TEST, PHYSICAL STANDARD TEST, WRITTEN
-                                    EXAMINATION & MEDICAL EXAMINATION</strong>
+                                    EXAMINATION & MEDICAL EXAMINATION.</strong>
                             </td>
                         </tr>
                     </tbody>
-                </table>
+                </table> -->
             </div>
         </div>
     </div>
@@ -411,7 +513,7 @@
         <div class="clsCopyright">
             <div class="container pt-2">
                 <div class="row">
-                    <div class="col-6 text-center">
+                    <div class="col-6 text-left">
                         <p>© 2023 Karnataka State Police. All Rights Reserved</p>
                     </div>
                     <div class="col-6 text-right">
