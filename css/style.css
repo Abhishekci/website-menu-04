@@ -155,7 +155,7 @@ a:active {
 	position: relative;
 	background-size: cover;
 	/* background-position: bottom; */
-	background-image: url(/images/Home.png);
+	background-image: url(/images/Home.svg);
 	top: -42px;
 	/* position: fixed; */
 	background-attachment: fixed;
@@ -1133,6 +1133,7 @@ input[type=number] {
 	color: #495057;
 	outline: none;
 	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	overflow: auto;
 }
 
 .datepicker:focus {
@@ -1151,6 +1152,8 @@ input[type=number] {
 	line-height: 1.5;
 	color: #495057;
 }
+
+
 
 .newapplicationv2 .modal-dialog {
 	max-width: 70% !important;
