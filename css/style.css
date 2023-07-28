@@ -1355,3 +1355,22 @@ input[type=number] {
 	pointer-events: none;
 	/* Disable pointer events to prevent clicks */
 }
+
+.char-counter-container {
+	position: relative;
+	margin-top: 5px;
+}
+
+.char-counter {
+	position: relative;
+	/* bottom: -25px; */
+	right: 0;
+	font-size: 12px;
+	color: #6c757d;
+}
+
+/* Optional: Add styles for text-danger class */
+.text-danger {
+	color: #dc3545;
+	/* Customize the color to your liking */
+}

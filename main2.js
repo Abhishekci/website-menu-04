@@ -20,6 +20,9 @@ window.addEventListener('beforeunload', function () {
     });
 });
 
+// *********** Remove Selected OPtion ************ //
+
+
 // *************************** NAV Disabler *************************** //
 
 $(document).ready(function () {
@@ -387,37 +390,37 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     // Initially hide the div elements
-    $('#exServicemandate').hide();
-    $('#exServicemanService').hide();
-    $('#exServicemandischarge').hide();
-    $('#exServicemanrendered').hide();
-    $('#exServicemanServing').hide();
+    $('#exServicemendate').hide();
+    $('#exServicemenService').hide();
+    $('#exServicemendischarge').hide();
+    $('#exServicemenrendered').hide();
+    $('#exServicemenServing').hide();
 
-    // Event handler for the exServiceman radio buttons
-    $('input[name="exServiceman"]').change(function () {
+    // Event handler for the exServicemen radio buttons
+    $('input[name="exServicemen"]').change(function () {
         var selectedValue = $(this).val();
 
         // Check if "yes" is selected
         if (selectedValue === 'yes') {
             // Show the desired div elements
-            $('#exServicemandate').show();
-            $('#exServicemanService').show();
-            // $('#exServicemandischarge').show();
-            $('#exServicemanrendered').show();
-            $('#exServicemanServing').show();
+            $('#exServicemendate').show();
+            $('#exServicemenService').show();
+            // $('#exServicemendischarge').show();
+            $('#exServicemenrendered').show();
+            $('#exServicemenServing').show();
         } else {
             // Hide the div elements
-            $('#exServicemandate').hide();
-            $('#exServicemanService').hide();
-            $('#exServicemandischarge').hide();
-            $('#exServicemanrendered').hide();
-            $('#exServicemanServing').hide();
+            $('#exServicemendate').hide();
+            $('#exServicemenService').hide();
+            $('#exServicemendischarge').hide();
+            $('#exServicemenrendered').hide();
+            $('#exServicemenServing').hide();
 
             // Clear the input fields in the div elements
-            $('#exServicemandate input[type="date"]').val("");
-            $('#exServicemanService select').val("");
-            $('#exServicemandischarge input[type="date"]').val("");
-            $('#exServicemanrendered input[type="text"]').val("");
+            $('#exServicemendate input[type="date"]').val("");
+            $('#exServicemenService select').val("");
+            $('#exServicemendischarge input[type="date"]').val("");
+            $('#exServicemenrendered input[type="text"]').val("");
         }
     });
 
@@ -427,24 +430,24 @@ $(document).ready(function () {
         // Check if "yes" is selected
         if (selectedValue === 'no') {
             // Show the desired div elements
-            // $('#exServicemandate').show();
-            // $('#exServicemanService').show();
-            $('#exServicemandischarge').show();
-            // $('#exServicemanrendered').show();
-            // $('#exServicemanServing').show();
+            // $('#exServicemendate').show();
+            // $('#exServicemenService').show();
+            $('#exServicemendischarge').show();
+            // $('#exServicemenrendered').show();
+            // $('#exServicemenServing').show();
         } else {
             // Hide the div elements
-            // $('#exServicemandate').hide();
-            // $('#exServicemanService').hide();
-            $('#exServicemandischarge').hide();
-            // $('#exServicemanrendered').hide();
-            // $('#exServicemanServing').hide();
+            // $('#exServicemendate').hide();
+            // $('#exServicemenService').hide();
+            $('#exServicemendischarge').hide();
+            // $('#exServicemenrendered').hide();
+            // $('#exServicemenServing').hide();
 
             // Clear the input fields in the div elements
-            // $('#exServicemandate input[type="date"]').val("");
-            // $('#exServicemanService select').val("");
-            $('#exServicemandischarge input[type="date"]').val("");
-            // $('#exServicemanrendered input[type="text"]').val("");
+            // $('#exServicemendate input[type="date"]').val("");
+            // $('#exServicemenService select').val("");
+            $('#exServicemendischarge input[type="date"]').val("");
+            // $('#exServicemenrendered input[type="text"]').val("");
         }
     });
 });
@@ -460,7 +463,7 @@ $(document).ready(function () {
     $('#armid').hide();
     $('#armid2').hide();
 
-    // Event handler for the armServiceman radio buttons
+    // Event handler for the armServicemen radio buttons
     $('input[name="presentlyServing"]').change(function () {
         var selectedValue = $(this).val();
 
@@ -642,6 +645,7 @@ $(document).ready(function () {
             // Hide the date of issue field
             $('#criminalcases1').hide();
             $('#criminalcases1 textarea').val('');
+
         }
     });
 
@@ -854,13 +858,83 @@ $(document).ready(function () {
     });
 });
 
+// Attach the event listener to the inputs
+$('#maxMarks, #marksObtained').on('input', calculatePercentage);
+
+// Function to calculate Degree percentage
+function calculateDegreePercentage() {
+    const maxMarksDegree = parseFloat($('#degmarks').val());
+    const marksObtainedDegree = parseFloat($('#degmarksobtained').val());
+
+    if (maxMarksDegree && marksObtainedDegree) {
+        const percentageDegree = (marksObtainedDegree / maxMarksDegree) * 100;
+        $('#degpercentageobtained').val(percentageDegree.toFixed(2));
+    }
+}
+
+// Attach the event listener to the inputs
+$('#degmarks, #degmarksobtained').on('input', calculateDegreePercentage);
+
+
+
+
+$(document).ready(function () {
+
+
+    $('#sslcgrade, #sslcgradeobtained, #sslcpercentage, #sslcmanualpercentage').hide();
+
+    // Event handler for the marks radio buttons
+    $('input[name="maksslc"]').change(function () {
+        var selectedValue = $(this).val();
+
+        // Check if "Marks" is selected
+        if (selectedValue === 'yes') {
+            // Show the "Max Marks" and "Marks Obtained" fields
+            $('#sslcgrade').show();
+            $('#sslcpercentage').show();
+            $('#sslcmanualpercentage').hide();
+            $('#sslcmanualpercentage input[type="text"]').val('');
+            $('#sslcautopercentage').show();
+            // Hide the "Grade Obtained" field
+            $('#sslcgradeobtained').hide();
+            $('#sslcgradeobtained input[type="text"]').val('');
+        } else if (selectedValue === 'no') {
+            // Show the "Grade Obtained" field
+            $('#sslcgradeobtained').show();
+            $('#sslcmanualpercentage').show();
+            $('#sslcautopercentage').hide();
+            // $('#sslcpercentage').hide();
+            // $('#degautopercentage input[type="text"]').val('');
+            // Hide the "Max Marks" and "Marks Obtained" fields
+            $('#sslcgrade').hide();
+            $('#sslcgrade input[type="text"]').val('');
+            $('#sslcautopercentage input[type="text"]').val('');
+        }
+    });
+});
+
+// Function to calculate SSLC percentage
+function calculateSSLCPercentage() {
+    const maxMarksSSLC = parseFloat($('#sslcmaxmarks').val());
+    const marksObtainedSSLC = parseFloat($('#sslcmarksobtained').val());
+
+    if (maxMarksSSLC && marksObtainedSSLC) {
+        const percentageSSLC = (marksObtainedSSLC / maxMarksSSLC) * 100;
+        $('#sslcpercentageobtained').val(percentageSSLC.toFixed(2));
+    }
+}
+
+// Attach the event listener to the inputs
+$('#sslcmaxmarks, #sslcmarksobtained').on('input', calculateSSLCPercentage);
+
+
 
 $(document).ready(function () {
     // Hide the second group initially
     $(".group-2").hide();
 
     // Event handler for radio button change
-    $("input[name='exServicemanChild']").change(function () {
+    $("input[name='exServicemenChild']").change(function () {
         if ($(this).val() === "yes") {
             $(".group-2").show();
             $(".group-2b").show();
@@ -878,13 +952,22 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    $('input[name="exServicemanfamded"]').change(function () {
+    $('input[name="exServicemenfamded"]').change(function () {
         if ($(this).val() === 'yes') {
-            $('.group-2e').show(); // Show the "Relationship with the Serviceman" field
+            $("#exServicemendisno").prop('checked', true).prop('disabled', true); // Show the "Relationship with the Servicemen" field
+            $("#exServicemendisyes").prop('checked', false).prop('disabled', true); // Show the "Relationship with the Servicemen" field
         } else {
-            $('.group-2e').hide(); // Hide the "Relationship with the Serviceman" field
-            // Clear the value of the "Relationship with the Serviceman" field
-            $('.group-2e select').val("");
+            $("#exServicemendisno").prop('checked', false).prop('disabled', false);
+            $("#exServicemendisyes").prop('checked', false).prop('disabled', false);
+        }
+    });
+    $('input[name="exServicemendis"]').change(function () {
+        if ($(this).val() === 'yes') {
+            $("#exServicemenfamdedno").prop('checked', true).prop('disabled', true); // Show the "Relationship with the Servicemen" field
+            $("#exServicemenfamdedyes").prop('checked', false).prop('disabled', true); // Show the "Relationship with the Servicemen" field
+        } else {
+            $("#exServicemenfamdedno").prop('checked', false).prop('disabled', false); // Show the "Relationship with the Servicemen" field
+            $("#exServicemenfamdedyes").prop('checked', false).prop('disabled', false);
         }
     });
 });
@@ -908,16 +991,16 @@ $(document).ready(function () {
     $('#candidate-type').change(function () {
         // Reset the disabled and checked properties for all options
         $('#inService-no, #inService-yes, #exservice-no, #exservice-yes').prop('disabled', false).prop('checked', false);
-        $('#exServicemanChildno, #exServicemanChildyes').prop('disabled', false).prop('checked', false);
+        $('#exServicemenChildno, #exServicemenChildyes').prop('disabled', false).prop('checked', false);
 
-        if ($(this).val() === 'option1') {
+        if ($(this).val() === 'DirectCandidate') {
             $('#inService-section').show();
             $('#exservice-section').show();
-            $('#exServicemandate').hide();
-            $('#exServicemanService').hide();
-            $('#exServicemandischarge').hide();
-            $('#exServicemanrendered').hide();
-            $('#exServicemanServing').hide();
+            $('#exServicemendate').hide();
+            $('#exServicemenService').hide();
+            $('#exServicemendischarge').hide();
+            $('#exServicemenrendered').hide();
+            $('#exServicemenServing').hide();
             $('#inService-no').prop('checked', true).prop('disabled', true);
             $('#exservice-no').prop('checked', true).prop('disabled', true);
             $('#inService-yes').prop('checked', false).prop('disabled', true);
@@ -925,23 +1008,25 @@ $(document).ready(function () {
             $('#inServicewing').hide();
             $('#inServicerendered').hide();
             $('#inServicedate').hide();
-        } else if ($(this).val() === 'option2') {
-            $('#inService-section').show();
-            $('#exservice-section').show();
-            $('#exServicemandate').hide();
-            $('#exServicemanService').hide();
-            $('#exServicemandischarge').hide();
-            $('#exServicemanrendered').hide();
-            $('#exServicemanServing').hide();
-            $('#exservice-no').prop('checked', true).prop('disabled', true);
-            $('#exservice-yes').prop('checked', false).prop('disabled', true);
-        } else if ($(this).val() === 'option3') {
+        }
+        // else if ($(this).val() === 'InServiceCandidate') {
+        //     $('#inService-section').show();
+        //     $('#exservice-section').show();
+        //     $('#exServicemendate').hide();
+        //     $('#exServicemenService').hide();
+        //     $('#exServicemendischarge').hide();
+        //     $('#exServicemenrendered').hide();
+        //     $('#exServicemenServing').hide();
+        //     $('#exservice-no').prop('checked', true).prop('disabled', true);
+        //     $('#exservice-yes').prop('checked', false).prop('disabled', true);
+        // }
+        else if ($(this).val() === 'ExServiceCandidate') {
             $('#inService-section').show();
             $('#exservice-section').show();
             $('#inService-no').prop('checked', true).prop('disabled', true);
             $('#inService-yes').prop('checked', false).prop('disabled', true);
-            $('#exServicemanChildno').prop('checked', true).prop('disabled', true);
-            $('#exServicemanChildyes').prop('checked', false).prop('disabled', true);
+            $('#exServicemenChildno').prop('checked', true).prop('disabled', true);
+            $('#exServicemenChildyes').prop('checked', false).prop('disabled', true);
             $('#inServicewing').hide();
             $('#inServicerendered').hide();
             $('#inServicedate').hide();
@@ -953,6 +1038,61 @@ $(document).ready(function () {
     });
 });
 
+
+$(document).ready(function () {
+    $('input[name="gender"]').on('change', function () {
+        var selectedValue = $(this).val();
+        if (selectedValue === 'Male') {
+            $('#transgender-yes').prop('checked', false).prop('disabled', true);
+            $('#transgender-no').prop('checked', true).prop('disabled', true);
+        } else {
+            $('#transgender-yes').prop('checked', false).prop('disabled', false);
+            $('#transgender-no').prop('checked', false).prop('disabled', false);
+        }
+    });
+});
+
+// ************************** Text Area Character couner ******************************** //
+
+$(document).ready(function () {
+    var maxCharacters = 500;
+    var minCharacters = 10;
+
+    $('#charCounter').text(maxCharacters + ' characters left');
+    $('#charCounter2').text(maxCharacters + ' characters left');
+    $('#charCounter3').text(maxCharacters + ' characters left');
+
+    $('#criminalcasestext').on('input', function () {
+        var remainingCharacters = maxCharacters - $(this).val().length;
+        $('#charCounter').text(remainingCharacters + ' characters left');
+
+        if (remainingCharacters < minCharacters) {
+            $('#charCounter').addClass('text-danger'); // Optional: Change text color when approaching the minimum limit
+        } else {
+            $('#charCounter').removeClass('text-danger');
+        }
+    });
+    $('#deptenqcariminalcases2').on('input', function () {
+        var remainingCharacters = maxCharacters - $(this).val().length;
+        $('#charCounter2').text(remainingCharacters + ' characters left');
+
+        if (remainingCharacters < minCharacters) {
+            $('#charCounter2').addClass('text-danger'); // Optional: Change text color when approaching the minimum limit
+        } else {
+            $('#charCounter2').removeClass('text-danger');
+        }
+    });
+    $('#convictedcriminalcases3').on('input', function () {
+        var remainingCharacters = maxCharacters - $(this).val().length;
+        $('#charCounter3').text(remainingCharacters + ' characters left');
+
+        if (remainingCharacters < minCharacters) {
+            $('#charCounter3').addClass('text-danger'); // Optional: Change text color when approaching the minimum limit
+        } else {
+            $('#charCounter3').removeClass('text-danger');
+        }
+    });
+});
 
 
 
@@ -975,6 +1115,24 @@ $(document).ready(function () {
         });
     }
 });
+
+// ************************* SSLC Other Borad ***************************** //
+
+
+$(document).ready(function () {
+    $('#sslcboard').change(function () {
+        // Reset the disabled and checked properties for all options
+
+        if ($(this).val() === 'Other') {
+            $('#sslcotherboard').show();
+        }
+        else {
+            $('#sslcotherboard').hide();
+        }
+    });
+});
+
+
 
 // $(document).ready(function () {
 //     $('#weightField').hide();
@@ -1025,6 +1183,5 @@ function initializeCookieBanner() {
 // Assigning values to window object
 window.onload = initializeCookieBanner();
 window.cb_hideCookieBanner = hideCookieBanner;
-
 
 
